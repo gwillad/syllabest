@@ -1,19 +1,31 @@
-<h1> displaying user data </h1>
+<h1> Displaying user data </h1>
+
 <table>
 	<tr>
-		<th> First Name </th>
-		<th> Last Name </th>
-		<th> Email </th>
-		<th> Password </th>
-		<th> School </th>
-		<th> Office </th>
+		<td><b> First Name: </b>&nbsp</td>
+		<td><%= @user.first_name %></td>
+	</tr>
+	<tr> 
+		<td><b> Last Name: </b></td>
+		<td><%= @user.last_name %></td>
 	</tr>
 	<tr>
-		<td><%= @user.first_name %></td>
-		<td><%= @user.last_name %></td>
+		<td><b> Email: </b></td>
 		<td><%= @user.email %></td>
+	</tr>
+	<tr>
+		<td><b> Password: </b></td>
 		<td><%= @user.password %></td>
-		<td><%= @user.office %></td>
+	</tr>
+	<tr>
+		<td><b> School: </b></td>
 		<td><%= @user.school %></td>
 	</tr>
+	<tr>
+		<td><b> Office: </b></td>
+		<td><%= @user.office %></td>
+	</tr>
 </table>
+
+<br>
+<%= link_to 'Back', users_path %>
