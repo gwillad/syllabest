@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140923194119) do
+ActiveRecord::Schema.define(version: 20140925193356) do
 
   create_table "components", force: true do |t|
     t.string   "name"
@@ -28,6 +28,9 @@ ActiveRecord::Schema.define(version: 20140923194119) do
     t.string   "course_num"
     t.string   "department"
     t.string   "term"
+    t.string   "section_num"
+    t.string   "order"
+    t.string   "course_type"
   end
 
   create_table "users", force: true do |t|
