@@ -3361,3 +3361,12 @@ ActionView::Template::Error (/opt/syllabus/chris/syllabest/app/assets/stylesheet
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.1ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (13.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSyllabusAttributes (20140925193356)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mALTER TABLE "syllabuses" ADD "section_num" varchar(255)[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "syllabuses" ADD "order" varchar(255)
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "syllabuses" ADD "course_type" varchar(255)[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140925193356"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
