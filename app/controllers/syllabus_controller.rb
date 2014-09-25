@@ -1,13 +1,17 @@
 class SyllabusController < ApplicationController
 
   def new
+    @syllabus = Syllabus.new
   end
 
   def create
-    @syllabus = Syllabus.new(params[:syllabus])
+    @syllabus = Syllabus.new(syllabus_params)
 
-    @syllabus.save
-    redirect_to @syllabus
+    if @syllabus.save
+      redirect_to @syllabus
+    else
+      render 'new'
+    end
   end
 
   def show
