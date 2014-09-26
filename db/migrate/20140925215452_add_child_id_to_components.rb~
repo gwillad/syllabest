@@ -1,0 +1,4 @@
+class AddChildIdToComponents < ActiveRecord::Migration
+  def change
+  end
+end

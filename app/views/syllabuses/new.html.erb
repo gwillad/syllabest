@@ -1,0 +1,22 @@
+<%= form_for :syllabus do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :location %><br>
+    <%= f.text_area :location %>
+  </p>
+
+  <p>
+    <%= f.label :courseno %><br>
+    <%= f.text_area :courseno %>
+  </p>
+
+  
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

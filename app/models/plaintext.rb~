@@ -1,0 +1,2 @@
+class Plaintext < ActiveRecord::Base
+end

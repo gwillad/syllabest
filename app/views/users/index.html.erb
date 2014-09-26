@@ -1,15 +1,9 @@
-<h1> Displaying all users </h1>
-<table>
-	<tr>
-		<td><b> Name </b></td>
-	</tr>
-	<% @users.each do |user| %>
-		<tr>
-			<td><%= user.first_name %> <%= user.last_name %>&nbsp</td>
-			<td><%= link_to 'View', user_path(user) %></td>
-		</tr>
-	<% end %>
-</table>
+<div id="posts"></div>
 
-<br>
-<%= link_to 'Create new user', new_user_path %>
+<script type="text/javascript">
+  $(function() {
+    // Blog is the app name
+    window.router = new Syllabest.Routers.PostsRouter({posts: <%= @users.to_json.html_safe -%>});
+    Backbone.history.start();
+  });
+</script>

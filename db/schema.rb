@@ -11,11 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140925193356) do
+ActiveRecord::Schema.define(version: 20140926175736) do
 
   create_table "components", force: true do |t|
     t.string   "name"
     t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "child_id"
+  end
+
+  create_table "plaintexts", force: true do |t|
+    t.string   "title"
+    t.string   "contents"
+    t.string   "component_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,6 +40,7 @@ ActiveRecord::Schema.define(version: 20140925193356) do
     t.string   "section_num"
     t.string   "order"
     t.string   "course_type"
+    t.integer  "owner_id"
   end
 
   create_table "users", force: true do |t|

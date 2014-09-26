@@ -6,7 +6,11 @@ Syllabest::Application.routes.draw do
   root 'users#index'
 
   resources :users do
-    resources :syllabuses
+    resources :syllabuses do
+      resources :components do
+        resources :plaintexts 
+        end
+    end
   end
 
   # Example of regular route:
