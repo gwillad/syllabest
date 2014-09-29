@@ -23,6 +23,6 @@ class ComponentsController < ApplicationController
 
 	private
 		def component_params
-			params.require(:component).permit(:name, :type, :order, plaintext_attributes: [:title, :contents, :component_id])
+			params.require(:component).permit(:name, :component_type, :order, plaintext_attributes: [:title, :contents, :component_id])
 		end
-ends
+end
