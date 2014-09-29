@@ -1,0 +1,35 @@
+<h1> Displaying syllabus data </h1>
+
+<table>
+	<tr>
+		<td><b> Title: </b>&nbsp</td>
+		<td><%= @syllabus.title %></td>
+	</tr>
+	<tr>
+		<td><b> Location: </b>&nbsp</td>
+		<td><%= @syllabus.location %></td>
+	</tr>
+	<tr>
+		<td><b> Course Number: </b>&nbsp</td>
+		<td><%= @syllabus.course_num %></td>
+	</tr>
+	<tr>
+		<td><b> Section Number: </b>&nbsp</td>
+		<td><%= @syllabus.section_num %></td>
+	</tr>
+	<tr>
+		<td><b> Course Type: </b>&nbsp</td>
+		<td><%= @syllabus.course_type %></td>
+	</tr>
+	<tr>
+		<td><b> Department: </b>&nbsp</td>
+		<td><%= @syllabus.department %></td>
+	</tr>
+	<tr>
+		<td><b> Term: </b>&nbsp</td>
+		<td><%= @syllabus.term %></td>
+	</tr>
+</table>
+
+<br>
+<%= link_to 'Back', user_syllabuses_path(@user) %>
