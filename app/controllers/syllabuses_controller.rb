@@ -1,4 +1,4 @@
-class SyllabusController < ApplicationController
+class SyllabusesController < ApplicationController
 
   def new
     @syllabus = Syllabus.new
@@ -16,6 +16,10 @@ class SyllabusController < ApplicationController
 
   def show
     @syllabus = Syllabus.find(params[:id])
+  end
+
+  def index
+    @syllabuses = Syllabus.all
   end
 
   def edit
