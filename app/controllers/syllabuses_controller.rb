@@ -1,13 +1,17 @@
-class SyllabusesController < ApplicationController
+class SyllabusController < ApplicationController
 
   def new
+    @syllabus = Syllabus.new
   end
 
   def create
-    @syllabus = Syllabus.new(params[:syllabus])
+    @syllabus = Syllabus.new(syllabus_params)
 
-    @syllabus.save
-    redirect_to @syllabus
+    if @syllabus.save
+      redirect_to @syllabus
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -26,7 +30,7 @@ class SyllabusesController < ApplicationController
   private
   def syllabus_params
     params.require(:syllabus).permit(:title, :location, 
-                                     :course_num, :department, :term)
+                                     :course_num, :section_num, :course_type, :department, :term, :order)
   end
     
 
