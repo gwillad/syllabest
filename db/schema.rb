@@ -11,11 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140926175736) do
+ActiveRecord::Schema.define(version: 20140929223144) do
 
   create_table "components", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "component_type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "child_id"
