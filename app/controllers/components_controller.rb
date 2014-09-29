@@ -52,7 +52,7 @@ ends
   
   private
   def component_params
-    params.require(:component).permit(:name, :type, :order)
+    params.require(:component).permit(:name, :component_type, :order)
   end
 end
 >>>>>>> f97220cc4e7279c0bdf314f916161fc809db4ec2
