@@ -10,7 +10,7 @@ class SyllabusesController < ApplicationController
     @syllabus = @user.syllabuses.create(syllabus_params)    
 
     if @syllabus.save
-      redirect_to @syllabus
+      render 'show'
     else
       render 'new'
     end
