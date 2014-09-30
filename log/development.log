@@ -7528,3 +7528,140 @@ Migrating to RemoveOwnerId (20140930004156)
   [1m[35m (9.4ms)[0m  commit transaction
   [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 >>>>>>> 1d4eb9402905705019f03484b40cc17e6004176b
+
+
+Started GET "/users/3" for 127.0.0.1 at 2014-09-29 21:51:30 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered users/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 198ms (Views: 152.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 21:51:31 -0400
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 21:51:41 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 21:51:46 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 38ms (Views: 36.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 21:51:48 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:24)
+  [1m[35mSyllabus Load (6.3ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+  Rendered syllabuses/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 116ms (Views: 16.8ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/users/1/syllabuses/2" for 127.0.0.1 at 2014-09-29 21:51:51 -0400
+Processing by SyllabusesController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ? AND "syllabuses"."id" = ? LIMIT 1  [["user_id", 1], ["id", "2"]]
+  Rendered syllabuses/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 19ms (Views: 15.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 21:51:54 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:24)
+  [1m[35mSyllabus Load (0.1ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+  Rendered syllabuses/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.2ms)
