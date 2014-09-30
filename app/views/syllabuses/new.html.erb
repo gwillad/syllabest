@@ -1,6 +1,6 @@
 <h1>Add a new Syllabus</h1>
 
-<%= form_for :syllabus do |f| %>
+<%= form_for :syllabus, :url user_syllabuses_path(@user) do |f| %>
   <p>
     <%= f.label :title %><br>
     <%= f.text_field :title %>

@@ -1,11 +1,13 @@
 class SyllabusesController < ApplicationController
 
+  before_action :find_user, only: [:new, :create, :show, :index]
+
   def new
     @syllabus = Syllabus.new
   end
 
   def create
-    @syllabus = Syllabus.new(syllabus_params)
+    @syllabus = @user.syllabuses.create(syllabus_params)    
 
     if @syllabus.save
       redirect_to @syllabus
@@ -15,11 +17,12 @@ class SyllabusesController < ApplicationController
   end
 
   def show
-    @syllabus = Syllabus.find(params[:id])
+    @syllabus = @user.syllabuses.find(params[:id])
   end
 
   def index
-    @syllabuses = Syllabus.all
+    @syllabuses = @user.syllabuses.all
+
   end
 
   def edit
@@ -34,10 +37,12 @@ class SyllabusesController < ApplicationController
   private
   def syllabus_params
     params.require(:syllabus).permit(:title, :location, 
-                                     :course_num, :section_num, :course_type, :department, :term, :order)
+                                     :course_num, :section_num, :course_type, :department, :term, :order, :user_id)
   end
     
-
+  def find_user
+    @user = User.find(params[:user_id])
+  end
 
 
 end

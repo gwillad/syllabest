@@ -12,7 +12,7 @@
 <td><%= syllabus.title %></td>
 <td><%= syllabus.course_num %></td>
 <td><%= syllabus.section_num %></td>
-<td><%= link_to 'View', syllabus_path(syllabus) %></td>
+<td><%= link_to 'View', user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
 </tr>
 <% end %>
 </table>

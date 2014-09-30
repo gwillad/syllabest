@@ -7361,3 +7361,32 @@ Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -040
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToSyllabuses (20140930002124)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "syllabuses" ADD "user" references[0m
+SQLite3::SQLException: near "references": syntax error: ALTER TABLE "syllabuses" ADD "user" references
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToSyllabuses (20140930002124)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "syllabuses" ADD "user_id" int[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140930002124"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveOwnerId (20140930004156)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "asyllabuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime, "course_num" varchar(255), "department" varchar(255), "term" varchar(255), "section_num" varchar(255), "order" varchar(255), "course_type" varchar(255), "owner_id" integer, "user_id" integer) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "syllabuses"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asyllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","owner_id","user_id") VALUES (1, 'a', 'aa', '2014-09-30 00:05:49.211869', '2014-09-30 00:05:49.211869', 'a', 'a', 'a', 'a', NULL, 'a', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asyllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","owner_id","user_id") VALUES (2, 'asdf', 'asdf', '2014-09-30 00:23:57.176924', '2014-09-30 00:23:57.176924', 'asdf', 'asdf', 'asdf', 'asdf', NULL, 'asdf', NULL, 1)
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "syllabuses"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "syllabuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime, "course_num" varchar(255), "department" varchar(255), "term" varchar(255), "section_num" varchar(255), "order" varchar(255), "course_type" varchar(255), "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asyllabuses"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "syllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","user_id") VALUES (1, 'a', 'aa', '2014-09-30 00:05:49.211869', '2014-09-30 00:05:49.211869', 'a', 'a', 'a', 'a', NULL, 'a', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "syllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","user_id") VALUES (2, 'asdf', 'asdf', '2014-09-30 00:23:57.176924', '2014-09-30 00:23:57.176924', 'asdf', 'asdf', 'asdf', 'asdf', NULL, 'asdf', 1)[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "asyllabuses"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140930004156"]]
+  [1m[35m (9.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
