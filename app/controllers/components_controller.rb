@@ -1,10 +1,14 @@
 class ComponentsController < ApplicationController
+
+  before_action :find_syllabus, only: [:new, :create, :index, :show]
+
   def new
     @component = Component.new
+    @component.plaintexts.build
   end
   
   def create
-    @component = Component.new(component_params)
+    @component = @syllabus.components.create(component_params)
     
     if @component.save
       redirect_to @component
@@ -14,15 +18,19 @@ class ComponentsController < ApplicationController
   end
   
   def index
-    @components = Component.all
+    @components = @syllabus.components.all
   end
   
   def show
-    @component = Component.find(params[:id])
+    @component = @syllabus.components.find(params[:id])
   end
   
   private
   def component_params
-    params.require(:component).permit(:name, :component_type, :child_id, plaintext_attributes: [:title, :contents, :component_id])
+    params.require(:component).permit(:component_type, :child_id, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id])
+  end
+
+  def find_syllabus
+    @syllabus = Syllabus.find(params[:syllabus_id])
   end
 end
