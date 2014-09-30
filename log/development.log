@@ -5202,6 +5202,7 @@ Migrating to ChangeTypeName (20140929223144)
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 
 
+<<<<<<< HEAD
 Started GET "/" for 127.0.0.1 at 2014-09-29 21:40:46 -0400
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by UsersController#index as HTML
@@ -5337,3 +5338,2193 @@ Processing by UsersController#index as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
   Rendered users/index.html.erb within layouts/application (1.5ms)
 Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+=======
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:02:22 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+LoadError (Unable to autoload constant SyllabusesController, expected /opt/syllabus/paul/syllabest/app/controllers/syllabuses_controller.rb to define it):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3810332184426395686__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.7ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:04:00 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+LoadError (Unable to autoload constant SyllabusesController, expected /opt/syllabus/paul/syllabest/app/controllers/syllabuses_controller.rb to define it):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3788120538185786582__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (42.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (62.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 19:04:07 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 201ms (Views: 193.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/syllabus.css?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/syllabus.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:04:08 -0400
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:04:12 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 22.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 19:04:14 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 46ms (Views: 44.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:04:16 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:04:24 -0400
+
+RuntimeError (Circular dependency detected while autoloading constant SyllabusesController):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:460:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__3788120538185786582__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.8ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:20:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (29.1ms)
+Completed 500 Internal Server Error in 115ms
+
+ActionView::Template::Error (No route matches {:action=>"index", :controller=>"syllabuses", :id=>"1"} missing required keys: [:user_id]):
+    28: </table>
+    29: 
+    30: <br>
+    31: <%= link_to 'Syllabuses', user_syllabuses_path %>
+    32: <%= link_to 'Back', users_path %>
+  app/views/users/show.html.erb:31:in `_app_views_users_show_html_erb__836529211518208698_32039200'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:22:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 300ms (Views: 243.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:22:44 -0400
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:22:47 -0400
+
+LoadError (Unable to autoload constant SyllabusesController, expected /opt/syllabus/paul/syllabest/app/controllers/syllabuses_controller.rb to define it):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2349412850311106768__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.4ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:22:47 -0400
+
+RuntimeError (Circular dependency detected while autoloading constant SyllabusesController):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:460:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__2349412850311106768__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.2ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 240ms (Views: 183.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:52 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:25:53 -0400
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:25:54 -0400
+
+LoadError (Unable to autoload constant SyllabusesController, expected /opt/syllabus/paul/syllabest/app/controllers/syllabuses_controller.rb to define it):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:463:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1126159649794116636__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.3ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:25:54 -0400
+
+RuntimeError (Circular dependency detected while autoloading constant SyllabusesController):
+  activesupport (4.0.0) lib/active_support/dependencies.rb:460:in `load_missing_constant'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:183:in `const_missing'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `const_get'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:226:in `block in constantize'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `each'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `inject'
+  activesupport (4.0.0) lib/active_support/inflector/methods.rb:224:in `constantize'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:534:in `get'
+  activesupport (4.0.0) lib/active_support/dependencies.rb:565:in `constantize'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:76:in `controller_reference'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:66:in `controller'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:44:in `call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:71:in `block in call'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `each'
+  actionpack (4.0.0) lib/action_dispatch/journey/router.rb:59:in `call'
+  actionpack (4.0.0) lib/action_dispatch/routing/route_set.rb:655:in `call'
+  rack (1.5.2) lib/rack/etag.rb:23:in `call'
+  rack (1.5.2) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.5.2) lib/rack/head.rb:11:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/flash.rb:241:in `call'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.5.2) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/cookies.rb:486:in `call'
+  activerecord (4.0.0) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.0.0) lib/active_record/connection_adapters/abstract/connection_pool.rb:626:in `call'
+  activerecord (4.0.0) lib/active_record/migration.rb:369:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:373:in `_run__1126159649794116636__call__callbacks'
+  activesupport (4.0.0) lib/active_support/callbacks.rb:80:in `run_callbacks'
+  actionpack (4.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/reloader.rb:64:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:26:39 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (33.3ms)
+Completed 500 Internal Server Error in 97ms
+
+ActionView::Template::Error (undefined local variable or method `new_syllabus_path' for #<#<Class:0x007f11a868cb10>:0x00000002c44788>):
+    16: <% end %>
+    17: </table>
+    18: <br>
+    19: <%= link_to 'Create new syllabus', new_syllabus_path %>
+  app/views/syllabuses/index.html.erb:19:in `_app_views_syllabuses_index_html_erb__1849741082626711455_37925420'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.2ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:28:07 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (33.4ms)
+Completed 500 Internal Server Error in 97ms
+
+ActionView::Template::Error (undefined local variable or method `new_syllabus_path' for #<#<Class:0x007f3110bc2918>:0x00000001f807e0>):
+    16: <% end %>
+    17: </table>
+    18: <br>
+    19: <!--<%= link_to 'Create new syllabus', new_syllabus_path %><-->
+  app/views/syllabuses/index.html.erb:19:in `_app_views_syllabuses_index_html_erb___1704260629573097420_31642200'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 187ms (Views: 155.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:14 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:15 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:15 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:15 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:15 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:15 -0400
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:28:16 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.3ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (9.1ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined local variable or method `new_syllabus_path' for #<#<Class:0x007f3110bc2918>:0x007f311014b570>):
+    16: <% end %>
+    17: </table>
+    18: <br>
+    19: <!--<%= link_to 'Create new syllabus', new_syllabus_path %><-->
+  app/views/syllabuses/index.html.erb:19:in `_app_views_syllabuses_index_html_erb___1704260629573097420_69924349956320'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (26.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (40.2ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:28:16 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSyllabus Load (0.2ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (7.3ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined local variable or method `new_syllabus_path' for #<#<Class:0x007f3110bc2918>:0x000000020c4480>):
+    16: <% end %>
+    17: </table>
+    18: <br>
+    19: <!--<%= link_to 'Create new syllabus', new_syllabus_path %><-->
+  app/views/syllabuses/index.html.erb:19:in `_app_views_syllabuses_index_html_erb___1704260629573097420_31642200'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.0ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:28:35 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 183ms (Views: 152.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:36 -0400
+
+
+Started GET "/users/1/" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 81ms (Views: 18.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:28:58 -0400
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:29:00 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 41.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:36:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered syllabuses/new.html.erb within layouts/application (105.6ms)
+Completed 500 Internal Server Error in 171ms
+
+ActionView::Template::Error (undefined local variable or method `syllabuses_path' for #<#<Class:0x0000000307c210>:0x000000032b8448>):
+    37:   </p>
+    38: <% end %>
+    39: 
+    40: <%= link_to 'Back', syllabuses_path %>
+  app/views/syllabuses/new.html.erb:40:in `_app_views_syllabuses_new_html_erb___1954196982498421925_34830240'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.1ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:38:10 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 241ms (Views: 184.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:38:11 -0400
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:39:17 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 218ms (Views: 182.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered syllabuses/new.html.erb within layouts/application (102.7ms)
+Completed 200 OK in 122ms (Views: 119.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:39:22 -0400
+
+
+Started GET "/users//syllabuses" for 127.0.0.1 at 2014-09-29 19:39:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"syllabuses"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "syllabuses"]]
+Completed 404 Not Found in 10ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=syllabuses):
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.6ms)
+
+
+Started GET "/users//syllabuses" for 127.0.0.1 at 2014-09-29 19:39:28 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"syllabuses"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "syllabuses"]]
+Completed 404 Not Found in 2ms
+
+ActiveRecord::RecordNotFound (Couldn't find User with id=syllabuses):
+  app/controllers/users_controller.rb:21:in `show'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:40:44 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 243ms (Views: 186.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:40:45 -0400
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:40:46 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSyllabus Load (0.3ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 52ms (Views: 42.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:40:56 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:41:05 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSyllabus Load (0.2ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:41:08 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant SyllabusesController::Users):
+  app/controllers/syllabuses_controller.rb:5:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:43:33 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant SyllabusesController::Users):
+  app/controllers/syllabuses_controller.rb:5:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:45:13 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 500 Internal Server Error in 3ms
+
+NameError (uninitialized constant SyllabusesController::Users):
+  app/controllers/syllabuses_controller.rb:5:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (20.0ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.3ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:45:18 -0400
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:45:20 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant SyllabusesController::Users):
+  app/controllers/syllabuses_controller.rb:5:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.9ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (19.7ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:45:33 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered syllabuses/new.html.erb within layouts/application (117.0ms)
+Completed 500 Internal Server Error in 127ms
+
+ActionView::Template::Error (undefined local variable or method `syllabuses_path' for #<#<Class:0x007ff9ac3b0698>:0x007ff9ac3af978>):
+    37:   </p>
+    38: <% end %>
+    39: 
+    40: <%= link_to 'Back', syllabuses_path %>
+  app/views/syllabuses/new.html.erb:40:in `_app_views_syllabuses_new_html_erb___667474164230504600_70355156562780'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.1ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:49:10 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered syllabuses/new.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:49:10 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:49:10 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:49:11 -0400
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 19:49:13 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (26.4ms)
+Completed 200 OK in 48ms (Views: 42.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:49:17 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:49:18 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSyllabus Load (0.2ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 19:49:28 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 22ms (Views: 20.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-29 19:49:29 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (7.6ms)
+  Rendered users/new.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 32ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 19:49:32 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 43ms (Views: 41.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2014-09-29 19:49:34 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  Rendered users/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 21ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/syllabuses" for 127.0.0.1 at 2014-09-29 19:49:35 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mSyllabus Load (0.2ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2/syllabuses" for 127.0.0.1 at 2014-09-29 19:49:59 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mSyllabus Load (0.4ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2/syllabuses" for 127.0.0.1 at 2014-09-29 19:52:13 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mSyllabus Load (0.3ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (32.7ms)
+Completed 500 Internal Server Error in 37ms
+
+ActionView::Template::Error (undefined local variable or method `new_syllabus_path' for #<#<Class:0x007ff9ac3b0698>:0x007ff9b8af05c8>):
+    1: <h1> Displaying All Syllabi </h1>
+    2: <br><%= link_to 'New', new_syllabus_path =%></br>
+    3: <table>
+    4: <tr>
+    5: <th>Title</th>
+  app/views/syllabuses/index.html.erb:2:in `_app_views_syllabuses_index_html_erb___2942107684447444875_70355257741480'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.3ms)
+
+
+Started GET "/users/2/syllabuses" for 127.0.0.1 at 2014-09-29 19:52:13 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (7.8ms)
+Completed 500 Internal Server Error in 12ms
+
+ActionView::Template::Error (undefined local variable or method `new_syllabus_path' for #<#<Class:0x007ff9ac3b0698>:0x007ff9b8ac1598>):
+    1: <h1> Displaying All Syllabi </h1>
+    2: <br><%= link_to 'New', new_syllabus_path =%></br>
+    3: <table>
+    4: <tr>
+    5: <th>Title</th>
+  app/views/syllabuses/index.html.erb:2:in `_app_views_syllabuses_index_html_erb___2942107684447444875_70355260932160'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.4ms)
+
+
+Started GET "/users/2/syllabuses" for 127.0.0.1 at 2014-09-29 19:53:26 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"2"}
+  [1m[36mSyllabus Load (0.2ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:53:27 -0400
+
+
+Started GET "/users/2/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:53:29 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendered syllabuses/new.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 19:53:31 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2014-09-29 19:53:34 -0400
+Processing by UsersController#new as HTML
+  Rendered users/_form.html.erb (6.0ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 45ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2014-09-29 19:53:35 -0400
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2014-09-29 19:53:36 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered users/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:53:38 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mSyllabus Load (0.2ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses"[0m
+  Rendered syllabuses/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:53:39 -0400
+Processing by SyllabusesController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered syllabuses/new.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 42ms (Views: 41.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/1/syllabuses/new" for 127.0.0.1 at 2014-09-29 19:54:05 -0400
+
+ActionController::RoutingError (No route matches [POST] "/users/1/syllabuses/new"):
+  actionpack (4.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `block in call'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `block in tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:25:in `tagged'
+  activesupport (4.0.0) lib/active_support/tagged_logging.rb:67:in `tagged'
+  railties (4.0.0) lib/rails/rack/logger.rb:21:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.0.0) lib/active_support/cache/strategy/local_cache.rb:83:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.0.0) lib/action_dispatch/middleware/static.rb:64:in `call'
+  railties (4.0.0) lib/rails/engine.rb:511:in `call'
+  railties (4.0.0) lib/rails/application.rb:97:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /usr/local/rvm/rubies/ruby-1.9.3-p448/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/routes/_table.html.erb (5.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (41.4ms)
+
+
+Started GET "/users/1/syllabuses" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+Processing by SyllabusesController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[35mSyllabus Load (0.3ms)[0m  SELECT "syllabuses".* FROM "syllabuses"
+  Rendered syllabuses/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 39ms (Views: 37.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-09-29 19:55:50 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToSyllabuses (20140930002124)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "syllabuses" ADD "user" references[0m
+SQLite3::SQLException: near "references": syntax error: ALTER TABLE "syllabuses" ADD "user" references
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUserIdToSyllabuses (20140930002124)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "syllabuses" ADD "user_id" int[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140930002124"]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveOwnerId (20140930004156)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "asyllabuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime, "course_num" varchar(255), "department" varchar(255), "term" varchar(255), "section_num" varchar(255), "order" varchar(255), "course_type" varchar(255), "owner_id" integer, "user_id" integer) [0m
+  [1m[35m (0.2ms)[0m  SELECT * FROM "syllabuses"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asyllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","owner_id","user_id") VALUES (1, 'a', 'aa', '2014-09-30 00:05:49.211869', '2014-09-30 00:05:49.211869', 'a', 'a', 'a', 'a', NULL, 'a', NULL, NULL)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asyllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","owner_id","user_id") VALUES (2, 'asdf', 'asdf', '2014-09-30 00:23:57.176924', '2014-09-30 00:23:57.176924', 'asdf', 'asdf', 'asdf', 'asdf', NULL, 'asdf', NULL, 1)
+  [1m[36m (0.5ms)[0m  [1mDROP TABLE "syllabuses"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "syllabuses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "location" varchar(255), "created_at" datetime, "updated_at" datetime, "course_num" varchar(255), "department" varchar(255), "term" varchar(255), "section_num" varchar(255), "order" varchar(255), "course_type" varchar(255), "user_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "asyllabuses"[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "syllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","user_id") VALUES (1, 'a', 'aa', '2014-09-30 00:05:49.211869', '2014-09-30 00:05:49.211869', 'a', 'a', 'a', 'a', NULL, 'a', NULL)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "syllabuses" ("id","title","location","created_at","updated_at","course_num","department","term","section_num","order","course_type","user_id") VALUES (2, 'asdf', 'asdf', '2014-09-30 00:23:57.176924', '2014-09-30 00:23:57.176924', 'asdf', 'asdf', 'asdf', 'asdf', NULL, 'asdf', 1)[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "asyllabuses"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140930004156"]]
+  [1m[35m (9.4ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+>>>>>>> 1d4eb9402905705019f03484b40cc17e6004176b
