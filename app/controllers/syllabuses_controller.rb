@@ -37,7 +37,8 @@ class SyllabusesController < ApplicationController
   private
   def syllabus_params
     params.require(:syllabus).permit(:title, :location, 
-                                     :course_num, :section_num, :course_type, :department, :term, :order, :user_id)
+                                     :course_num, :section_num, :course_type, :department, :term, :order, :user_id, 
+                                     component_attributes: [:name, :component_type, :child_id])
   end
     
   def find_user
