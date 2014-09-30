@@ -27,7 +27,7 @@ class ComponentsController < ApplicationController
   
   private
   def component_params
-    params.require(:component).permit(:name, :component_type, :child_id, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id])
+    params.require(:component).permit(:component_type, :child_id, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id])
   end
 
   def find_syllabus
