@@ -7665,3 +7665,10 @@ DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a rel
   [1m[35mSyllabus Load (0.1ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
   Rendered syllabuses/index.html.erb within layouts/application (0.6ms)
 Completed 200 OK in 37ms (Views: 34.1ms | ActiveRecord: 0.2ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddSyllabusIdToComponent (20140930191442)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mALTER TABLE "components" ADD "syllabus_id" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140930191442"]]
+  [1m[36m (8.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"

@@ -1,6 +1,7 @@
 class ComponentsController < ApplicationController
   def new
     @component = Component.new
+    @component.plaintexts.build
   end
   
   def create
@@ -23,6 +24,10 @@ class ComponentsController < ApplicationController
   
   private
   def component_params
-    params.require(:component).permit(:name, :component_type, :child_id, plaintext_attributes: [:title, :contents, :component_id])
+    params.require(:component).permit(:name, :component_type, :child_id, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id])
+  end
+
+  def find_syllabus
+    @syllabus = Syllabus.find(params[:syllabus_id])
   end
 end
