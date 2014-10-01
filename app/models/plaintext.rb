@@ -1,3 +1,3 @@
 class Plaintext < ActiveRecord::Base
-  belongs_to :components
+  belongs_to :component
 end

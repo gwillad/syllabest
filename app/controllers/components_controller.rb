@@ -4,14 +4,14 @@ class ComponentsController < ApplicationController
 
   def new
     @component = Component.new
-    @component.plaintexts.build
+    @component.create_plaintext
   end
   
   def create
     @component = @syllabus.components.create(component_params)
     
     if @component.save
-      redirect_to @component
+      render 'show'
     else
       render 'new'
     end
