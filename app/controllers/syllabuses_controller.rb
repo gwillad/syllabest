@@ -1,6 +1,6 @@
 class SyllabusesController < ApplicationController
 
-  before_action :find_user, only: [:new, :create, :show, :index. :edit]
+  before_action :find_user, only: [:new, :create, :show, :index, :edit]
 
   def new
     @syllabus = Syllabus.new
