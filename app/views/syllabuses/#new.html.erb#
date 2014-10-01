@@ -37,6 +37,8 @@
     <%= ff.label :name %>
     <%= ff.text_field :name %>
   </div>
+
+  <
 <% end %>
  
   <p>

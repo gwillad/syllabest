@@ -9079,3 +9079,25 @@ Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-01 13:45:41 -0400
 
 
 Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-01 13:45:41 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to RemoveComponentName (20140930192646)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (17.5ms)[0m  [1mCREATE TEMPORARY TABLE "acomponents" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "component_type" varchar(255), "created_at" datetime, "updated_at" datetime, "child_id" integer, "syllabus_id" integer) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "components"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "components"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "components" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "component_type" varchar(255), "created_at" datetime, "updated_at" datetime, "child_id" integer, "syllabus_id" integer) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "acomponents"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "acomponents"
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20140930192646"]]
+  [1m[35m (1.1ms)[0m  commit transaction
+Migrating to ChangePlaintextContentsToText (20140930192941)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  CREATE TEMPORARY TABLE "aplaintexts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "contents" varchar(255), "component_id" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.1ms)[0m  [1mSELECT * FROM "plaintexts"[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "plaintexts"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "plaintexts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar(255), "contents" text(255), "component_id" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "aplaintexts"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "aplaintexts"[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20140930192941"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
