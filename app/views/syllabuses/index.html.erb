@@ -1,23 +1,30 @@
-<h1> Displaying All Syllabi </h1>
-<%= link_to 'Add New Syllabus', new_user_syllabus_path =%>
-<br><br>
-<table>
-<tr>
-<th>Title</th>
-<th>Course No.</th>
-<th>Section No.</th>
-<th>Term</th>
-</tr>
-<% @syllabuses.each do |syllabus| %>
-<tr>
-<td><%= syllabus.title %></td>
-<td><%= syllabus.course_num %></td>
-<td><%= syllabus.section_num %></td>
-<td><%= link_to 'View', user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
-<td><%= link_to 'Edit', edit_user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
-</tr>
-<% end %>
-</table>
-<br>
-<%= link_to 'Back', user_path(@user) %>
-
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Displaying All Syllabi</h1>
+			<table class="table">
+				<tr>
+					<th>Title</th>
+					<th>Course No.</th>
+					<th>Section No.</th>
+					<th>Term</th>
+				</tr>
+				<% @syllabuses.each do |syllabus| %>
+					<tr class="success">
+						<td><%= syllabus.title %></td>
+						<td><%= syllabus.course_num %></td>
+						<td><%= syllabus.section_num %></td>
+						<td><%= syllabus.term %></td>
+						<td><%= link_to 'View', user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
+					<td><%= link_to 'Edit', edit_user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
+					</tr>
+				<% end %>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<%= link_to 'Back', user_path(@user) %>
+		</div>
+	</div>
+</div>
