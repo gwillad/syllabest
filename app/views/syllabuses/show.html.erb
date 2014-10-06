@@ -31,5 +31,8 @@
 	</tr>
 </table>
 
+<br>
+<%= link_to 'New Component', new_user_syllabus_component_path({:syllabus_id => @syllabus[:id]}) %>
+<br><br>
 <%= link_to 'Edit', edit_user_syllabus_path(@syllabus[:user_id], @syllabus[:id]) %>
 | <%= link_to 'Back', user_syllabuses_path(@user) %>
