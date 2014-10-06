@@ -1,0 +1,25 @@
+<h1>Add a new Component</h1>
+
+<%= form_for :component, url: user_syllabus_path(@syllabus) do |f| %>
+  <p>
+    <%= f.label :component_type %><br>
+    <%= f.text_field :component_type %>
+  </p>
+
+<%= f.fields_for :plaintext do |ff| %>
+  <div>
+    <%= ff.label :title %>
+    <%= ff.text_field :title %>
+  </div>
+  <div>
+    <%= ff.label :contents %>
+    <%= ff.text_area :contents %>
+  </div>
+<% end %>
+ 
+<p>
+  <%= f.submit %>
+</p>
+<% end %>
+
+<%= link_to 'Back', user_syllabus_path(@syllabus) %>
