@@ -5,15 +5,21 @@
 			<table class="table">
 				<tr>
 					<th>Title</th>
+					<th>Department</th>
 					<th>Course No.</th>
 					<th>Section No.</th>
+					<th>Course Type</th>
+					<th>Location</th>
 					<th>Term</th>
 				</tr>
 				<% @syllabuses.each do |syllabus| %>
-					<tr class="success">
+					<tr class="active">
 						<td><%= syllabus.title %></td>
+						<td><%= syllabus.department %></td>
 						<td><%= syllabus.course_num %></td>
 						<td><%= syllabus.section_num %></td>
+						<td><%= syllabus.course_type %></td>
+						<td><%= syllabus.location %></td>
 						<td><%= syllabus.term %></td>
 						<td><%= link_to 'View', user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
 					<td><%= link_to 'Edit', edit_user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
