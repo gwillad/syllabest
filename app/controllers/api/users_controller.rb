@@ -2,22 +2,22 @@ class UsersController < ApplicationController
   respond_to :json 
 
   def index
-    respond_with Entry.all
+    respond_with User.all
   end
   
   def show
-    respond_with Entry.find(params[:id])
+    respond_with User.find(params[:id])
   end
 
   def create
-    respond_with Entry.create(params[:entry])
+    respond_with User.create(params[:user])
   end
 
   def update
-    respond_with Entry.update(params[:id], params[:entry])
+    respond_with User.update(params[:id], params[:user])
   end
 
   def destroy
-    respond_with Entry.destroy(params[:id])
+    respond_with User.destroy(params[:id])
   end
 end
