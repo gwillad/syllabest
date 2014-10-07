@@ -6,7 +6,9 @@ Syllabest::Application.routes.draw do
   root 'users#index'
 
   scope "api" do 
-    resources :users
+    resources :users do
+      resources :syllabuses 
+      end
   end
 
   # resources :users do
