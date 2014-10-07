@@ -1,0 +1,20 @@
+<h1>make a new component</h1>
+
+<%= form_for :component, url: user_syllabus_components_path({:user_id => @syllabus[:user_id]}) do |f| %>
+<%= fields_for @component.plaintext, url: user_syllabus_component_plaintext_path({:component_id => :id, :id => @component.plaintext[:id]}) do |ff| %>
+<p>
+  <%= ff.label :title %>
+  <%= ff.text_field :title %>
+</p>
+<p>
+  <%= ff.label :contents %>
+  <%= ff.text_area :contents %>
+</p>
+
+<p>
+
+</p>
+<% end %>
+  <%= f.submit %>
+<% end %>
+
