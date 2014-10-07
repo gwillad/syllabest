@@ -22,7 +22,9 @@
 						<td><%= syllabus.location %></td>
 						<td><%= syllabus.term %></td>
 						<td><%= link_to 'View', user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
-					<td><%= link_to 'Edit', edit_user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
+						<td><%= link_to 'Edit', edit_user_syllabus_path(syllabus[:user_id], syllabus[:id]) %></td>
+						<td><%= link_to 'Delete', user_syllabus_path(syllabus[:user_id], syllabus[:id]), method: :delete, data: 
+							{ confirm: 'Are you sure?' } %></td>
 					</tr>
 				<% end %>
 			</table>
@@ -32,6 +34,6 @@
 		<div class="col-md-12">
 			<%= link_to 'New Syllabus', new_user_syllabus_path(@user) %> |
 			<%= link_to 'Back', user_path(@user) %>
-		</div>
+		</div> 
 	</div>
 </div>
