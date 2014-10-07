@@ -33,6 +33,13 @@ class SyllabusesController < ApplicationController
   end
   
   def update
+    @syllabus = @user.syllabuses.find(params[:id])
+
+    if @syllabus.update(params[:id])
+      render 'show'
+    else
+      render 'edit'
+    end
   end
 
   def destroy
