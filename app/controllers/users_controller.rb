@@ -1,29 +1,23 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
+  respond_to :json 
+
+  def index
+    respond_with User.all
+  end
+  
+  def show
+    respond_with User.find(params[:id])
   end
 
   def create
-    @user = User.new(user_params)
-
-    if @user.save
-      redirect_to @user
-    else
-      render 'new'
-    end
+    respond_with User.create(params[:user])
   end
 
-  def index
-    @users = User.all
+  def update
+    respond_with User.update(params[:id], params[:user])
   end
 
-  def show
-    @user = User.find(params[:id])
-  end
-
-
-  private
-  def user_params
-    params.require(:user).permit(:email, :password, :first_name, :last_name, :office, :school)
+  def destroy
+    respond_with User.destroy(params[:id])
   end
 end
