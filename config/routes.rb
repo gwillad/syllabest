@@ -7,17 +7,15 @@ Syllabest::Application.routes.draw do
 
   scope "api" do 
     resources :users do
-      resources :syllabuses 
+      resources :syllabuses do
+        resources :components do 
+          resources :plaintexts
+#          resources :calendars
+#          resources :tables
+        end
       end
+    end
   end
-
-  # resources :users do
-  #   resources :syllabuses do
-  #     resources :components do
-  #       resources :plaintexts 
-  #       end
-  #   end
-  # end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
