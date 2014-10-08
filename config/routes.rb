@@ -8,6 +8,7 @@ Syllabest::Application.routes.draw do
   scope "api" do 
     resources :users do
       resources :syllabuses do
+        resources :students
         resources :components do 
           resources :plaintexts
 #          resources :calendars
