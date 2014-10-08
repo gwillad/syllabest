@@ -2,25 +2,24 @@ class PlaintextsController < ApplicationController
 
   before_action :find_component, only: [:new, :create, :index, :show]
 
-  def new
-    @plaintext = Plaintext.new
+   def index
+    respond_with @component.plaintexts.all
+  end
+
+  def show
+    respond_with Plaintext.find(params[:id])
+  end
+  
+  def update
+    respond_with Plaintext.update(params[:id], params[:plaintext])
   end
   
   def create
-    @plaintext = @component.create(plaintext_params)
-    
-    if @plaintext.save
-      render 'show'
-    else
-      render 'new'
+    respond_with Plaintext.create(params[:plaintext])
   end
   
-  def index
-    @plaintexts = @component.plaintexts.all
-  end
-  
-  def show
-    @plaintext = @component.plaintexts.find(params[:id])
+  def destroy
+    respond_with Plaintext.destroy(params[:id])
   end
   
   private
