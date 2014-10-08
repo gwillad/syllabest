@@ -32247,3 +32247,35 @@ Started GET "/api/users.json" for 127.0.0.1 at 2014-10-07 15:40:27 -0400
 Processing by UsersController#index as JSON
   [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
 Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/api/users.json" for 127.0.0.1 at 2014-10-08 19:02:13 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 109ms (Views: 43.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/api/users/1/syllabuses.json" for 127.0.0.1 at 2014-10-08 19:02:26 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/adam/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (5.5ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 116ms (Views: 1.1ms | ActiveRecord: 6.3ms)
+
+
+Started GET "/api/users/1/syllabuses/1/components.json" for 127.0.0.1 at 2014-10-08 19:02:42 -0400
+Processing by ComponentsController#index as JSON
+  Parameters: {"user_id"=>"1", "syllabus_id"=>"1"}
+  [1m[36mSyllabus Load (0.4ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/adam/syllabest/app/controllers/components_controller.rb:7)
+  [1m[35mComponent Load (0.2ms)[0m  SELECT "components".* FROM "components" WHERE "components"."syllabus_id" = ?  [["syllabus_id", 1]]
+Completed 200 OK in 19ms (Views: 0.1ms | ActiveRecord: 0.8ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateStudents (20141008230349)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (4.4ms)[0m  [1mCREATE TABLE "students" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35mSQL (1.9ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20141008230349"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
