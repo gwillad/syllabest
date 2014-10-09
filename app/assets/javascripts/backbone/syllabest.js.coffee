@@ -9,3 +9,8 @@ window.Syllabest =
   Collections: {}
   Routers: {}
   Views: {}
+  init: ->
+    new Syllabest.Routers.UsersRouter()
+    Backbone.history.start()
+
+$(document).ready -> Syllabest.init()
