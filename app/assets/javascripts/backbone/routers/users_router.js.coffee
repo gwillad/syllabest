@@ -1,31 +1,16 @@
 class Syllabest.Routers.UsersRouter extends Backbone.Router
-  initialize: (options) ->
-    @users = new Syllabest.Collections.UsersCollection()
-    @users.reset options.users
-
   routes:
-    "new"      : "newUser"
-    "index"    : "index"
-    ":id/edit" : "edit"
-    ":id"      : "show"
-    ".*"        : "index"
-
-  newUser: ->
-    @view = new Syllabest.Views.Users.NewView(collection: @users)
-    $("#users").html(@view.render().el)
+    '': 'index'
+    'users/:id' : 'show'
+  
+  initialize: (options) ->
+    @collection = new Syllabest.Collections.UsersCollection
+    @collection.reset options.users
 
   index: ->
-    @view = new Syllabest.Views.Users.IndexView(users: @users)
-    $("#users").html(@view.render().el)
+    view = new Syllabest.Views.Users.IndexView(collection: @collection)
+    $('#container').html(view.render().el)
 
   show: (id) ->
-    user = @users.get(id)
+    alert "User #{id}"
 
-    @view = new Syllabest.Views.Users.ShowView(model: user)
-    $("#users").html(@view.render().el)
-
-  edit: (id) ->
-    user = @users.get(id)
-
-    @view = new Syllabest.Views.Users.EditView(model: user)
-    $("#users").html(@view.render().el)
