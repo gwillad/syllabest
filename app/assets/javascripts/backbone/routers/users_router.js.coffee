@@ -4,8 +4,8 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     'users/:id' : 'show'
   
   initialize: (options) ->
-    @collection = new Syllabest.Collections.UsersCollection
-    @collection.reset options.users
+    @collection = new Syllabest.Collections.UsersCollection()
+    @collection.fetch()
 
   index: ->
     view = new Syllabest.Views.Users.IndexView(collection: @collection)
