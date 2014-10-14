@@ -1,3 +1,7 @@
 <h1>Syllabest</h1>
 
-<%= users.length %>
+<ul>
+<% for(var i=0; i < users.models.length; i++) { %>
+   <li><%= users.models[i].get("first_name") %></li>
+<% } %>
+</ul>

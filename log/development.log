@@ -34195,3 +34195,1486 @@ Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:11:04 -0400
 Processing by UsersController#index as JSON
   [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
 Completed 200 OK in 86ms (Views: 23.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:18:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 423ms (Views: 401.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:02 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:18:03 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 66ms (Views: 25.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 283ms (Views: 282.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:18:37 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:18:50 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 310ms (Views: 308.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:18:51 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:19:02 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 292ms (Views: 291.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:19:03 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 286ms (Views: 285.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:19:15 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 306ms (Views: 305.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:19:30 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 293ms (Views: 292.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:19:51 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.6ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 27ms (Views: 1.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 262ms (Views: 260.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:20:02 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 288ms (Views: 287.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:32 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:20:33 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:21:00 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 295ms (Views: 294.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:21:01 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 4ms (Views: 1.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 290ms (Views: 289.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:21:07 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 306ms (Views: 305.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:21:54 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:21:55 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 287ms (Views: 286.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-14 15:22:04 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-14 15:22:05 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.2ms)
