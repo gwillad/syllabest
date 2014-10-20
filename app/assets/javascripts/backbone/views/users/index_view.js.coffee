@@ -17,7 +17,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
   addUserForm: (event) ->
     event.preventDefault()
     view = new Syllabest.Views.Users.New
-    $('#users').append(view.render().el)
+    $('#users').after(view.render().el)
 
   appendUser: (user) ->
     view = new Syllabest.Views.User(model: user)
