@@ -19,11 +19,13 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     event.preventDefault()
     view = new Syllabest.Views.Users.New
     $('#users').after(view.render().el)
+    $('#users').hide()
     $('#add_user_form').hide()
 
   removeUserForm: (event) ->
     event.preventDefault()
     $('#new_user').remove()
+    $('#users').show()
     $('#add_user_form').show()
 
   appendUser: (user) ->
@@ -42,6 +44,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     @collection.create attributes
     $('#new_user').remove()
     $('#add_user_form').show()
+    $('#users').show()
 
  
     
