@@ -1,9 +1,27 @@
-<form id="new_user">
-      <input type="text" label="first_name" id="new_user_fname">
-      <input type="text" name="last_name" id="new_user_lname">
-      <input type="text" name="email" id="new_user_email">
-      <input type="text" name="password" id="new_user_password">
-      <input type="text" name="school" id="new_user_school">
-      <input type="text" name="office" id="new_user_office">
-      <input type="submit" value="Create">
+<form role="form" id="new_user">
+	<div class="form-group">
+		<label for="new_user_fname">First Name</label>
+		<input type="text" class="form-control" id="new_user_fname" placeholder="ex: Joel">
+	</div>
+	<div class="form-group">
+		<label for="new_user_lname">Last Name</label>
+		<input type="text" class="form-control" id="new_user_lname" placeholder="ex: Winkelman">
+	</div>
+	<div class="form-group">
+		<label for="new_user_email">Email</label>
+		<input type="text" class="form-control" id="new_user_email" placeholder="ex: jwinkelm@hamilton.edu">
+	</div>
+	<div class="form-group">
+		<label for="new_user_password">Password</label>
+		<input type="password" class="form-control" id="new_user_password" placeholder="ex: abc123">
+	</div>
+	<div class="form-group">
+		<label for="new_user_school">School</label>
+		<input type="text" class="form-control" id="new_user_school" placeholder="ex: Hamilton College">
+	</div>
+	<div class="form-group">
+		<label for="new_user_office">Office</label>
+		<input type="text" class="form-control" id="new_user_office" placeholder="ex: KJ 137">
+	</div>
+	<button type="submit" class="btn btn-default">Submit</button>
 </form> 
