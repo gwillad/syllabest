@@ -1,9 +1,6 @@
 <h1>Syllabest</h1>
 
-<table>
-<% for(var i=0; i < users.models.length; i++) { %>
-	<tr>
-   		<td><%= users.models[i].get("first_name") %> <%= users.models[i].get("last_name") %></td>
-   	</tr>
-<% } %>
-</table>
+
+<ul id="users"></ul>
+<button type="button" id="add_user_form">Add User</button>
+

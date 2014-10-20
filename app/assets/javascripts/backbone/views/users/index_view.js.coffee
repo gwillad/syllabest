@@ -1,11 +1,42 @@
 class Syllabest.Views.Users.IndexView extends Backbone.View
   template: JST["backbone/templates/users/index"]
 
+  events:
+    'submit #new_user': 'createUser'
+    'click #add_user_form': 'addUserForm'
+
   initialize: ->
     @collection.on('reset', @render, this)
+    @collection.on('add',@appendUser,this)
 
   render: ->
-    $(@el).html(@template(users: @collection))
+    $(@el).html(@template())
+    @collection.each(@appendUser)
     this
+
+  addUserForm: (event) ->
+    event.preventDefault()
+    view = new Syllabest.Views.Users.New
+    $('#users').append(view.render().el)
+
+  appendUser: (user) ->
+    view = new Syllabest.Views.User(model: user)
+    $('#users').append(view.render().el)
+
+  createUser: (event) ->
+    event.preventDefault()
+    attributes = 
+      first_name: $('#new_user_fname').val()
+      last_name:  $('#new_user_lname').val()
+      email:      $('#new_user_email').val()
+      password:   $('#new_user_password').val()
+      school:     $('#new_user_school').val()
+      office:     $('#new_user_office').val()
+    @collection.create attributes
+    $('#new_user').remove()
+
+ 
+    
+      
 
  

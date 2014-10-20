@@ -1,0 +1,3 @@
+<%= user.get("first_name") + ' ' + user.get("last_name")%>
+
+<div data-id="1">
