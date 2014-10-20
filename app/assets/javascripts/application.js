@@ -19,3 +19,4 @@
 //= require backbone_datalink
 //= require backbone/syllabest
 //= require_tree .
+//= require bootstrap-sprockets
