@@ -4,6 +4,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
   events:
     'submit #new_user': 'createUser'
     'click #add_user_form': 'addUserForm'
+    'click #cancel_form': 'removeUserForm'
 
   initialize: ->
     @collection.on('reset', @render, this)
@@ -18,6 +19,10 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     event.preventDefault()
     view = new Syllabest.Views.Users.New
     $('#users').after(view.render().el)
+
+  removeUserForm: (event) ->
+    event.preventDefault()
+    $('#new_user').remove()
 
   appendUser: (user) ->
     view = new Syllabest.Views.User(model: user)
