@@ -7,9 +7,22 @@ body {
 	font-size: 16px;
 }
 
-h1 {
+#syllabest {
 	font-family: "Courier New";
 	color: #707070;
+	padding-top: 15px;
+}
+
+#best {
+	color: #6CBC51;
+}
+
+#line {
+	background-color: #6CBC51;
+	width: 98%;
+	height: 1px;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
 
 .table>tbody>tr>th {
@@ -40,22 +53,15 @@ h1 {
 	border-color: #D9534F;
 }
 
-label {
+#submit_form, #submit_syllabus, #cancel_form, #cancel_syllabus {
+	margin-top: 10px;
+}
+
+#new_user label {
 	color: #6CBC51;
+	margin-left: -50px;
 }
 
-#syllabest {
-	padding-top: 15px;
-}
-
-#best {
+#new_syllabus label {
 	color: #6CBC51;
-}
-
-#line {
-	background-color: #6CBC51;
-	width: 98%;
-	height: 1px;
-	margin-bottom: 40px;
-	margin-top: 40px;
 }
