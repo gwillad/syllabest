@@ -1,7 +1,31 @@
-<ul id="user_profile">
-  <li><%= user.get("first_name") + ' ' + user.get("last_name")%></li>
-  <li><%= user.get("school") %></li>
-  <li><%= user.get("office") %></li>
-</ul>
-
-<button class="btn btn-default" id="add_syllabus">Add Syllabus</button>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<h1>Sylla<span style="color:#6CBC51">best</span>.</h1>
+		</div>	
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<table class="table table-hover" id="users">
+				<tr class="active">
+					<th>First Name</th>
+					<th>Last Name</th>
+					<th>School</th>
+					<th>Office</th>
+					<th></th>
+				</tr>
+				<tr id="user_profile">
+					<td><%= user.get("first_name") %></td>
+					<td><%= user.get("last_name") %></td>
+					<td><%= user.get("school") %></td>
+					<td><%= user.get("office") %></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<button type="button" class="btn btn-default" id="add_syllabus">Add Syllabus</button>
+		</div>
+	</div>
+</div>
