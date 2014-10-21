@@ -48,5 +48,5 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     $('#new_user').remove()
     $('#add_user_form').show()
     $('#users').show()
-    
+
       
