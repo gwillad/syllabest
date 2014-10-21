@@ -4,6 +4,7 @@
 
 body {
 	color: #707070;
+	font-size: 16px;
 }
 
 h1 {
@@ -11,8 +12,14 @@ h1 {
 	color: #707070;
 }
 
-th {
+.table>tbody>tr>th {
+	border-top: none;
+	padding-bottom: 20px;
 	color: #6CBC51;
+}
+
+.table>tbody>tr>td {
+	border-top: none;
 }
 
 .btn {
@@ -35,4 +42,20 @@ th {
 
 label {
 	color: #6CBC51;
+}
+
+#syllabest {
+	padding-top: 15px;
+}
+
+#best {
+	color: #6CBC51;
+}
+
+#line {
+	background-color: #6CBC51;
+	width: 98%;
+	height: 1px;
+	margin-bottom: 40px;
+	margin-top: 40px;
 }
