@@ -6,6 +6,9 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     'click #add_user_form': 'addUserForm'
     'click #cancel_form': 'removeUserForm'
 
+  testAlert: ->
+    alert "working!"
+
   initialize: ->
     @collection.on('reset', @render, this)
     @collection.on('add',@appendUser,this)
@@ -45,9 +48,5 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     $('#new_user').remove()
     $('#add_user_form').show()
     $('#users').show()
-
- 
     
       
-
- 

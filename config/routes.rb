@@ -19,6 +19,8 @@ Syllabest::Application.routes.draw do
     end
   end
 
+  get '*path', to: 'main#index'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

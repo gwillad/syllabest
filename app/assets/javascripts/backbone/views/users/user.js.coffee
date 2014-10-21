@@ -3,6 +3,12 @@ class Syllabest.Views.User extends Backbone.View
 
   tagName: 'tr'
 
+  events: 
+  	'click #view_user': 'showUser'
+
+  showUser: ->
+  	Backbone.history.navigate("users/#{@model.get("id")}", true)
+
   render: ->
     $(@el).attr("user-id", @model["id"])
     $(@el).html(@template(user: @model))
