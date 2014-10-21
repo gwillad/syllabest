@@ -12,7 +12,10 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     $('#container').html(view.render().el)
 
   show: (id) ->
-    @syllabi = new Syllabest.Collections.SyllabusesCollection()
+    hash = 
+      id = id
+    @syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
+    @syllabi.fetch()
     @model = @collection.get(id)
     view = new Syllabest.Views.Users.ShowView(model: @model, collection: @syllabi)
     $('#container').html(view.render().el)

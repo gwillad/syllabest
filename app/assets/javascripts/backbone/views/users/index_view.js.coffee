@@ -14,6 +14,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     @collection.on('add',@appendUser,this)
 
   render: ->
+    console.log @collection.toJSON()
     $(@el).html(@template())
     @collection.each(@appendUser)
     this

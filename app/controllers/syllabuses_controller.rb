@@ -16,6 +16,7 @@ class SyllabusesController < ApplicationController
   end
   
   def create
+    params.permit!
     respond_with Syllabus.create(params[:syllabus])
   end
   
