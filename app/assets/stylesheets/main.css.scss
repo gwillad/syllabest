@@ -1,3 +1,39 @@
 // Place all the styles related to the main controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+	color: #707070;
+}
+
+h1 {
+	font-family: "Courier New";
+	color: #707070;
+}
+
+th {
+	color: #6CBC51;
+}
+
+.btn-default {
+	color: #707070;
+}
+
+#add_user_form {
+	color: #6CBC51;
+	border-color: #6CBC51;
+}
+
+#submit_form {
+	color: #6CBC51;
+	border-color: #6CBC51;
+}
+
+#cancel_form {
+	color: #D9534F;
+	border-color: #D9534F;
+}
+
+label {
+	color: #6CBC51;
+}
