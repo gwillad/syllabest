@@ -12,5 +12,8 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     $('#container').html(view.render().el)
 
   show: (id) ->
-    alert "User #{id}"
+    @syllabi = new Syllabest.Collections.SyllabusesCollection()
+    @model = @collection.get(id)
+    view = new Syllabest.Views.Users.ShowView(model: @model, collection: @syllabi)
+    $('#container').html(view.render().el)
 
