@@ -116,6 +116,10 @@ input[type="text"]:focus, input[type="password"]:focus {
 	text-align: left;
 }
 
+#back_button, #new_section_button {
+	cursor: pointer;
+}
+
 #syllabus {
 	height: 1000px;
 	width: 95%;
@@ -125,6 +129,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 	border: 1px solid #909090;
 	border-radius: 100px;
 	color: black;
+	font-family: "Baskerville";
 }
 
 #header {
