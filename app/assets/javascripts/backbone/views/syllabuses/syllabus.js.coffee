@@ -10,6 +10,6 @@ class Syllabest.Views.Syllabus extends Backbone.View
   	Backbone.history.navigate("users/#{@model.get("id")}", true)
 
   render: ->
-    $(@el).attr("user-id", @model["id"])
-    $(@el).html(@template(user: @model))
+    $(@el).attr("syllabus-id", @model["id"])
+    $(@el).html(@template(syllabus: @model))
     this

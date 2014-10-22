@@ -8,9 +8,11 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
 
   initialize: -> 
     @collection.on('reset', @render, this)
+    @collection.on('add', @appendSyllabus, this)
 
   render: ->
     $(@el).html(@template(user: @model))
+    @collection.each(@appendSyllabus)
     this
 
   addSyllabusForm: (event) ->
@@ -19,6 +21,10 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     $('#syllabi').after(view.render().el)
     $('#syllabi').hide()
     $('#add_syllabus').hide()
+
+  appendSyllabus: (syllabus) ->
+    view = new Syllabest.Views.Syllabus(model: syllabus)
+    $('#syllabi').append(view.render().el)
 
   removeSyllabusForm: (event) ->
     event.preventDefault()
@@ -43,6 +49,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     $('#new_syllabus').remove()
     $('#add_syllabus').show()
     $('#syllabi').show()
+
 ###
 
 WHAT WE NEED TO DO:
