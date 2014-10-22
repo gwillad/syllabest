@@ -23,7 +23,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
   removeSyllabusForm: (event) ->
     event.preventDefault()
     $('#new_syllabus').remove()
-    $('#user_profile').show()
+    $('#user_table').show()
     $('#add_syllabus').show()
 
   createSyllabus: (event) ->
@@ -42,7 +42,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     console.log @collection.toJSON()
     $('#new_syllabus').remove()
     $('#add_syllabus').show()
-    $('#user_profile').show()
+    $('#user_table').show()
 ###
 
 WHAT WE NEED TO DO:

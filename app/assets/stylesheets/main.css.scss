@@ -19,7 +19,7 @@ body {
 
 #line {
 	background-color: #6CBC51;
-	width: 98%;
+	width: 100%;
 	height: 1px;
 	margin-bottom: 40px;
 	margin-top: 40px;
@@ -53,15 +53,11 @@ body {
 	border-color: #D9534F;
 }
 
-#submit_form, #submit_syllabus, #cancel_form, #cancel_syllabus {
-	margin-top: 10px;
+.form_button_group {
+	margin-top: 2%;
+	margin-left: 17%;
 }
 
-#new_user label {
-	color: #6CBC51;
-	margin-left: -50px;
-}
-
-#new_syllabus label {
+#new_user label, #new_syllabus label {
 	color: #6CBC51;
 }
