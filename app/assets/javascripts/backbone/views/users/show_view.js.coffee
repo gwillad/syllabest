@@ -16,8 +16,8 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
   addSyllabusForm: (event) ->
     event.preventDefault()
     view = new Syllabest.Views.Syllabuses.New
-    $('#user_profile').after(view.render().el)
-    $('#user_profile').hide()
+    $('#user_table').after(view.render().el)
+    $('#user_table').hide()
     $('#add_syllabus').hide()
 
   removeSyllabusForm: (event) ->
