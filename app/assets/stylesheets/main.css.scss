@@ -5,6 +5,7 @@
 body {
 	color: #707070;
 	font-size: 16px;
+	//font-family: "Calibri Light";
 }
 
 #syllabest {
@@ -99,4 +100,9 @@ body {
 
 input[type="text"]:focus, input[type="password"]:focus {
 	border-color: #6CBC51;
+}
+
+#syllabus {
+	border: 1px solid black;
+	border-radius: 10px;
 }
