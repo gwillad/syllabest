@@ -1,7 +1,13 @@
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-2">
 			<h1 id="syllabest">Sylla<span id="best">best</span>.</h1>
+		</div>
+		<div class="col-md-2 col-md-offset-8">
+			<div id="account">
+				<%= user.get("first_name") + ' ' + user.get("last_name") %>
+				<i class="fa fa-caret-down"></i>
+			</div>
 		</div>	
 	</div>
 	<div class="row">
