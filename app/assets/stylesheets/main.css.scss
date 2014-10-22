@@ -17,6 +17,10 @@ body {
 	color: #6CBC51;
 }
 
+#show_user_menu {
+	margin-left: 5px;
+}
+
 #line {
 	background-color: #6CBC51;
 	width: 96%;
@@ -43,9 +47,13 @@ body {
 	color: #707070;
 }
 
-#submit_form, #submit_syllabus, #add_user_form, #add_syllabus {
+#submit_form, #submit_syllabus, #add_user, #add_syllabus {
 	color: #6CBC51;
 	border-color: #6CBC51;
+}
+
+#add_user, #add_syllabus {
+	margin-left: .5%;
 }
 
 #cancel_form, #cancel_syllabus {

@@ -3,7 +3,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
 
   events:
     'submit #new_user': 'createUser'
-    'click #add_user_form': 'addUserForm'
+    'click #add_user': 'addUserForm'
     'click #cancel_form': 'removeUserForm'
 
   testAlert: ->
@@ -24,13 +24,13 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     view = new Syllabest.Views.Users.New
     $('#users').after(view.render().el)
     $('#users').hide()
-    $('#add_user_form').hide()
+    $('#add_user').hide()
 
   removeUserForm: (event) ->
     event.preventDefault()
     $('#new_user').remove()
     $('#users').show()
-    $('#add_user_form').show()
+    $('#add_user').show()
 
   appendUser: (user) ->
     view = new Syllabest.Views.User(model: user)
@@ -47,7 +47,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
       office:     $('#new_user_office').val()
     @collection.create attributes
     $('#new_user').remove()
-    $('#add_user_form').show()
+    $('#add_user').show()
     $('#users').show()
 
       
