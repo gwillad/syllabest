@@ -43,9 +43,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
       section_num: $('#new_syllabus_section_num').val()
       course_type: $('#new_syllabus_course_type').val()
       user_id: @model.get("id")
-    console.log attributes
     @collection.create attributes
-    console.log @collection.toJSON()
     $('#new_syllabus').remove()
     $('#add_syllabus').show()
     $('#syllabi').show()
