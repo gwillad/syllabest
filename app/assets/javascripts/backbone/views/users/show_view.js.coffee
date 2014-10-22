@@ -2,27 +2,51 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
   template: JST["backbone/templates/users/show"]
 
   events:
+    'submit #new_syllabus': 'createSyllabus'
     'click #add_syllabus': 'addSyllabusForm'
     'click #cancel_syllabus': 'removeSyllabusForm'
 
   initialize: -> 
     @collection.on('reset', @render, this)
+    @collection.on('add', @appendSyllabus, this)
 
   render: ->
     $(@el).html(@template(user: @model))
+    @collection.each(@appendSyllabus)
     this
 
   addSyllabusForm: (event) ->
     event.preventDefault()
     view = new Syllabest.Views.Syllabuses.New
-    $('#container').after(view.render().el)
-    $('#user_profile').hide()
+    $('#syllabi').after(view.render().el)
+    $('#syllabi').hide()
     $('#add_syllabus').hide()
+
+  appendSyllabus: (syllabus) ->
+    view = new Syllabest.Views.Syllabus(model: syllabus)
+    $('#syllabi').append(view.render().el)
 
   removeSyllabusForm: (event) ->
     event.preventDefault()
-    alert "22"
-    #$('#new_syllabus').remove()
+    $('#new_syllabus').remove()
+    $('#syllabi').show()
+    $('#add_syllabus').show()
+
+  createSyllabus: (event) ->
+    event.preventDefault()
+    attributes = 
+      title: $('#new_syllabus_title').val()
+      location: $('#new_syllabus_location').val()
+      course_num: $('#new_syllabus_course_num').val()
+      department: $('#new_syllabus_title').val()
+      term: $('#new_syllabus_term').val()
+      section_num: $('#new_syllabus_section_num').val()
+      course_type: $('#new_syllabus_course_type').val()
+      user_id: @model.get("id")
+    @collection.create attributes
+    $('#new_syllabus').remove()
+    $('#add_syllabus').show()
+    $('#syllabi').show()
 
 ###
 

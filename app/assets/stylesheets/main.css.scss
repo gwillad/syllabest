@@ -4,24 +4,62 @@
 
 body {
 	color: #707070;
+	font-size: 16px;
+	//font-family: "Calibri Light";
 }
 
-h1 {
+#syllabest {
 	font-family: "Courier New";
 	color: #707070;
+	padding-top: 15px;
 }
 
-th {
+#best {
 	color: #6CBC51;
+}
+
+#account {
+	color: #6CBC51;
+	margin-top: 20%;
+}
+
+#show_user_menu {
+	margin-left: 5px;
+}
+
+#line {
+	background-color: #6CBC51;
+	width: 96%;
+	height: 1px;
+	margin-bottom: 40px;
+	margin-top: 40px;
+}
+
+.table>tbody>tr>th {
+	border-top: none;
+	padding-bottom: 20px;
+	color: #6CBC51;
+}
+
+.table>tbody>tr>td {
+	border-top: none;
+}
+
+.btn {
+	border-radius: 6px;
 }
 
 .btn-default {
 	color: #707070;
 }
 
-#submit_form, #submit_syllabus, #add_user_form, #add_syllabus {
+#submit_form, #submit_syllabus, #add_user, #add_syllabus {
 	color: #6CBC51;
 	border-color: #6CBC51;
+}
+
+#add_user, #add_syllabus {
+	margin-left: .5%;
 }
 
 #cancel_form, #cancel_syllabus {
@@ -29,6 +67,42 @@ th {
 	border-color: #D9534F;
 }
 
-label {
+.form_button_group {
+	margin-top: 2%;
+	margin-left: 17%;
+}
+
+#new_user label, #new_syllabus label {
 	color: #6CBC51;
+}
+
+.form-control-inline {
+	min-width: 30%;
+	width: auto;
+	display: inline;
+}
+
+.form-control:-moz-placeholder {
+	color: #909090;
+}
+
+.form-control::-moz-placeholder {
+	color: #909090;
+}
+
+.form-control::-webkit-input-placeholder {
+	color: #909090;
+}
+
+.form-control:-ms-input-placeholder {
+	color: #909090;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+	border-color: #6CBC51;
+}
+
+#syllabus {
+	border: 1px solid black;
+	border-radius: 10px;
 }
