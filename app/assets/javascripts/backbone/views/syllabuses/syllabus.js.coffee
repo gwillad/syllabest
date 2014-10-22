@@ -7,7 +7,7 @@ class Syllabest.Views.Syllabus extends Backbone.View
   	'click #view_syllabus': 'showSyllabus'
 
   showSyllabus: ->
-  	Backbone.history.navigate("users/#{@model.get("id")}", true)
+  	Backbone.history.navigate("users/#{@model.get('user_id')}/syllabuses/#{@model.get('id')}", true)
 
   render: ->
     $(@el).attr("syllabus-id", @model["id"])
