@@ -17,6 +17,11 @@ body {
 	color: #6CBC51;
 }
 
+#account {
+	color: #6CBC51;
+	margin-top: 20%;
+}
+
 #show_user_menu {
 	margin-left: 5px;
 }
@@ -76,7 +81,18 @@ body {
 	display: inline;
 }
 
-#account {
-	color: #6CBC51;
-	margin-top: 20%;
+.form-control:-moz-placeholder {
+	color: #909090;
+}
+
+.form-control::-moz-placeholder {
+	color: #909090;
+}
+
+.form-control::-webkit-input-placeholder {
+	color: #909090;
+}
+
+.form-control:-ms-input-placeholder {
+	color: #909090;
 }
