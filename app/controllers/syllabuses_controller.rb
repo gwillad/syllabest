@@ -17,7 +17,8 @@ class SyllabusesController < ApplicationController
   
   def create
     params.permit!
-    respond_with Syllabus.create(params[:syllabus])
+    @record = @user.syllabuses.create(params[:syllabus])
+    respond_with @user, @record
   end
   
   def destroy
