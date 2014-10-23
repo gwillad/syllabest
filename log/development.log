@@ -54917,3 +54917,1044 @@ Processing by UsersController#create as JSON
   [1m[35mSQL (2.9ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "last_name", "office", "password", "school", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 22 Oct 2014 18:44:53 UTC +00:00], ["email", "asdf"], ["first_name", "asdasd"], ["last_name", "asdfasdf"], ["office", "asdf"], ["password", "asdf"], ["school", "asdfas"], ["updated_at", Wed, 22 Oct 2014 18:44:53 UTC +00:00]]
   [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
 Completed 201 Created in 39ms (Views: 3.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-22 19:13:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 365ms
+
+ActionView::Template::Error ([stdin]:12:15: error: unexpected this
+  highlight: (this) ->
+              ^^^^
+  (in /opt/syllabus/chris/syllabest/app/assets/javascripts/backbone/views/syllabuses/show_view.js.coffee)):
+    3: <head>
+    4:   <title>Syllabest</title>
+    5:   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    6:   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    7:   <%= csrf_meta_tags %>
+    8: </head>
+    9: <body>
+  app/views/layouts/application.html.erb:6:in `_app_views_layouts_application_html_erb___30466812356127221_36119220'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.8ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (14.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 309ms (Views: 308.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:01 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new2.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/show.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/models/syllabus.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/show_view.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/users/new_user.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/users/user.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-22 19:14:02 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 41ms (Views: 30.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-22 19:14:04 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (4.5ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 121ms (Views: 1.7ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2014-10-22 19:14:04 -0400
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-22 19:14:13 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (0.1ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-22 19:14:21 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (0.1ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 150.209.42.203 at 2014-10-22 23:36:08 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 1772ms (Views: 1750.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 150.209.42.203 at 2014-10-22 23:36:11 -0400
+
+
+Started GET "/assets/components.css?body=1" for 150.209.42.203 at 2014-10-22 23:36:11 -0400
+
+
+Started GET "/assets/main.css?body=1" for 150.209.42.203 at 2014-10-22 23:36:11 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 150.209.42.203 at 2014-10-22 23:36:11 -0400
+
+
+Started GET "/assets/static.css?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone/templates/components/new.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/users.css?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone/models/components.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone/views/components/new.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:12 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new2.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/syllabus.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/show.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/models/syllabus.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:13 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/new.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/show_view.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/syllabus.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/users/user.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/users/new_user.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/components.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/static.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:14 -0400
+
+
+Started GET "/assets/users.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/application.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:15 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:16 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:16 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 150.209.42.203 at 2014-10-22 23:36:16 -0400
+
+
+Started GET "/api/users" for 150.209.42.203 at 2014-10-22 23:36:17 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 85ms (Views: 35.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/api/users/1/syllabuses" for 150.209.42.203 at 2014-10-22 23:36:21 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (4.6ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 122ms (Views: 1.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 150.209.42.203 at 2014-10-22 23:36:22 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:54:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (19.0ms)
+Completed 200 OK in 454ms (Views: 412.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/components/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new2.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/show.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/models/components.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/models/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/components/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/show_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/users/new_user.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/users/user.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 13:54:35 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-23 13:54:36 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 74ms (Views: 52.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 13:57:44 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 4468ms (Views: 4467.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new2.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/components/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/show.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/models/components.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/models/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/components/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/show_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/users/new_user.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/users/user.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:49 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-23 13:57:50 -0400
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1mSELECT "users".* FROM "users"[0m
+Completed 200 OK in 14ms (Views: 8.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-23 13:57:54 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[36mSyllabus Load (4.6ms)[0m  [1mSELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?[0m  [["user_id", 1]]
+Completed 200 OK in 135ms (Views: 1.6ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2014-10-23 13:57:54 -0400
+
+
+Started GET "/" for 127.0.0.1 at 2014-10-23 14:00:42 -0400
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 731ms (Views: 729.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/components/new.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/new2.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/show.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/models/components.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/models/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/components/new.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/show_view.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/syllabus.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/syllabuses/new.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/users/new_user.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/users/user.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:43 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-23 14:00:44 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-23 14:00:45 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 1.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/fontawesome-webfont.woff?v=4.2.0" for 127.0.0.1 at 2014-10-23 14:00:45 -0400
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-23 14:01:17 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (0.1ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-23 14:01:20 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (0.2ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/api/users/1/syllabuses" for 127.0.0.1 at 2014-10-23 14:01:23 -0400
+Processing by SyllabusesController#index as JSON
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+DEPRECATION WARNING: Relation#all is deprecated. If you want to eager-load a relation, you can call #load (e.g. `Post.where(published: true).load`). If you want to get an array of records from a relation, you can call #to_a (e.g. `Post.where(published: true).to_a`). (called from index at /opt/syllabus/chris/syllabest/app/controllers/syllabuses_controller.rb:7)
+  [1m[35mSyllabus Load (0.1ms)[0m  SELECT "syllabuses".* FROM "syllabuses" WHERE "syllabuses"."user_id" = ?  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.3ms)
