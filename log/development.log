@@ -42611,6 +42611,166 @@ Processing by UsersController#index as JSON
 Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.3ms)
 
 
+<<<<<<< HEAD
+Started GET "/" for 127.0.0.1 at 2014-10-21 14:54:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MainController#index as HTML
+  Rendered main/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 6259ms (Views: 6232.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-21 14:54:07 -0400
+
+
+Started GET "/assets/components.css?body=1" for 127.0.0.1 at 2014-10-21 14:54:07 -0400
+
+
+Started GET "/assets/plaintexts.css?body=1" for 127.0.0.1 at 2014-10-21 14:54:07 -0400
+
+
+Started GET "/assets/main.css?body=1" for 127.0.0.1 at 2014-10-21 14:54:07 -0400
+
+
+Started GET "/assets/static.css?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/users.css?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/underscore.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone_rails_sync.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone_datalink.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/syllabest.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/edit.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/index.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/new.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/show.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/templates/users/user.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/views/users/edit_view.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/models/user.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/views/users/index_view.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/views/users/new_user.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/views/users/new_view.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/views/users/show_view.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/views/users/user.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/views/users/user_view.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/routers/_users_router.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/components.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/plaintexts.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/static.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/backbone/routers/users_router.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/users.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/bootstrap-sprockets.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+
+
+Started GET "/api/users" for 127.0.0.1 at 2014-10-21 14:54:08 -0400
+Processing by UsersController#index as JSON
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users"
+Completed 200 OK in 98ms (Views: 34.1ms | ActiveRecord: 0.7ms)
+=======
 Started GET "/" for 127.0.0.1 at 2014-10-21 15:17:26 -0400
   [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
 Processing by MainController#index as HTML
@@ -54917,6 +55077,7 @@ Processing by UsersController#create as JSON
   [1m[35mSQL (2.9ms)[0m  INSERT INTO "users" ("created_at", "email", "first_name", "last_name", "office", "password", "school", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["created_at", Wed, 22 Oct 2014 18:44:53 UTC +00:00], ["email", "asdf"], ["first_name", "asdasd"], ["last_name", "asdfasdf"], ["office", "asdf"], ["password", "asdf"], ["school", "asdfas"], ["updated_at", Wed, 22 Oct 2014 18:44:53 UTC +00:00]]
   [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
 Completed 201 Created in 39ms (Views: 3.4ms | ActiveRecord: 4.2ms)
+<<<<<<< HEAD
 
 
 Started GET "/" for 127.0.0.1 at 2014-10-22 19:13:16 -0400
@@ -59707,3 +59868,6 @@ NoMethodError (undefined method `component_url' for #<ComponentsController:0x007
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.7ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.3ms)
   Rendered /usr/local/rvm/gems/ruby-1.9.3-p448/gems/actionpack-4.0.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (22.5ms)
+=======
+>>>>>>> bc52ee7744103a22f909f79ba000a7ebd3e9cb30
+>>>>>>> be0ba3d9837739856ba74fb7c0b99ddf9331e4d2

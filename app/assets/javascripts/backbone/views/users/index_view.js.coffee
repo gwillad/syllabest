@@ -44,9 +44,18 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
       password:   $('#new_user_password').val()
       school:     $('#new_user_school').val()
       office:     $('#new_user_office').val()
-    @collection.create attributes
-    $('#new_user').remove()
-    $('#add_user').show()
-    $('#users').show()
+    @collection.create attributes,
+      wait: true
+      success: ->
+        $('#new_user').remove()
+        $('#add_user').show()
+        $('#users').show()
+      error: @handleError
 
+
+  handleError: (user, response)->
+    if response.status == 422
+      errors = $.parseJSON(response.responseText).errors
+      for attribute, messages of errors
+        alert(attribute + " " + message) for message in messages
       
