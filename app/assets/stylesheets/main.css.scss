@@ -102,22 +102,19 @@ input[type="text"]:focus, input[type="password"]:focus {
 	margin-right: 10px;
 }
 
-#new_section_button, #back_button {
+#new_component_button, #back_button {
 	font-size: 20px;
 	margin-top: 0%;
 	white-space: nowrap;
+	cursor: pointer;
 }
 
-#new_section {
+#new_component {
 	text-align: right;
 }
 
 #back {
 	text-align: left;
-}
-
-#back_button, #new_section_button {
-	cursor: pointer;
 }
 
 #syllabus {
