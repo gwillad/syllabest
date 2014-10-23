@@ -133,3 +133,15 @@ input[type="text"]:focus, input[type="password"]:focus {
 	width: 100%;
 	text-align: center;
 }
+
+.component {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+	text-align: left;
+}
+
+.component #title {
+	font-weight: bold;
+}
