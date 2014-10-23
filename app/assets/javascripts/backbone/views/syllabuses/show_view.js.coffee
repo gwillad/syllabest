@@ -4,6 +4,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   events:
     'click #back_button': 'returnToUser'
     'click #new_component_button': 'addComponent'
+    'click #new_component_button': 'createComponent'
     'mouseenter #back_button': 'highlight_back'
     'mouseleave #back_button': 'unhighlight_back'
     'mouseenter #new_component_button': 'highlight_new'
@@ -23,6 +24,15 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
 
   unhighlight_new: ->
     $('#new_component_button').removeClass("accent")
+
+  createComponent: ->
+    #event.preventDefault()
+    alert @collection.url
+    attributes =
+      component_type: "plaintext"
+      child_id: 1
+      syllabus_id: 1
+    @collection.create attributes
 
   addComponent: (event) ->
     event.preventDefault()
