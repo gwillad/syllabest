@@ -10,6 +10,6 @@ class Syllabest.Collections.ComponentsCollection extends Backbone.Collection
 
   model: Syllabest.Models.Component
   url: -> 
-    '/api/users/'+ @uid + '/syllabuses/' + @sid
+    '/api/users/'+ @uid + '/syllabuses/' + @sid + '/components'
  
     

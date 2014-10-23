@@ -16,7 +16,8 @@ class ComponentsController < ApplicationController
   end
   
   def create
-    respond_with @syllabus.components.create(params[:component])
+    @record = @syllabus.components.create(params[:component])
+    respond_with @record, @syllabus
   end
   
   def destroy

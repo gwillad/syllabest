@@ -15,7 +15,8 @@ class PlaintextsController < ApplicationController
   end
   
   def create
-    respond_with Plaintext.create(params[:plaintext])
+    @record = @component.plaintexts.create(params[:component])
+    respond_with @record, @component
   end
   
   def destroy

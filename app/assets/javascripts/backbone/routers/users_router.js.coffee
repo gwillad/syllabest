@@ -29,5 +29,5 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     @components = new Syllabest.Collections.ComponentsCollection([],hash)
     @components.fetch
     @model = @syllabi.get(syllabusid)
-    view = new Syllabest.Views.Syllabuses.ShowView(model: @model, collection: @collection)
+    view = new Syllabest.Views.Syllabuses.ShowView(model: @model, collection: @components)
     $('#container').html(view.render().el)
