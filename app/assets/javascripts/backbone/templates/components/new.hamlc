@@ -1,0 +1,4 @@
+.component
+	%h4#title Title
+	#content
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ornare risus porta diam scelerisque aliquam. Vivamus faucibus dui odio, sed ullamcorper sem laoreet sed. Sed sed lectus sapien. Donec auctor placerat ante. In purus purus, cursus ac tortor vulputate, vulputate condimentum est. Morbi felis nulla, tristique et eros quis, finibus tempor ex.

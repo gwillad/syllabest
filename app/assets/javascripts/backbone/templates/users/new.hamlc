@@ -1,0 +1,34 @@
+.row
+	.col-md-12
+		%form.form-horizontal#new_user{:role => "form"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "new_user_fname"} First Name
+				.col-md-10
+					%input.form-control.form-control-inline#new_user_fname{:type => "text", :placeholder => "ex: Joel"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "new_user_lname"} Last Name
+				.col-md-10
+					%input.form-control.form-control-inline#new_user_lname{:type => "text", :placeholder => "ex: Winkelman"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "new_user_email"} Email
+				.col-md-10
+					%input.form-control.form-control-inline#new_user_email{:type => "text", :placeholder => "ex: jwinkelm@hamilton.edu"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "new_user_password"} Password
+				.col-md-10
+					%input.form-control.form-control-inline#new_user_password{:type => "password", :placeholder => "ex: abc123"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "confirm_password"} Confirm Password
+				.col-md-10
+					%input.form-control.form-control-inline#confirm_password{:type => "password", :placeholder => "ex: abc123"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "new_user_school"} School
+				.col-md-10
+					%input.form-control.form-control-inline#new_user_school{:type => "text", :placeholder => "ex: Hamilton College"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "new_user_office"} Office
+				.col-md-10
+					%input.form-control.form-control-inline#new_user_office{:type => "text", :placeholder => "ex: KJ 137"}
+			.form_button_group
+				%button.btn.btn-default#submit_form{:type => "submit"} Submit
+				%button.btn.btn-default#cancel_form Cancel

@@ -1,0 +1,9 @@
+%td= @syllabus.get("title")
+%td= @syllabus.get("department")
+%td= @syllabus.get("course_num")
+%td= @syllabus.get("section_num")
+%td= @syllabus.get("course_type")
+%td= @syllabus.get("term")
+%td= @syllabus.get("location")
+%td
+	%button.btn.btn-default#view_syllabus{:type => "button"} View

@@ -1,0 +1,7 @@
+%td= @user.get("first_name")
+%td= @user.get("last_name")
+%td= @user.get("email")
+%td= @user.get("school")
+%td= @user.get("office")
+%td
+	%button.btn.btn-default#view_user{:type => "button"} View

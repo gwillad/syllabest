@@ -38,7 +38,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
       title: $('#new_syllabus_title').val()
       location: $('#new_syllabus_location').val()
       course_num: $('#new_syllabus_course_num').val()
-      department: $('#new_syllabus_title').val()
+      department: $('#new_syllabus_department').val()
       term: $('#new_syllabus_term').val()
       section_num: $('#new_syllabus_section_num').val()
       course_type: $('#new_syllabus_course_type').val()
