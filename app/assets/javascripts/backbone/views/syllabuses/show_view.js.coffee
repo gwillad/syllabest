@@ -4,7 +4,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   events:
     'click #back_button': 'returnToUser'
     'click #new_component_button': 'addComponent'
-    'click #new_component_button': 'createComponent'
+    #'click #new_component_button': 'createComponent'
     'hover #back_button, #new_component_button': 'highlight'
 
   returnToUser: ->
@@ -25,7 +25,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   addComponent: (event) ->
     event.preventDefault()
     view = new Syllabest.Views.Components.New
-    $('#add_component').remove()
     $('#header').append(view.render().el)
 
   render: ->

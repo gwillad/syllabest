@@ -145,3 +145,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 .component #title {
 	font-weight: bold;
 }
+
+[contenteditable=true]:focus {
+	outline-color: #6CBC51;
+}
