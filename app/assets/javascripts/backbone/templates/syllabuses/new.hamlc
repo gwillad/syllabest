@@ -3,32 +3,32 @@
 		%form.form-horizontal#new_syllabus{:role => "form"}
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_title"} Title
-				.col-md-10
-					%input.form-control.form-control-inline#new_syllabus_title{:type => "text", :placeholder => "ex: Intro to Computer Science"}
+				.col-md-4
+					%input.form-control#new_syllabus_title{:type => "text", :placeholder => "ex: Intro to Computer Science"}
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_department"} Department
-				.col-md-10
-					%input.form-control.form-control-inline#new_syllabus_department{:type => "text", :placeholder => "ex: CPSCI"}
+				.col-md-4
+					%input.form-control#new_syllabus_department{:type => "text", :placeholder => "ex: CPSCI"}
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_course_num"} Course Number
-				.col-md-10
-					%input.form-control.form-control-inline#new_syllabus_course_num{:type => "text", :placeholder => "ex: 110"}
+				.col-md-4
+					%input.form-control#new_syllabus_course_num{:type => "text", :placeholder => "ex: 110"}
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_section_num"} Section Number
-				.col-md-10
-					%input.form-control.form-control-inline#new_syllabus_section_num{:type => "text", :placeholder => "ex: 01"}
+				.col-md-4
+					%input.form-control#new_syllabus_section_num{:type => "text", :placeholder => "ex: 01"}
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_course_type"} Course Type
-				.col-md-10
-					%input.form-control.form-control-inline#new_syllabus_course_type{:type => "text", :placeholder => "ex: QSR"}
+				.col-md-4
+					%input.form-control#new_syllabus_course_type{:type => "text", :placeholder => "ex: QSR"}
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_term"} Term
-				.col-md-10
-					%input.form-control.form-control-inline#new_syllabus_term{:type => "text", :placeholder => "ex: Fall 2014"}
+				.col-md-4
+					%input.form-control#new_syllabus_term{:type => "text", :placeholder => "ex: Fall 2014"}
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_location"} Location
-				.col-md-10
-					%input.form-control.form-control-inline#new_syllabus_location{:type => "text", :placeholder => "ex: SCCT 3040"}
+				.col-md-4
+					%input.form-control#new_syllabus_location{:type => "text", :placeholder => "ex: SCCT 3040"}
 			.form_button_group
 				%button.btn.btn-default#submit_syllabus{:type => "submit"} Submit
 				%button.btn.btn-default#cancel_syllabus Cancel
