@@ -5,11 +5,7 @@ class Syllabest.Views.Components.New extends Backbone.View
 
   events:
     'click #new_plaintext_button, #new_table_button, #new_calendar_button': 'addComponentForm'
-    'hover #new_plaintext_button, #new_table_button, #new_calendar_button': 'highlight'
     'click #cancel_component_button': 'cancelComponent'
-
-  highlight: (e) ->
-  	$(e.currentTarget).toggleClass("accent")
 
   addComponentForm: (e) ->
     e.preventDefault()
