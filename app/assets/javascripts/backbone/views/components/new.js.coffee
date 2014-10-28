@@ -3,9 +3,10 @@ Syllabest.Views.Components ||={}
 class Syllabest.Views.Components.New extends Backbone.View
   template: JST["backbone/templates/components/new"]
 
+  id: "new_component"
+
   events:
     'click #new_plaintext_button, #new_table_button, #new_calendar_button': 'addComponentForm'
-    'click #cancel_component_button': 'cancelComponent'
 
   addComponentForm: (e) ->
     e.preventDefault()
@@ -17,12 +18,6 @@ class Syllabest.Views.Components.New extends Backbone.View
       #view = new Syllabest.Views.Tables.New
     #else if component_type is "calendar"
       #view = new Syllabest.Views.Calendars.New
-
-  cancelComponent: ->
-    $('#new_component_tab').hide()
-    $('#new_component_button').show()
-    syllabus_row = $('#syllabus_row').detach()
-    $('.container-fluid').append(syllabus_row)
 
   createComponent: (e) ->
     #e.preventDefault()
