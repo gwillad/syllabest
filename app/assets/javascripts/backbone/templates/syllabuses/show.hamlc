@@ -1,0 +1,30 @@
+.container-fluid
+	.row
+		.col-md-6.col-sm-6
+			%h1#syllabest Sylla<span class="accent">best</span>.
+		.col-md-6.col-sm-6
+			#account.accent
+				First Last
+				%i.fa.fa-caret-down#show_user_menu
+	.row
+		.col-md-12.col-sm-12
+			#line
+	.row
+		.col-md-8.col-sm-8#left_side
+			.row
+				.col-md-12.col-sm-12#back
+					%span#back_button
+						%i.fa.fa-reply#back_arrow
+						Back
+		.col-md-4.col-sm-4#new_component
+			%span#new_component_button
+				%i.fa.fa-plus#plus_sign
+				New Component
+	.row#syllabus_row
+		.col-md-12.col-sm-12
+			#syllabus
+				.row
+					.col-md-12.col-sm-12#header
+						%h1= @syllabus.get("title")
+						%h3= @syllabus.get("department") + ' ' + @syllabus.get("course_num")
+						%h5= @syllabus.get("term")

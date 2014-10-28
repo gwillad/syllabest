@@ -1,0 +1,16 @@
+#new_component_tab
+	.row
+		.col-md-12.col-sm-12#cancel_component
+			%i.fa.fa-close.fa-lg#cancel_component_button
+	.row
+		.col-md-12.col-sm-12
+			%h3#new_component_title New Component
+	.row
+		.col-md-12.col-sm-12#new_plaintext
+			%button.btn.btn-lg#new_plaintext_button{:component_type => "plaintext"} Plain Text
+	.row
+		.col-md-12.col-sm-12#new_table
+			%button.btn.btn-lg#new_table_button{:component_type => "table"} Table
+	.row
+		.col-md-12.col-sm-12#new_calendar
+			%button.btn.btn-lg#new_calendar_button{:component_type => "calendar"} Calendar

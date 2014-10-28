@@ -20,3 +20,5 @@
 //= require backbone/syllabest
 //= require_tree .
 //= require bootstrap-sprockets
+//= require hamlcoffee
+//= require_tree ./backbone/templates

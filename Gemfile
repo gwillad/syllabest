@@ -19,6 +19,10 @@ gem 'autoprefixer-rails'
 #using font awesome
 gem 'font-awesome-rails'
 
+#using haml
+gem 'execjs'
+gem 'haml_coffee_assets'
+
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 

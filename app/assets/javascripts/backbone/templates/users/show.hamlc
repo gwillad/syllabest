@@ -1,0 +1,26 @@
+.container-fluid
+	.row
+		.col-md-6
+			%h1#syllabest Sylla<span class="accent">best</span>.
+		.col-md-6
+			#account.accent
+				= @user.get("first_name") + ' ' + @user.get("last_name")
+				%i.fa.fa-caret-down#show_user_menu
+	.row
+		.col-md-12
+			#line
+	.row
+		.col-md-12
+			%table.table.table-hover#syllabi
+				%tr.active
+					%th Title
+					%th Department
+					%th Course Number
+					%th Section Number
+					%th Course Type
+					%th Term
+					%th Location
+					%th
+	.row
+		.col-md-12
+			%button.btn.btn-default#add_syllabus{:type => "button"} Add Syllabus
