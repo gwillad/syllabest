@@ -59,5 +59,5 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
       for attribute, messages of errors
         if (attribute == "first_name")
           $('#new_user_fname').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
-          $('#new_user_fname').after('<p'>' + message + '</p>') for message in messages
+          $('#new_user_fname').after('<p>' + message + '</p>') for message in messages
       
