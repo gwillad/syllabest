@@ -26,7 +26,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
     arel (4.0.2)
-    autoprefixer-rails (3.1.0.20140911)
+    autoprefixer-rails (3.1.2.20141016)
       execjs
     bootstrap-sass (3.2.0.2)
       sass (~> 3.2)
@@ -40,7 +40,7 @@ GEM
     coffee-script-source (1.8.0)
     ejs (1.1.1)
     erubis (2.7.0)
-    execjs (2.2.1)
+    execjs (2.2.2)
     font-awesome-rails (4.2.0.0)
       railties (>= 3.2, < 5.0)
     haml_coffee_assets (1.16.0)
@@ -112,9 +112,9 @@ GEM
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    turbolinks (2.3.0)
+    turbolinks (2.5.1)
       coffee-rails
-    tzinfo (0.3.41)
+    tzinfo (0.3.42)
     uglifier (2.5.3)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
