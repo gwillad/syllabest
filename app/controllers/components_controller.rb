@@ -17,7 +17,7 @@ class ComponentsController < ApplicationController
   
   def create
     @record = @syllabus.components.create(params[:component])
-    respond_with @record, @syllabus
+    respond_with @user, @syllabus, @record
   end
   
   def destroy
@@ -31,5 +31,6 @@ class ComponentsController < ApplicationController
 
   def find_syllabus
     @syllabus = Syllabus.find(params[:syllabus_id])
+    @user = User.find(@syllabus[:user_id])
   end
 end

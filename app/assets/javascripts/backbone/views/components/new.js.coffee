@@ -6,7 +6,20 @@ class Syllabest.Views.Components.New extends Backbone.View
   id: "new_component"
 
   events:
-    'click #new_plaintext_button, #new_table_button, #new_calendar_button': 'addComponentForm'
+    'click #new_table_button, #new_calendar_button': 'addComponentForm'
+    'click #new_plaintext_button': 'addPlaintext'
+
+  addPlaintext: (e) ->
+    e.preventDefault()
+    view = new Syllabest.Views.Plaintexts.New(model: @model, collection: @collection)
+    $('#new_component_button').show()
+    $('#new_component').remove()
+    syllabus_row = $('#syllabus_row').detach()
+    $('.container-fluid').append(syllabus_row)
+    $('#syllabus').append(view.render().el)
+    
+    
+    
 
   addComponentForm: (e) ->
     e.preventDefault()

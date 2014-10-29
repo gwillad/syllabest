@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140930192941) do
+ActiveRecord::Schema.define(version: 20141029011000) do
 
   create_table "components", force: true do |t|
     t.string   "component_type"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 20140930192941) do
     t.string   "section_num"
     t.string   "order"
     t.string   "course_type"
-    t.integer  "owner_id"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

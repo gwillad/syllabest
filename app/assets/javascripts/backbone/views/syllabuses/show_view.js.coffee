@@ -15,7 +15,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
 
   addComponent: (e) ->
     #e.preventDefault()
-    view = new Syllabest.Views.Components.New
+    hash = 
+      sid: @model.get('id')
+      uid: @model.get('user_id')
+    components = new Syllabest.Collections.ComponentsCollection([],hash)
+    
+    view = new Syllabest.Views.Components.New(model: @model, collection: components)
     $('#new_component_button').hide()
     syllabus_row = $('#syllabus_row').detach()
     $('#left_side').append(syllabus_row)
