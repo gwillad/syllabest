@@ -57,7 +57,10 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     if response.status == 422
       errors = $.parseJSON(response.responseText).errors
       for attribute, messages of errors
+        #alert(attribute + ' ' +message) for message in messages
         if (attribute == "first_name")
-          $('#new_user_fname').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
-          $('#new_user_fname').after('<p>' + message + '</p>') for message in messages
-      
+          $('#new_user_fname').css({'border-color': 'red', 'box-shadow': '0 0 2px red'})
+          $('#new_user_fname_label').append('<small class="text-danger"> ('+messages+')<small>')#('<p class="text-danger"><sub>' + message + '</sub></p') for message in messages
+        if (attribute == "email")
+          $('#new_user_email').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+          $('#new_user_email').after('<p class="text-danger"><sub>' + messages + '</sub></p>')
