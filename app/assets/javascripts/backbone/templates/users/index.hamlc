@@ -1,12 +1,12 @@
 .container-fluid
 	.row
-		.col-md-6
+		.col-md-6.col-sm-6
 			%h1#syllabest Sylla<span class="accent">best</span>.
 	.row
-		.col-md-12
+		.col-md-12.col-sm-12
 			#line
 	.row
-		.col-md-12
+		.col-md-12.col-sm-12
 			%table.table.table-hover#users
 				%tr.active
 					%th First Name
@@ -16,7 +16,7 @@
 					%th Office
 					%th
 	.row
-		.col-md-12
+		.col-md-12.col-sm-12
 			%button.btn.btn-default#add_user{:type => "button"} Add User
 
 

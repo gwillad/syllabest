@@ -1,16 +1,16 @@
 .container-fluid
 	.row
-		.col-md-6
+		.col-md-6.col-sm-6
 			%h1#syllabest Sylla<span class="accent">best</span>.
-		.col-md-6
+		.col-md-6.col-sm-
 			#account.accent
 				= @user.get("first_name") + ' ' + @user.get("last_name")
 				%i.fa.fa-caret-down#show_user_menu
 	.row
-		.col-md-12
+		.col-md-12.col-sm-12
 			#line
 	.row
-		.col-md-12
+		.col-md-12.col-sm-12
 			%table.table.table-hover#syllabi
 				%tr.active
 					%th Title
@@ -22,5 +22,5 @@
 					%th Location
 					%th
 	.row
-		.col-md-12
+		.col-md-12.col-sm-12
 			%button.btn.btn-default#add_syllabus{:type => "button"} Add Syllabus
