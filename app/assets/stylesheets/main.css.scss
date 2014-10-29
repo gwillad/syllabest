@@ -130,6 +130,10 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-family: "Baskerville";
 }
 
+.accept_drop {
+	background-color: #E8E8E8;
+}
+
 #header {
 	width: 100%;
 	text-align: center;
@@ -141,6 +145,15 @@ input[type="text"]:focus, input[type="password"]:focus {
 	margin-left: 2%;
 	margin-right: 2%;
 	text-align: left;
+}
+
+#component_box {
+	margin-top: 2%;
+	margin-bottom: 2%;
+	margin-left: 2%;
+	margin-right: 2%;
+	border: 2px dashed #6CBC51;
+	border-radius: 8px;
 }
 
 .component #title {
@@ -179,5 +192,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 #new_plaintext_button, #new_table_button, #new_calendar_button {
-	cursor: pointer;
+	cursor: grab;
+	cursor: -webkit-grab;
+	cursor: -moz-grab;
 }
