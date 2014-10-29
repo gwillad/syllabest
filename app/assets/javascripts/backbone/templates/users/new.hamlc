@@ -2,7 +2,7 @@
 	.col-md-12
 		%form.form-horizontal#new_user{:role => "form"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_fname"} First Name
+				%label.col-md-2.control-label.accent{:for => "new_user_fname", :id=> "new_user_fname_label"} First Name
 				.col-md-4
 					%input.form-control#new_user_fname{:type => "text", :placeholder => "ex: Joel"}
 			.form-group
