@@ -25,6 +25,14 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     syllabus_row = $('#syllabus_row').detach()
     $('#left_side').append(syllabus_row)
     $('#right_side').append(view.render().el)
+    $('#new_plaintext_button').draggable({
+      helper: "clone",
+      opacity: .5,
+      scope: "components"
+    })
+    $('#syllabus').droppable({
+      scope: "components"
+    })
 
   cancelComponent: (e) =>
     $('#new_component').remove()

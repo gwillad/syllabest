@@ -9,6 +9,9 @@ class Syllabest.Views.Components.New extends Backbone.View
     'click #new_table_button, #new_calendar_button': 'addComponentForm'
     'click #new_plaintext_button': 'addPlaintext'
 
+  initialize: ->
+
+
   addPlaintext: (e) ->
     e.preventDefault()
     view = new Syllabest.Views.Plaintexts.New(model: @model, collection: @collection)
