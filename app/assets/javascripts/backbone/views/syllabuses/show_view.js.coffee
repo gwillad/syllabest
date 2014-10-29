@@ -70,13 +70,4 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#new_component_button').show()
     syllabus_row = $('#syllabus_row').detach()
     $('.container-fluid').append(syllabus_row)
-
-<<<<<<< HEAD
-  
-
-=======
-  render: ->
-    $(@el).html(@template(syllabus: @model))
-    this
->>>>>>> 26adaba39fbb59d07af18ccf7ad7005aa113e6d8
   
