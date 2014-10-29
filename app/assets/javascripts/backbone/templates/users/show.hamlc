@@ -11,8 +11,8 @@
 			#line
 	.row
 		.col-md-12.col-sm-12
-			%table.table.table-hover#syllabi
-				%tr.active
+			%table.table#syllabi
+				%tr
 					%th Title
 					%th Department
 					%th Course Number

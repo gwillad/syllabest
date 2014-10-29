@@ -7,8 +7,8 @@
 			#line
 	.row
 		.col-md-12.col-sm-12
-			%table.table.table-hover#users
-				%tr.active
+			%table.table#users
+				%tr
 					%th First Name
 					%th Last Name
 					%th Email
