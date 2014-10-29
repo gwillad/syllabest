@@ -162,24 +162,20 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 #cancel_component_button {
-	z-index: 1;
 	cursor: pointer;
 	margin-right: 10px;
 	margin-top: 10px;
 }
 
 #new_component_title {
-	margin-top: 20%;
+	margin-top: 15%;
 	margin-bottom: 10%;
 }
 
-#new_plaintext_button, #new_table_button, #new_calendar_button {
+#new_plaintext, #new_table, #new_calendar {
 	margin-top: 10%;
-	width: 60%;
-	background-color: #6CBC51;
-	border-color: #FFFFFF;
-	border-radius: 10px;
-	font-size: 20px;
-	white-space: nowrap;
+}
+
+#new_plaintext_button, #new_table_button, #new_calendar_button {
 	cursor: pointer;
 }

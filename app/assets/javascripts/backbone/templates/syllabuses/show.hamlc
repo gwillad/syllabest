@@ -10,13 +10,13 @@
 		.col-md-12.col-sm-12
 			#line
 	.row
-		.col-md-8.col-sm-8#left_side
+		.col-md-9.col-sm-9#left_side
 			.row
 				.col-md-12.col-sm-12#back
 					%span#back_button
 						%i.fa.fa-reply#back_arrow
 						Back
-		.col-md-4.col-sm-4#right_side
+		.col-md-3.col-sm-3#right_side
 			%span#new_component_button
 				%i.fa.fa-plus#plus_sign
 				New Component
