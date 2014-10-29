@@ -16,7 +16,11 @@ class ComponentsController < ApplicationController
   end
   
   def create
+    params.permit!
     @record = @syllabus.components.create(params[:component])
+    # @record.child_id = @record.plaintext.id
+    # @record.save
+    
     respond_with @user, @syllabus, @record
   end
   

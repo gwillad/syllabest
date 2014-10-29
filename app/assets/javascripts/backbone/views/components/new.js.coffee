@@ -9,9 +9,6 @@ class Syllabest.Views.Components.New extends Backbone.View
     'click #new_table_button, #new_calendar_button': 'addComponentForm'
     'click #new_plaintext_button': 'addPlaintext'
 
-  initialize: ->
-
-
   addPlaintext: (e) ->
     e.preventDefault()
     view = new Syllabest.Views.Plaintexts.New(model: @model, collection: @collection)
@@ -21,9 +18,6 @@ class Syllabest.Views.Components.New extends Backbone.View
     $('.container-fluid').append(syllabus_row)
     $('#syllabus').append(view.render().el)
     
-    
-    
-
   addComponentForm: (e) ->
     e.preventDefault()
     component_type = $(e.currentTarget).attr("component_type")

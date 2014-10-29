@@ -1,9 +1,9 @@
 class PlaintextsController < ApplicationController
-
+  respond_to :json
   before_action :find_component, only: [:new, :create, :index, :show]
 
-   def index
-    respond_with @component.plaintexts.all
+  def index
+    respond_with @component.plaintext
   end
 
   def show

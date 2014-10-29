@@ -6,7 +6,21 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #new_component_button': 'addComponent'
     'hover #back_button, #new_component_button': 'highlight'
     'click #cancel_component_button': 'cancelComponent'
+    
+  initialize: ->
+    @usid = @model.get("user_id")
+    @collection.on('reset',@render, this)
+    @collection.on('add', @appendComponent,this)
 
+  render: ->
+    $(@el).html(@template(syllabus: @model))
+    @collection.each(@appendComponent)
+    this
+
+  appendComponent: (c) ->
+    view = new Syllabest.Views.Components.Show(model: c)
+    $('#syllabus').append(view.render().el)
+  
   returnToUser: ->
     Backbone.history.navigate("users/#{@model.get('user_id')}", true)
 
@@ -18,9 +32,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     hash = 
       sid: @model.get('id')
       uid: @model.get('user_id')
-    components = new Syllabest.Collections.ComponentsCollection([],hash)
+    #@components = new Syllabest.Collections.ComponentsCollection([],hash)
     
-    view = new Syllabest.Views.Components.New(model: @model, collection: components)
+    view = new Syllabest.Views.Components.New(model: @model, collection: @collection)
     $('#new_component_button').hide()
     syllabus_row = $('#syllabus_row').detach()
     $('#left_side').append(syllabus_row)
@@ -40,8 +54,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     syllabus_row = $('#syllabus_row').detach()
     $('.container-fluid').append(syllabus_row)
 
-  render: ->
-    $(@el).html(@template(syllabus: @model))
-    this
+  
 
   

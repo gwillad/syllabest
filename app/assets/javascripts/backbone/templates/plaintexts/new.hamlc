@@ -8,7 +8,7 @@
 			.form-group
 				%label.col-md-2.control-label.accent{:for => "new_plaintext_text"} Text
 				.col-md-4
-					%textarea.form-control#new_plaintext_title{:placeholder => "Sample Text"}
+					%textarea.form-control#new_plaintext_contents{:placeholder => "Sample Text"}
 			.form_button_group
 				%button.btn.btn-default#submit_plaintext{:type => "submit"} Submit
 				%button.btn.btn-default#cancel_plaintext Cancel

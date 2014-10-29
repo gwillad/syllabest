@@ -11,4 +11,4 @@ class Syllabest.Collections.PlaintextsCollection extends Backbone.Collection
 
   model: Syllabest.Models.Plaintext
   url: -> 
-    '/api/users/'+ @uid + '/syllabuses/' + @sid + '/components' + @cid + '/plaintexts'
+    '/api/users/'+ @uid + '/syllabuses/' + @sid + '/components/' + @cid + '/plaintexts'

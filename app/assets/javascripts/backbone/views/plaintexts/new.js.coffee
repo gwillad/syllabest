@@ -12,11 +12,12 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
     attributes =
       component_type: "plaintext"
       syllabus_id: @model.get('id')
-    @collection.create attributes,
-    success: (r)-> 
-      console.log r
-    
-    
+      plaintext_attributes: 
+       title: $('#new_plaintext_title').val()
+       contents:  $('#new_plaintext_contents').val()	
+    @collection.create attributes
+    this.remove()
+    this.unbind()    
     
   cancelPlainText: (e) ->
     e.preventDefault()

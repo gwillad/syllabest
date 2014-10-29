@@ -1,5 +1,5 @@
 class Syllabest.Models.Component extends Backbone.Model
-  paramRoot: 'syllabus'
+  paramRoot: 'component'
 
  
 
