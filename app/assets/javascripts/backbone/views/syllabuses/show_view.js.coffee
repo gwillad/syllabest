@@ -9,8 +9,8 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     
   initialize: ->
     @usid = @model.get("user_id")
-    @collection.on('reset',@render, this)
-    @collection.on('add', @appendComponent,this)
+    @collection.on('reset', @render, this)
+    @collection.on('add', @appendComponent, this)
 
   render: ->
     $(@el).html(@template(syllabus: @model))
@@ -28,26 +28,20 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   	$(e.currentTarget).toggleClass("accent")
 
   applyDragDrop: ->
-    componentBox = "<div id='component_box'></div>"
-    draggables = [$('#new_plaintext_button'), $('#new_table_button'), $('#new_calendar_button')]
-    for each in draggables
-      $(each).draggable({
-        helper: "clone",
-        opacity: .5,
-        scope: "components",
-        containment: $('.container-fluid'),
-        cursor: "-webkit-grabbing"
-      })
+    $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
+      helper: "clone",
+      opacity: .5,
+      scope: "components",
+      containment: $('.container-fluid'),
+      cursor: "-webkit-grabbing"
+    })
     $('#syllabus').droppable({
       scope: "components",
       over: (event, ui) ->
         console.log(ui.helper)
-        $('#new_plaintext_button').draggable({
-          helper: $(JST["backbone/templates/components/box"]())
-        })
-        console.log(ui.helper)
-      out: ->
+        $('#new_plaintext_button').draggable("option", "helper", $(JST["backbone/templates/components/box"]()))
         console.log($('#new_plaintext_button').draggable("option", "helper"))
+      out: ->
         $('#new_plaintext_button').draggable("option", "helper", "clone")
     })
 
@@ -65,7 +59,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#right_side').append(view.render().el)
     this.applyDragDrop()
 
-  cancelComponent: (e) =>
+  cancelComponent: (e) ->
     $('#new_component').remove()
     $('#new_component_button').show()
     syllabus_row = $('#syllabus_row').detach()
