@@ -8,12 +8,12 @@
 	.row
 		.col-md-12.col-sm-12#new_plaintext{:title => "Drag to syllabus to add plain text"}
 			%i.fa.fa-file-text-o.fa-3x#new_plaintext_button{:component_type => "plaintext"} 
-			%h4 Plain Text
+			%h4#new_plaintext_title Plain Text
 	.row
 		.col-md-12.col-sm-12#new_table{:title => "Drag to syllabus to add table"}
 			%i.fa.fa-list.fa-3x#new_table_button{:component_type => "table"}
-			%h4 Table
+			%h4#new_table_title Table
 	.row
 		.col-md-12.col-sm-12#new_calendar{:title => "Drag to syllabus to add calendar"}
 			%i.fa.fa-calendar.fa-3x#new_calendar_button{:component_type => "calendar"}
-			%h4 Calendar
+			%h4#new_calendar_title Calendar

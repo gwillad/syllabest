@@ -2,31 +2,31 @@
 	.col-md-12
 		%form.form-horizontal#new_user{:role => "form"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_fname", :id=> "new_user_fname_label"} First Name
+				%label.col-md-2.control-label.accent{:for => "new_user_fname", :id=> "new_user_fname_label"} First Name<small class="text-danger" id="fname_errors"></small>
 				.col-md-4
 					%input.form-control#new_user_fname{:type => "text", :placeholder => "ex: Joel"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_lname"} Last Name
+				%label.col-md-2.control-label.accent{:for => "new_user_lname", :id=>"new_user_lname_label"} Last Name
 				.col-md-4
 					%input.form-control#new_user_lname{:type => "text", :placeholder => "ex: Winkelman"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_email"} Email
+				%label.col-md-2.control-label.accent{:for => "new_user_email", :id=>"new_user_email_label"} Email<small class="text-danger" id="email_errors"></small>
 				.col-md-4
 					%input.form-control#new_user_email{:type => "text", :placeholder => "ex: jwinkelm@hamilton.edu"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_password"} Password
+				%label.col-md-2.control-label.accent{:for => "new_user_password", :id=>"new_user_password_label"} Password
 				.col-md-4
 					%input.form-control#new_user_password{:type => "password", :placeholder => "ex: abc123"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "confirm_password"} Confirm Password
+				%label.col-md-2.control-label.accent{:for => "confirm_password", :id=."confirm_password_label"} Confirm Password
 				.col-md-4
 					%input.form-control#confirm_password{:type => "password", :placeholder => "ex: abc123"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_school"} School
+				%label.col-md-2.control-label.accent{:for => "new_user_school", :id => "new_user_school_label"} School
 				.col-md-4
 					%input.form-control#new_user_school{:type => "text", :placeholder => "ex: Hamilton College"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_office"} Office
+				%label.col-md-2.control-label.accent{:for => "new_user_office", :id=>"new_user_office"} Office
 				.col-md-4
 					%input.form-control#new_user_office{:type => "text", :placeholder => "ex: KJ 137"}
 			.form_button_group

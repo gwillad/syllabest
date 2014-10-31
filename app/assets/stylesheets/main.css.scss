@@ -12,6 +12,10 @@ body {
 	color: #6CBC51;
 }
 
+.highlight {
+	opacity: .5;
+}
+
 #syllabest {
 	font-family: "Courier New";
 	color: #707070;
@@ -80,19 +84,7 @@ body {
 	margin-left: 17%;
 }
 
-.form-control:-moz-placeholder {
-	color: #909090;
-}
-
-.form-control::-moz-placeholder {
-	color: #909090;
-}
-
 .form-control::-webkit-input-placeholder {
-	color: #909090;
-}
-
-.form-control:-ms-input-placeholder {
 	color: #909090;
 }
 
@@ -130,8 +122,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-family: "Baskerville";
 }
 
-.accept_drop {
-	background-color: #E8E8E8;
+.accept {
+    border: 2px dashed #909090 !important;
 }
 
 #header {
@@ -192,7 +184,5 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 #new_plaintext_button, #new_table_button, #new_calendar_button {
-	cursor: grab;
 	cursor: -webkit-grab;
-	cursor: -moz-grab;
 }
