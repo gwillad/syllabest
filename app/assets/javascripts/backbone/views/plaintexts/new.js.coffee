@@ -15,7 +15,8 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
       plaintext_attributes: 
        title: $('#new_plaintext_title').val()
        contents:  $('#new_plaintext_contents').val()	
-    @collection.create attributes
+    @collection.create attributes, success: (response) ->
+      console.log response.toJSON()
     this.remove()
     this.unbind()    
     

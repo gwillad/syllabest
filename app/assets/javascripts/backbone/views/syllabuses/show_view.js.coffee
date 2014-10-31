@@ -10,7 +10,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   initialize: ->
     @usid = @model.get("user_id")
     @collection.on('reset',@render, this)
-    @collection.on('add', @appendComponent,this)
+    #@collection.on('add', @appendComponent,this)
 
   render: ->
     $(@el).html(@template(syllabus: @model))
@@ -52,6 +52,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     })
 
   addComponent: (e) ->
+    console.log @collection.toJSON()
     #e.preventDefault()
     hash = 
       sid: @model.get('id')
