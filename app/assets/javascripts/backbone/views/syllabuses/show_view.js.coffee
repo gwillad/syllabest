@@ -5,6 +5,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #back_button': 'returnToUser'
     'click #new_component_button': 'addComponent'
     'hover #back_button, #new_component_button': 'highlight'
+    'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_title, #new_calendar_button, #new_calendar_title, #cancel_component_button': 'highlight2'
     'click #cancel_component_button': 'cancelComponent'
     
   initialize: ->
@@ -25,7 +26,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     Backbone.history.navigate("users/#{@model.get('user_id')}", true)
 
   highlight: (e) ->
-  	$(e.currentTarget).toggleClass("accent")
+    $(e.currentTarget).toggleClass("accent")
+
+  highlight2: (e) ->
+    $(e.currentTarget).parent().toggleClass("highlight")
 
   applyDragDrop: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
