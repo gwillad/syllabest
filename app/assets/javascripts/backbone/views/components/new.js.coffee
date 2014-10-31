@@ -21,7 +21,6 @@ class Syllabest.Views.Components.New extends Backbone.View
   addComponentForm: (e) ->
     e.preventDefault()
     component_type = $(e.currentTarget).attr("component_type")
-    alert component_type
     #if component_type is "plaintext"
       #view = new Syllabest.Views.Plaintexts.New
     #else if component_type is "table"
