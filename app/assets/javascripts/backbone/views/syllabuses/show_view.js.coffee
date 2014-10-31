@@ -41,10 +41,11 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     })
     $('#syllabus').droppable({
       scope: "components",
+      hoverClass: "accept",
       over: (event, ui) ->
-        console.log(ui.helper)
-        $('#new_plaintext_button').draggable("option", "helper", $(JST["backbone/templates/components/box"]()))
-        console.log($('#new_plaintext_button').draggable("option", "helper"))
+        #console.log(ui.helper)
+        #$('#new_plaintext_button').draggable("option", "helper", $(JST["backbone/templates/components/box"]()))
+        #console.log($('#new_plaintext_button').draggable("option", "helper"))
       out: ->
         $('#new_plaintext_button').draggable("option", "helper", "clone")
     })

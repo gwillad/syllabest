@@ -122,8 +122,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-family: "Baskerville";
 }
 
-.accept_drop {
-	background-color: #E8E8E8;
+.accept {
+    border: 2px dashed #909090 !important;
 }
 
 #header {
