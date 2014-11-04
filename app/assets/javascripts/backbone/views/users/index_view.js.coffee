@@ -27,6 +27,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
 
   removeUserForm: (event) ->
     event.preventDefault()
+    $('#warning-box').remove()
     $('#new_user').remove()
     $('#users').show()
     $('#add_user').show()
@@ -47,6 +48,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     @collection.create attributes,
       wait: true
       success: ->
+        $('warning-box').remove()
         $('#new_user').remove()
         $('#add_user').show()
         $('#users').show()
@@ -55,18 +57,45 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
 
   handleError: (user, response)->
     if response.status == 422
+      $('#warnings').append('<div id="warning-box" class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Warning</strong> A problem has occured while submitting your data.</div>')
       errors = $.parseJSON(response.responseText).errors
       for attribute, messages of errors
         #alert(attribute + ' ' +message) for message in messages
         if (attribute == "first_name")
-          $('#new_user_fname').css({'border-color': 'red', 'box-shadow': '0 0 2px red'})
+          #$('#new_user_fname').css({'border-color': 'red', 'box-shadow': '0 0 2px red'})
           $('#fname_errors').empty()
           $('#fname_errors').text(' ('+messages+')')
+          $('#new_user_fname').append('%span{:class=>"glyphicon glyphicon-remove form-control-feedback"}')
+          $('#new_user_fname').closest('.form-group').addClass('has-error')
+          $('#fname_span').addClass('glyphicon glyphicon-remove form-control-feedback')
 
         if (attribute == "email")
           $('#new_user_email').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+          $('#new_user_email').append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
           $('#email_errors').empty()
           $('#email_errors').text(' ('+messages+')')
+
+        if (attribute == "last_name")
+          $('#new_user_lname').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+          $('#lname_errors').empty()
+          $('#lname_errors').text(' ('+messages+')')
+
+        if (attribute == "password")
+          $('#new_user_password').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+          $('#password_errors').empty()
+          $('#password_errors').text(' ('+messages+')')
+
+
+        if (attribute == "office")
+          $('#new_user_office').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+          $('#office_errors').empty()
+          $('#office_errors').text(' ('+messages+')')
+
+        if (attribute == "school")
+          $('#new_user_school').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+          $('#school_errors').empty()
+          $('#school_errors').text(' ('+messages+')')
+          
 
 
 
