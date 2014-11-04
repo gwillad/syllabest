@@ -1,3 +1,5 @@
+Syllabest.Views.Users ||= {}
+
 class Syllabest.Routers.UsersRouter extends Backbone.Router
   routes:
     '': 'index'

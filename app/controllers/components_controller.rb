@@ -4,11 +4,23 @@ class ComponentsController < ApplicationController
   before_action :find_syllabus, only: [:index, :show, :update, :create, :destroy]
 
   def index
-    respond_with @syllabus.components.all
+    @response = @syllabus.components.all
+    @jsonResponse = []
+    @response.each do |h|
+      @plaintext = h.plaintext.as_json
+      record = h.as_json
+      record[:plaintext] = @plaintext
+      @jsonResponse.push(record)
+    end
+    respond_with @jsonResponse
   end
 
   def show
-    respond_with @syllabus.components.find(params[:id])
+    @response = @syllabus.components.find(params[:id])
+    @plaintext = @response.plaintext
+    @response = @response.as_json
+    @response[:plaintext] = @plaintext.as_json
+    respond_with @response
   end
   
   def update

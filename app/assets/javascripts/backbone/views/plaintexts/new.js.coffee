@@ -14,11 +14,12 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
       syllabus_id: @model.get('id')
       plaintext_attributes: 
        title: $('#new_plaintext_title').val()
-       contents:  $('#new_plaintext_contents').val()	
-    @collection.create attributes, success: (response) ->
-      console.log response.toJSON()
+       contents:  $('#new_plaintext_contents').val()
+    # @plain_comp = new Syllabest.Model.Components(attributes)	
+    @collection.create attributes, {wait: true}
+    @collection.fetch()
     this.remove()
-    this.unbind()    
+    this.unbind()   
     
   cancelPlainText: (e) ->
     e.preventDefault()
@@ -26,6 +27,8 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
     this.unbind()
 
 
+  succeed: (response) ->
+    console.log response.toJSON()
 
   render: ->
     $(@el).html(@template())
