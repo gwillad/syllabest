@@ -124,8 +124,10 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-family: "Baskerville";
 }
 
-.accept {
-    border: 2px dashed #909090 !important;
+.sort {
+    border: 3px dashed #6CBC51 !important;
+    border-radius: 8px;
+    overflow: auto;
 }
 
 #header {
