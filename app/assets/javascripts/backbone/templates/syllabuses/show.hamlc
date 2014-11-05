@@ -28,3 +28,5 @@
 						%h1= @syllabus.get("title")
 						%h3= @syllabus.get("department") + ' ' + @syllabus.get("course_num")
 						%h5= @syllabus.get("term")
+				.row
+					.col-md-12.col-sm-12#components

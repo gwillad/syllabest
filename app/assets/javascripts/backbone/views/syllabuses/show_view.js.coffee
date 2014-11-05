@@ -19,9 +19,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(@el).html(@template(syllabus: @model))
     @collection.each(@appendComponent)
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
-    $('#syllabus').sortable({
+    $('#components').sortable({
       axis: "y",
-      containment: "#syllabus",
+      containment: "#components",
       cursor: "row-resize",
       scroll: true,
       zIndex: 3,
@@ -43,7 +43,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
 
   appendComponent: (c) ->
     view = new Syllabest.Views.Components.Show(model: c)
-    $('#syllabus').append(view.render().el)
+    $('#components').append(view.render().el)
   
   returnToUser: ->
     Backbone.history.navigate("users/#{@model.get('user_id')}", true)
