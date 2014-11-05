@@ -7,6 +7,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'hover #back_button, #new_component_button': 'highlight'
     'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_title, #new_calendar_button, #new_calendar_title, #cancel_component_button': 'highlight2'
     'click #cancel_component_button': 'cancelComponent'
+    'dblclick .component-title': 'edit'
+    'dblclick .component-body': 'edit'
+    'blur .component-title': 'noedit'
+    'blur .component-body': 'noedit'
     
   initialize: ->
     @usid = @model.get("user_id")
@@ -18,7 +22,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
     $('#components').sortable({
       axis: "y",
-      containment: "#components",
+      containment: "#syllabus",
       cursor: "row-resize",
       scroll: true,
       zIndex: 3,
@@ -28,6 +32,15 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(ui.item).removeClass("sort")
     })
     this
+
+  edit: (e) ->
+    $('#components').sortable("disable")
+    $(e.currentTarget).attr('contenteditable', true)
+    $(e.currentTarget).focus()
+
+  noedit: (e) ->
+    $(e.currentTarget).attr('contenteditable', false)
+    $('#components').sortable("enable")
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
