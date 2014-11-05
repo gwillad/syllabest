@@ -30,10 +30,7 @@ class ComponentsController < ApplicationController
   def create
     params.permit!
     @record = @syllabus.components.create(params[:component])
-    @record.child_id = @record.plaintext.id
-    @record.save
-    @plain = @record.plaintext
-    respond_with @user, @syllabus, @record, @plain
+    respond_with @user, @syllabus, @record
   end
   
   def destroy
