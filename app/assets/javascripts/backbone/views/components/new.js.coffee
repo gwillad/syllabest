@@ -9,13 +9,6 @@ class Syllabest.Views.Components.New extends Backbone.View
     'click #new_table_button, #new_calendar_button': 'addComponentForm'
 
   initialize: ->
-    $('#syllabus').sortable({
-      axis: "y",
-      start: (event, ui) ->
-        $(ui.item).addClass("sort")
-      stop: (event, ui) ->
-        $(ui.item).removeClass("sort")
-    })
     doc = this
     $('#syllabus').droppable({
       scope: "components",

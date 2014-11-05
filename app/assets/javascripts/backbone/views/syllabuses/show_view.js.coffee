@@ -13,11 +13,23 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.on('reset', @render, this)
     # @collection.on('add', @appendComponent, this)
     # @collection.on('add', @render, this)
+    console.log("hi")
 
   render: ->
     $(@el).html(@template(syllabus: @model))
     @collection.each(@appendComponent)
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
+    $('#syllabus').sortable({
+      axis: "y",
+      containment: "#syllabus",
+      cursor: "row-resize",
+      scroll: true,
+      zIndex: 3,
+      start: (event, ui) ->
+        $(ui.item).addClass("sort")
+      stop: (event, ui) ->
+        $(ui.item).removeClass("sort")
+    })
     this
 
   applyDrag: ->
