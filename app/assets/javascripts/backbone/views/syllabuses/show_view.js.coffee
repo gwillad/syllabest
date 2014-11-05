@@ -13,6 +13,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.on('reset', @render, this)
     # @collection.on('add', @appendComponent, this)
     # @collection.on('add', @render, this)
+    console.log("hi")
 
   render: ->
     $(@el).html(@template(syllabus: @model))
