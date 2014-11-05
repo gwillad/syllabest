@@ -19,6 +19,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   render: ->
     $(@el).html(@template(syllabus: @model))
     @collection.each(@appendComponent)
+    doc = this
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
     $('#components').sortable({
       axis: "y",
@@ -30,8 +31,15 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(ui.item).addClass("sort")
       stop: (event, ui) ->
         $(ui.item).removeClass("sort")
+        console.log(doc.getComponentsOrder())
     })
     this
+
+  getComponentsOrder: ->
+    order = []
+    for each in $('.component-title')
+      order.push($(each).attr("cid"))
+    order
 
   edit: (e) ->
     $('#components').sortable("disable")
