@@ -1,2 +1,2 @@
-.component.component-title= @plaintext["title"]
-.component= @plaintext["contents"]
+%h4.component-title= @plaintext["title"]
+.component-body= @plaintext["contents"]

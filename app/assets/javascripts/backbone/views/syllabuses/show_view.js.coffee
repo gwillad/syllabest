@@ -19,6 +19,15 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.each(@appendComponent)
     this
 
+  applyDrag: ->
+    $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
+      helper: "clone",
+      opacity: .5,
+      scope: "components",
+      containment: $('.container-fluid'),
+      cursor: "-webkit-grabbing"
+    })
+
   appendComponent: (c) ->
     view = new Syllabest.Views.Components.Show(model: c)
     $('#syllabus').append(view.render().el)
@@ -32,27 +41,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   highlight2: (e) ->
     $(e.currentTarget).parent().toggleClass("highlight")
 
-  applyDragDrop: ->
-    $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
-      helper: "clone",
-      opacity: .5,
-      scope: "components",
-      containment: $('.container-fluid'),
-      cursor: "-webkit-grabbing"
-    })
-    $('#syllabus').droppable({
-      scope: "components",
-      hoverClass: "accept",
-      drop: (event, ui) ->
-        alert $(ui.draggable).attr("component_type")
-      over: (event, ui) ->
-        #console.log(ui.helper)
-        #$('#new_plaintext_button').draggable("option", "helper", $(JST["backbone/templates/components/box"]()))
-        #console.log($('#new_plaintext_button').draggable("option", "helper"))
-      out: ->
-        $('#new_plaintext_button').draggable("option", "helper", "clone")
-    })
-
   addComponent: (e) ->
     e.preventDefault()
     hash = 
@@ -65,7 +53,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     syllabus_row = $('#syllabus_row').detach()
     $('#left_side').append(syllabus_row)
     $('#right_side').append(view.render().el)
-    this.applyDragDrop()
+    this.applyDrag()
 
   cancelComponent: (e) ->
     $('#new_component').remove()

@@ -7,10 +7,24 @@ class Syllabest.Views.Components.New extends Backbone.View
 
   events:
     'click #new_table_button, #new_calendar_button': 'addComponentForm'
-    'click #new_plaintext_button': 'addPlaintext'
+
+  initialize: ->
+    temp = this
+    $('#syllabus').droppable({
+      scope: "components",
+      hoverClass: "accept",
+      drop: (event, ui) ->
+        if $(ui.draggable).attr("component_type") is "plaintext"
+          temp.addPlaintext()
+      over: (event, ui) ->
+        #console.log(ui.helper)
+        #$('#new_plaintext_button').draggable("option", "helper", $(JST["backbone/templates/components/box"]()))
+        #console.log($('#new_plaintext_button').draggable("option", "helper"))
+      out: ->
+        $('#new_plaintext_button').draggable("option", "helper", "clone")
+    })
 
   addPlaintext: (e) ->
-    e.preventDefault()
     view = new Syllabest.Views.Plaintexts.New(model: @model, collection: @collection)
     $('#new_component_button').show()
     $('#new_component').remove()

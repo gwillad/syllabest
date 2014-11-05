@@ -3,6 +3,8 @@ Syllabest.Views.Plaintexts ||={}
 class Syllabest.Views.Plaintexts.New extends Backbone.View
   template: JST["backbone/templates/plaintexts/new"]
 
+  className: "component"
+
   events:
     'click #submit_plaintext': 'createPlainText'
     'click #cancel_plaintext': 'cancelPlainText'

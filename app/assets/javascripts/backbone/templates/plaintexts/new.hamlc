@@ -1,14 +1,12 @@
-.row
-	.col-md-12
-		%form.form-horizontal#new_plaintext{:role => "form"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_plaintext_title"} Title
-				.col-md-4
-					%input.form-control#new_plaintext_title{:type => "text", :placeholder => "ex: Course Summary"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_plaintext_text"} Text
-				.col-md-4
-					%textarea.form-control#new_plaintext_contents{:placeholder => "Sample Text"}
-			.form_button_group
-				%button.btn.btn-default#submit_plaintext{:type => "submit"} Submit
-				%button.btn.btn-default#cancel_plaintext Cancel
+%form.form-horizontal#new_plaintext{:role => "form"}
+	.form-group
+		%label.col-md-2.control-label.accent{:for => "new_plaintext_title"} Title
+		.col-md-4
+			%input.form-control#new_plaintext_title{:type => "text", :placeholder => "ex: Course Summary"}
+	.form-group
+		%label.col-md-2.control-label.accent{:for => "new_plaintext_text"} Text
+		.col-md-4
+			%textarea.form-control#new_plaintext_contents{:placeholder => "Sample Text"}
+	.form_button_group
+		%button.btn.btn-default#submit_plaintext{:type => "submit"} Submit
+		%button.btn.btn-default#cancel_plaintext Cancel
