@@ -28,7 +28,7 @@ class Syllabest.Views.Components.New extends Backbone.View
     #$('#new_component').remove()
     #syllabus_row = $('#syllabus_row').detach()
     #$('.container-fluid').append(syllabus_row)
-    $('#syllabus').append(view.render().el)
+    $('#components').append(view.render().el)
     
   addComponentForm: (e) ->
     e.preventDefault()

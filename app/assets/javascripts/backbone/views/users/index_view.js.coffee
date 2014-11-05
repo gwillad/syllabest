@@ -57,20 +57,26 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
 
   handleError: (user, response)->
     if response.status == 422
+      $('#warning-box').remove()
       $('#warnings').append('<div id="warning-box" class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Warning</strong> A problem has occured while submitting your data.</div>')
+      $('#fname_errors').empty()
+      $('#new_user_fname').removeClass('error')
+      $('#fname_span').removeClass()
+
+
       errors = $.parseJSON(response.responseText).errors
+
       for attribute, messages of errors
         #alert(attribute + ' ' +message) for message in messages
         if (attribute == "first_name")
-          #$('#new_user_fname').css({'border-color': 'red', 'box-shadow': '0 0 2px red'})
           $('#fname_errors').empty()
           $('#fname_errors').text(' ('+messages+')')
-          $('#new_user_fname').append('%span{:class=>"glyphicon glyphicon-remove form-control-feedback"}')
-          $('#new_user_fname').closest('.form-group').addClass('has-error')
           $('#fname_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_user_fname').addClass('error')
+          $('#fname_span').css("color", "DarkRed")
 
         if (attribute == "email")
-          $('#new_user_email').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+          alert(messages.length)
           $('#new_user_email').append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
           $('#email_errors').empty()
           $('#email_errors').text(' ('+messages+')')
@@ -103,3 +109,9 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
 
 #Old code
 #$('#new_user_fname_label').append('<small class="text-danger"> ('+messages+')<small>')#('<p class="text-danger"><sub>' + message + '</sub></p') for message in messages
+
+          #('#new_user_email').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
+
+          #$('#new_user_fname').append('%span{:class=>"glyphicon glyphicon-remove form-control-feedback"}')
+          #$('#new_user_fname').append('%i.fa.fa-times')
+          #$('#new_user_fname').closest('.form-group').addClass('has-error')

@@ -8,6 +8,19 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
+.error {
+       border-color: DarkRed;
+       font-color: Black;
+}
+
+.error-text {
+	    color: DarkRed;
+	    font-size: 14px;
+	    padding-bottom: 0%;
+	    float:right;
+
+}
+
 .accent {
 	color: #6CBC51;
 }
