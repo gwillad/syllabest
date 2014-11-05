@@ -17,6 +17,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   render: ->
     $(@el).html(@template(syllabus: @model))
     @collection.each(@appendComponent)
+    $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
     this
 
   applyDrag: ->

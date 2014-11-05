@@ -114,14 +114,18 @@ input[type="text"]:focus, input[type="password"]:focus {
 	height: 1000px;
 	width: 95%;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: hidden;
 	margin-top: 2%;
 	margin-left: auto;
 	margin-right: auto;
 	border: 1px solid #909090;
-	border-radius: 100px;
+	border-radius: 30px;
 	color: black;
 	font-family: "Baskerville";
+}
+
+.scrolling {
+	overflow-y: auto !important;
 }
 
 .sort {
@@ -148,7 +152,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 	margin-bottom: 2%;
 	margin-left: 2%;
 	margin-right: 2%;
-	border: 2px dashed #6CBC51;
+	border: 3px dashed #6CBC51;
 	border-radius: 8px;
 }
 

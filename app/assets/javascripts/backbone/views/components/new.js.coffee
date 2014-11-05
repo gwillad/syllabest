@@ -10,6 +10,7 @@ class Syllabest.Views.Components.New extends Backbone.View
 
   initialize: ->
     $('#syllabus').sortable({
+      axis: "y",
       start: (event, ui) ->
         $(ui.item).addClass("sort")
       stop: (event, ui) ->
@@ -30,10 +31,10 @@ class Syllabest.Views.Components.New extends Backbone.View
 
   addPlaintext: (e) ->
     view = new Syllabest.Views.Plaintexts.New(model: @model, collection: @collection)
-    $('#new_component_button').show()
-    $('#new_component').remove()
-    syllabus_row = $('#syllabus_row').detach()
-    $('.container-fluid').append(syllabus_row)
+    #$('#new_component_button').show()
+    #$('#new_component').remove()
+    #syllabus_row = $('#syllabus_row').detach()
+    #$('.container-fluid').append(syllabus_row)
     $('#syllabus').append(view.render().el)
     
   addComponentForm: (e) ->
