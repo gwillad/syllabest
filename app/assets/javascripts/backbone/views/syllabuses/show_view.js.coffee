@@ -36,6 +36,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   edit: (e) ->
     $('#components').sortable("disable")
     $(e.currentTarget).attr('contenteditable', true)
+    $(e.currentTarget).attr('spellcheck', false)
     $(e.currentTarget).focus()
 
   noedit: (e) ->
