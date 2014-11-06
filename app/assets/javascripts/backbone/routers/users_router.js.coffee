@@ -5,16 +5,17 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     '': 'index'
     'users/:userid/syllabuses/:syllabusid': 'showSyllabus'
     'users/:id' : 'show'
-    
   
   initialize: (options) ->
     @collection = new Syllabest.Collections.UsersCollection()
-    @collection.fetch()
 
   index: ->
-    view = new Syllabest.Views.Users.IndexView(collection: @collection)
-    $('#container').html(view.render().el)
-
+    @collection.fetch({
+      success: (response) ->
+        view = new Syllabest.Views.Users.IndexView(collection: response)
+        $('#container').html(view.render().el)
+    })
+   
   show: (id) ->
     hash = 
       id: id 

@@ -11,6 +11,6 @@ window.Syllabest =
   Views: {}
   init: ->
     new Syllabest.Routers.UsersRouter()
-    Backbone.history.start(pushState: true)
+    Backbone.history.start()
 
 $(document).ready -> Syllabest.init()
