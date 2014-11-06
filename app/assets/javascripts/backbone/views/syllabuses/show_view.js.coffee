@@ -59,6 +59,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   noedit: (e) ->
     $(e.currentTarget).attr('contenteditable', false)
     $('#components').sortable("enable")
+    field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
+    component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
+    plaintext = component.get("plaintext_attributes")
+    plaintext[field] = $(e.currentTarget).text()
+    component.set("plaintext_attributes", plaintext)
+    component.save()
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
