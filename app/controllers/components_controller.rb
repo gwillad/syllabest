@@ -9,7 +9,7 @@ class ComponentsController < ApplicationController
     @response.each do |h|
       @plaintext = h.plaintext.as_json
       record = h.as_json
-      record[:plaintext] = @plaintext
+      record[:plaintext_attributes] = @plaintext
       @jsonResponse.push(record)
     end
     respond_with @jsonResponse
@@ -19,12 +19,15 @@ class ComponentsController < ApplicationController
     @response = @syllabus.components.find(params[:id])
     @plaintext = @response.plaintext
     @response = @response.as_json
-    @response[:plaintext] = @plaintext.as_json
+    @response[:plaintext_attributes] = @plaintext.as_json
     respond_with @response
   end
   
   def update
-    respond_with @syllabus.components.update(params[:id], params[:component])
+    params.permit!
+    p params
+    @record = @syllabus.components.update(params[:id].to_i, params[:component])
+    respond_with @user, @syllabus, @record
   end
   
   def create
@@ -39,7 +42,7 @@ class ComponentsController < ApplicationController
   
   private
   def component_params
-    params.require(:component).permit(:component_type, :child_id, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id])
+    params.require(:component).permit(:id, :order, :component_type, :order, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id, :id])
   end
 
   def find_syllabus

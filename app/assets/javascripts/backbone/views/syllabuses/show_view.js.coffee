@@ -17,7 +17,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.on('reset', @render, this)
 
   render: ->
-    $(@el).html(@template(syllabus: @model))
+    $(@el).html(@template(syllabus: @model))	
+    @collection.comparator = "order"
+    @collection.sort()
     @collection.each(@appendComponent)
     doc = this
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
@@ -31,14 +33,21 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(ui.item).addClass("sort")
       stop: (event, ui) ->
         $(ui.item).removeClass("sort")
-        console.log(doc.getComponentsOrder())
+        compOrder = doc.getComponentsOrder()
+        components = doc.collection["models"]
+        for component in components
+          id = component.get("id")
+          index = compOrder.indexOf(id) + 1
+          component.set("order", index)
+          component.save()
+
     })
     this
 
   getComponentsOrder: ->
     order = []
     for each in $('.component-title')
-      order.push($(each).attr("cid"))
+      order.push(parseInt($(each).attr("cid")))
     order
 
   edit: (e) ->
