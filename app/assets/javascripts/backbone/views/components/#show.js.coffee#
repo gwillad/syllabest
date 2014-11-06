@@ -6,6 +6,7 @@ class Syllabest.Views.Components.Show extends Backbone.View
 
   initialize: (options)->
     @plain = @model.get("plaintext_attributes")
+    @consol
 
   render: ->
     $(@el).html(@template(plaintext: @plain))

@@ -11,14 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141029011000) do
+ActiveRecord::Schema.define(version: 20141105210157) do
 
   create_table "components", force: true do |t|
     t.string   "component_type"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "child_id"
     t.integer  "syllabus_id"
+    t.integer  "order"
   end
 
   create_table "plaintexts", force: true do |t|
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(version: 20141029011000) do
     t.string   "department"
     t.string   "term"
     t.string   "section_num"
-    t.string   "order"
     t.string   "course_type"
     t.integer  "user_id"
   end

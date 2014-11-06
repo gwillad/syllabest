@@ -7,21 +7,25 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'hover #back_button, #new_component_button': 'highlight'
     'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_title, #new_calendar_button, #new_calendar_title, #cancel_component_button': 'highlight2'
     'click #cancel_component_button': 'cancelComponent'
+    'dblclick .component-title': 'edit'
+    'dblclick .component-body': 'edit'
+    'blur .component-title': 'noedit'
+    'blur .component-body': 'noedit'
     
   initialize: ->
     @usid = @model.get("user_id")
     @collection.on('reset', @render, this)
-    # @collection.on('add', @appendComponent, this)
-    # @collection.on('add', @render, this)
-    console.log("hi")
 
   render: ->
-    $(@el).html(@template(syllabus: @model))
+    $(@el).html(@template(syllabus: @model))	
+    @collection.comparator = "order"
+    @collection.sort()
     @collection.each(@appendComponent)
+    doc = this
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
     $('#components').sortable({
       axis: "y",
-      containment: "#components",
+      containment: "#syllabus",
       cursor: "row-resize",
       scroll: true,
       zIndex: 3,
@@ -29,8 +33,38 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(ui.item).addClass("sort")
       stop: (event, ui) ->
         $(ui.item).removeClass("sort")
+        compOrder = doc.getComponentsOrder()
+        components = doc.collection["models"]
+        for component in components
+          id = component.get("id")
+          index = compOrder.indexOf(id) + 1
+          component.set("order", index)
+          component.save()
+
     })
     this
+
+  getComponentsOrder: ->
+    order = []
+    for each in $('.component-title')
+      order.push(parseInt($(each).attr("cid")))
+    order
+
+  edit: (e) ->
+    $('#components').sortable("disable")
+    $(e.currentTarget).attr('contenteditable', true)
+    $(e.currentTarget).attr('spellcheck', false)
+    $(e.currentTarget).focus()
+
+  noedit: (e) ->
+    $(e.currentTarget).attr('contenteditable', false)
+    $('#components').sortable("enable")
+    field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
+    component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
+    plaintext = component.get("plaintext_attributes")
+    plaintext[field] = $(e.currentTarget).text()
+    component.set("plaintext_attributes", plaintext)
+    component.save()
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
