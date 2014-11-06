@@ -25,6 +25,10 @@ body {
 	color: #6CBC51;
 }
 
+.delete {
+	color: #D9534F !important;
+}
+
 .highlight {
 	opacity: .5;
 }
@@ -142,8 +146,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 .sort {
-    border: 3px dashed #6CBC51 !important;
-    border-radius: 8px;
+    //border: 3px dashed #6CBC51 !important;
+    border-color: #6CBC51 !important;
     overflow: auto;
     overflow: hidden;
 }
@@ -161,6 +165,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 	text-align: left;
 	cursor: pointer;
 	background-color: #FFFFFF;
+	border: 1px hidden #909090;
+	border-radius: 8px;
 }
 
 #component_box {
@@ -174,6 +180,25 @@ input[type="text"]:focus, input[type="password"]:focus {
 
 .component .component-title {
 	font-weight: bold;
+}
+
+.delete_col {
+	text-align:right;
+}
+
+.delete_component {
+	cursor: pointer;
+	color: #C0C0C0;
+	margin-right: 10%;
+	display: none;
+}
+
+.show_delete {
+	display: inline !important;
+}
+
+.show_component_border {
+	border-style: solid !important;
 }
 
 [contenteditable=true]:focus {
