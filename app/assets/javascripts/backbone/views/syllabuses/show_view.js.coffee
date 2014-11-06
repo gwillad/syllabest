@@ -6,6 +6,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #new_component_button': 'addComponent'
     'hover #back_button, #new_component_button': 'highlight'
     'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_title, #new_calendar_button, #new_calendar_title, #cancel_component_button': 'highlight2'
+    'hover .component': 'showDelete'
+    'hover .delete_component': 'highlightDelete'
+    'click .delete_component': 'deleteComponent'
     'click #cancel_component_button': 'cancelComponent'
     'dblclick .component-title': 'edit'
     'dblclick .component-body': 'edit'
@@ -30,8 +33,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       scroll: true,
       zIndex: 3,
       start: (event, ui) ->
+        $(ui.item).find(".delete_component").removeClass("show_delete")
         $(ui.item).addClass("sort")
       stop: (event, ui) ->
+        $(ui.item).find(".delete_component").addClass("show_delete")
         $(ui.item).removeClass("sort")
         doc.updateComponentsOrder()
     })
@@ -66,7 +71,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     plaintext[field] = $(e.currentTarget).text()
     component.set("plaintext_attributes", plaintext)
     component.save()
-    data = $(e.currentTarget).text()
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
@@ -89,6 +93,18 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
 
   highlight2: (e) ->
     $(e.currentTarget).parent().toggleClass("highlight")
+
+  showDelete: (e) ->
+    $(e.currentTarget).find('.delete_component').toggleClass("show_delete")
+    $(e.currentTarget).toggleClass("show_component_border")
+
+  highlightDelete: (e) ->
+    $(e.currentTarget).toggleClass("delete")
+
+  deleteComponent: (e) ->
+    component = @collection.get(parseInt($(e.currentTarget).parent().parent().find(".component-title").attr("cid")))
+    $(e.currentTarget).parent().parent().parent().remove()
+    component.destroy()
 
   addComponent: (e) ->
     e.preventDefault()
