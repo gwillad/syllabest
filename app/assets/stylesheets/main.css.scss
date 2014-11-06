@@ -145,6 +145,7 @@ input[type="text"]:focus, input[type="password"]:focus {
     border: 3px dashed #6CBC51 !important;
     border-radius: 8px;
     overflow: auto;
+    overflow: hidden;
 }
 
 #header {
