@@ -33,22 +33,21 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(ui.item).addClass("sort")
       stop: (event, ui) ->
         $(ui.item).removeClass("sort")
-        compOrder = doc.getComponentsOrder()
-        components = doc.collection["models"]
-        for component in components
-          id = component.get("id")
-          index = compOrder.indexOf(id) + 1
-          component.set("order", index)
-          component.save()
-
+        doc.updateComponentsOrder()
     })
     this
 
-  getComponentsOrder: ->
-    order = []
+  updateComponentsOrder: ()->
+    doc = this
+    compOrder = []
     for each in $('.component-title')
-      order.push(parseInt($(each).attr("cid")))
-    order
+      compOrder.push(parseInt($(each).attr("cid")))
+    components = doc.collection["models"]
+    for component in components
+      id = component.get("id")
+      index = compOrder.indexOf(id) + 1
+      component.set("order", index)
+      component.save()
 
   edit: (e) ->
     $('#components').sortable("disable")
@@ -62,9 +61,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
     component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
     plaintext = component.get("plaintext_attributes")
+    if $(e.currentTarget).text() is ""
+      $(e.currentTarget).text(plaintext[field])
     plaintext[field] = $(e.currentTarget).text()
     component.set("plaintext_attributes", plaintext)
     component.save()
+    data = $(e.currentTarget).text()
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
