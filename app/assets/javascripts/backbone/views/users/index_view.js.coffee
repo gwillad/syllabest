@@ -48,7 +48,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     @collection.create attributes,
       wait: true
       success: ->
-        $('warning-box').remove()
+        $('#warning-box').remove()
         $('#new_user').remove()
         $('#add_user').show()
         $('#users').show()
@@ -62,6 +62,26 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
       $('#fname_errors').empty()
       $('#new_user_fname').removeClass('error')
       $('#fname_span').removeClass()
+
+      $('#lname_errors').empty()
+      $('#new_user_lname').removeClass('error')
+      $('#lname_span').removeClass()
+
+      $('#email_errors').empty()
+      $('#new_user_email').removeClass('error')
+      $('#email_span').removeClass()
+
+      $('#password_errors').empty()
+      $('#new_user_password').removeClass('error')
+      $('#password_span').removeClass()
+
+      $('#school_errors').empty()
+      $('#new_user_school').removeClass('error')
+      $('#school_span').removeClass()
+
+      $('#office_errors').empty()
+      $('#new_user_office').removeClass('error')
+      $('#office_span').removeClass()
 
 
       errors = $.parseJSON(response.responseText).errors
@@ -77,30 +97,40 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
 
         if (attribute == "email")
           alert(messages.length)
-          $('#new_user_email').append('<span class="glyphicon glyphicon-remove form-control-feedback"></span>');
           $('#email_errors').empty()
-          $('#email_errors').text(' ('+messages+')')
+          $('#email_errors').text('('+messages+')')
+          $('#email_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_user_email').addClass('error')
+          $('#email_span').css("color", "DarkRed")
 
         if (attribute == "last_name")
-          $('#new_user_lname').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
           $('#lname_errors').empty()
-          $('#lname_errors').text(' ('+messages+')')
+          $('#lname_errors').text('('+messages+')')
+          $('#lname_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_user_lname').addClass('error')
+          $('#lname_span').css("color", "DarkRed")
 
         if (attribute == "password")
-          $('#new_user_password').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
           $('#password_errors').empty()
-          $('#password_errors').text(' ('+messages+')')
+          $('#password_errors').text('('+messages+')')
+          $('#password_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_user_password').addClass('error')
+          $('#password_span').css("color", "DarkRed")
 
 
         if (attribute == "office")
-          $('#new_user_office').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
           $('#office_errors').empty()
-          $('#office_errors').text(' ('+messages+')')
+          $('#office_errors').text('('+messages+')')
+          $('#office_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_user_office').addClass('error')
+          $('#office_span').css("color", "DarkRed")
 
         if (attribute == "school")
-          $('#new_user_school').css({'border-color': 'red', 'box-shadow': '0 0 7px red'})
           $('#school_errors').empty()
-          $('#school_errors').text(' ('+messages+')')
+          $('#school_errors').text('('+messages+')')
+          $('#school_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_user_school').addClass('error')
+          $('#school_span').css("color", "DarkRed")
           
 
 

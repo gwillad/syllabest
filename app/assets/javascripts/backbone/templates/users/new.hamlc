@@ -8,30 +8,42 @@
 					%input.form-control#new_user_fname{:type => "text", :placeholder => "ex: Joel"}
 					%span#fname_span{:class=>"glyphicon form-control-feedback"}
 					%p#fname_errors{:class=>"error-text"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_lname", :id=>"new_user_lname_label"} Last Name<small class="text-danger" id="lname_errors"></small>
+			.form-group.has-feedback
+				%label.col-md-2.control-label.accent{:for => "new_user_lname", :id=>"new_user_lname_label"} Last Name
 				.col-md-4
 					%input.form-control#new_user_lname{:type => "text", :placeholder => "ex: Winkelman"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_email", :id=>"new_user_email_label"} Email<small class="text-danger" id="email_errors"></small>
+					%span#lname_span{:class=>"glyphicon form-control-feedback"}
+					%p#lname_errors{:class=>"error-text"}
+			.form-group.has-feedback
+				%label.col-md-2.control-label.accent{:for => "new_user_email", :id=>"new_user_email_label"} Email
 				.col-md-4
 					%input.form-control#new_user_email{:type => "text", :placeholder => "ex: jwinkelm@hamilton.edu"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_password", :id=>"new_user_password_label"} Password<small class="text-danger" id="password_errors"></small>
+					%span#email_span{:class=>"glyphicon form-control-feedback"}
+					%p#email_errors{:class=>"error-text"}
+			.form-group.has-feedback
+				%label.col-md-2.control-label.accent{:for => "new_user_password", :id=>"new_user_password_label"} Password
 				.col-md-4
 					%input.form-control#new_user_password{:type => "password", :placeholder => "ex: abc123"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "confirm_password", :id=."confirm_password_label"} Confirm Password<small class="text-danger" id="confirm_password_errors"></small>
+					%span#password_span{:class=>"glyphicon form-control-feedback"}
+					%p#password_errors{:class=>"error-text"}
+			.form-group.has-feedback
+				%label.col-md-2.control-label.accent{:for => "confirm_password", :id=."confirm_password_label"} Confirm Password
 				.col-md-4
 					%input.form-control#confirm_password{:type => "password", :placeholder => "ex: abc123"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_school", :id => "new_user_school_label"} School<small class="text-danger" id="school_errors"></small>
+					%span#confirm_password_span{:class=>"glyphicon form-control-feedback"}
+					%p#confirm_password_errors{:class=>"error-text"}
+			.form-group.has-feedback
+				%label.col-md-2.control-label.accent{:for => "new_user_school", :id => "new_user_school_label"} School
 				.col-md-4
 					%input.form-control#new_user_school{:type => "text", :placeholder => "ex: Hamilton College"}
-			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_user_office", :id=>"new_user_office_label"} Office<small class="text-danger" id="office_errors"></small>
+					%span#school_span{:class=>"glyphicon form-control-feedback"}
+					%p#school_errors{:class=>"error-text"}
+			.form-group.has-feedback
+				%label.col-md-2.control-label.accent{:for => "new_user_office", :id=>"new_user_office_label"} Office
 				.col-md-4
 					%input.form-control#new_user_office{:type => "text", :placeholder => "ex: KJ 137"}
+					%span#office_span{:class=>"glyphicon form-control-feedback"}
+					%p#office_errors{:class=>"error-text"}
 			.form_button_group
 				%button.btn.btn-default#submit_form{:type => "submit"} Submit
 				%button.btn.btn-default#cancel_form Cancel
