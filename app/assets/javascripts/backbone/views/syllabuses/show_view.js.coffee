@@ -79,7 +79,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
-      helper: "clone", 
+      helper: "clone",
       opacity: .5,
       scope: "components",
       containment: $('.container-fluid'),
@@ -121,7 +121,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       uid: @model.get('user_id')
     #@components = new Syllabest.Collections.ComponentsCollection([],hash)
     
-    view = new Syllabest.Views.Components.New(model: @model, collection: @collection, test: @this)
+    view = new Syllabest.Views.Components.New(model: @model, collection: @collection)
     $('#new_component_button').hide()
     syllabus_row = $('#syllabus_row').detach()
     $('#left_side').append(syllabus_row)
