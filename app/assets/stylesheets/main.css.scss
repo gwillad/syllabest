@@ -181,6 +181,11 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-weight: bold;
 }
 
+.component-body[placeholder]:empty:before, .component-title[placeholder]:empty:before {
+	content: attr(placeholder);
+	color: #C0C0C0;
+}
+
 .delete_col {
 	text-align:right;
 }

@@ -67,13 +67,15 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).attr('contenteditable', false)
     $('#components').sortable("enable")
     field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
-    component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
-    plaintext = component.get("plaintext_attributes")
-    if $(e.currentTarget).text() is ""
-      $(e.currentTarget).text(plaintext[field])
-    plaintext[field] = $(e.currentTarget).text()
-    component.set("plaintext_attributes", plaintext)
-    component.save()
+    is_new = $(e.currentTarget).closest(".component").hasClass("new")
+    if not is_new
+      component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
+      plaintext = component.get("plaintext_attributes")
+      if $(e.currentTarget).text() is ""
+        $(e.currentTarget).text(plaintext[field])
+      plaintext[field] = $(e.currentTarget).text()
+      component.set("plaintext_attributes", plaintext)
+      component.save()
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
@@ -105,9 +107,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).toggleClass("delete")
 
   deleteComponent: (e) ->
-    component = @collection.get(parseInt($(e.currentTarget).parents().find(".component-title").attr("cid")))
-    $(e.currentTarget).parent().parent().parent().remove()
-    component.destroy()
+    is_new = $(e.currentTarget).closest(".component").hasClass("new")
+    if not is_new
+      component = @collection.get(parseInt($(e.currentTarget).parents().find(".component-title").attr("cid")))
+    $(e.currentTarget).closest(".component").remove()
+    if not is_new
+      component.destroy()
 
   addComponent: (e) ->
     e.preventDefault()
