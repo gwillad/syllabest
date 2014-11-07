@@ -10,16 +10,18 @@ class Syllabest.Views.Components.New extends Backbone.View
 
   initialize: ->
     doc = this
+    #view = new Syllabest.Views.Plaintexts.New(model: @model, collection: @collection)
     $('#syllabus').droppable({
       scope: "components",
       drop: (event, ui) ->
         doc.addPlaintext() if $(ui.draggable).attr("component_type") is "plaintext"
       over: (event, ui) ->
-        #console.log(ui.helper)
-        #$('#new_plaintext_button').draggable("option", "helper", $(JST["backbone/templates/components/box"]()))
-        #console.log($('#new_plaintext_button').draggable("option", "helper"))
-      out: ->
-        $('#new_plaintext_button').draggable("option", "helper", "clone")
+        ui.helper.css("color", "#6CBC51")
+        ui.helper.css("opacity", "1")
+        console.log($('#new_plaintext_button').draggable("option", "helper"))
+      out: (event, ui) ->
+        ui.helper.css("color", "white")
+        ui.helper.css("opacity", ".5")
     })
 
   addPlaintext: (e) ->
