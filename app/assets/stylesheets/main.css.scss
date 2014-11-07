@@ -146,8 +146,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 }
 
 .sort {
-    //border: 3px dashed #6CBC51 !important;
-    border-color: #6CBC51 !important;
+    outline-color: #6CBC51 !important;
     overflow: auto;
     overflow: hidden;
 }
@@ -165,8 +164,9 @@ input[type="text"]:focus, input[type="password"]:focus {
 	text-align: left;
 	cursor: pointer;
 	background-color: #FFFFFF;
-	border: 1px hidden #909090;
-	border-radius: 8px;
+	outline-color: #909090;
+	outline-style: hidden;
+	outline-width: 1px;
 }
 
 #component_box {
@@ -189,7 +189,7 @@ input[type="text"]:focus, input[type="password"]:focus {
 .delete_component {
 	cursor: pointer;
 	color: #C0C0C0;
-	margin-right: 10%;
+	margin-right: 7%;
 	display: none;
 }
 
@@ -197,12 +197,12 @@ input[type="text"]:focus, input[type="password"]:focus {
 	display: inline !important;
 }
 
-.show_component_border {
-	border-style: solid !important;
+.show_component_outline {
+	outline-style: solid !important;
 }
 
 [contenteditable=true]:focus {
-	outline-color: #6CBC51;
+	outline: none;
 	cursor: text;
 }
 

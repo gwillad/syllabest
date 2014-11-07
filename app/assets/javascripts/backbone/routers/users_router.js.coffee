@@ -8,13 +8,11 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
   
   initialize: (options) ->
     @collection = new Syllabest.Collections.UsersCollection()
+    @collection.fetch()
 
   index: ->
-    @collection.fetch({
-      success: (response) ->
-        view = new Syllabest.Views.Users.IndexView(collection: response)
-        $('#container').html(view.render().el)
-    })
+    view = new Syllabest.Views.Users.IndexView(collection: @collection)
+    $('#container').html(view.render().el)
    
   show: (id) ->
     hash = 

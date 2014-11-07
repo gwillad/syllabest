@@ -6,7 +6,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #new_component_button': 'addComponent'
     'hover #back_button, #new_component_button': 'highlight'
     'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_title, #new_calendar_button, #new_calendar_title, #cancel_component_button': 'highlight2'
-    'hover .component': 'showDelete'
+    'hover .component': 'animateComponent'
     'hover .delete_component': 'highlightDelete'
     'click .delete_component': 'deleteComponent'
     'click #cancel_component_button': 'cancelComponent'
@@ -29,6 +29,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#components').sortable({
       axis: "y",
       containment: "#syllabus",
+      opacity: .8,
       cursor: "row-resize",
       scroll: true,
       zIndex: 3,
@@ -94,9 +95,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   highlight2: (e) ->
     $(e.currentTarget).parent().toggleClass("highlight")
 
-  showDelete: (e) ->
+  animateComponent: (e) ->
     $(e.currentTarget).find('.delete_component').toggleClass("show_delete")
-    $(e.currentTarget).toggleClass("show_component_border")
+    $(e.currentTarget).toggleClass("show_component_outline")
 
   highlightDelete: (e) ->
     $(e.currentTarget).toggleClass("delete")
