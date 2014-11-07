@@ -35,10 +35,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       zIndex: 3,
       start: (event, ui) ->
         $(ui.item).find(".delete_component").removeClass("show_delete")
-        $(ui.item).addClass("sort")
+        $(ui.item).addClass("select")
       stop: (event, ui) ->
         $(ui.item).find(".delete_component").addClass("show_delete")
-        $(ui.item).removeClass("sort")
+        $(ui.item).removeClass("select")
         doc.updateComponentsOrder()
     })
     this
@@ -57,11 +57,13 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
 
   edit: (e) ->
     $('#components').sortable("disable")
+    $(e.currentTarget).closest(".component").addClass("select")
     $(e.currentTarget).attr('contenteditable', true)
     $(e.currentTarget).attr('spellcheck', false)
     $(e.currentTarget).focus()
 
   noedit: (e) ->
+    $(e.currentTarget).closest(".component").removeClass("select")
     $(e.currentTarget).attr('contenteditable', false)
     $('#components').sortable("enable")
     field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
@@ -103,7 +105,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).toggleClass("delete")
 
   deleteComponent: (e) ->
-    component = @collection.get(parseInt($(e.currentTarget).parent().parent().find(".component-title").attr("cid")))
+    component = @collection.get(parseInt($(e.currentTarget).parents().find(".component-title").attr("cid")))
     $(e.currentTarget).parent().parent().parent().remove()
     component.destroy()
 

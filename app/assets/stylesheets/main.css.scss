@@ -145,10 +145,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 	overflow-y: auto !important;
 }
 
-.sort {
+.select {
     outline-color: #6CBC51 !important;
-    overflow: auto;
-    overflow: hidden;
 }
 
 #header {
@@ -164,9 +162,10 @@ input[type="text"]:focus, input[type="password"]:focus {
 	text-align: left;
 	cursor: pointer;
 	background-color: #FFFFFF;
-	outline-color: #909090;
+	outline-color: #C0C0C0;
 	outline-style: hidden;
 	outline-width: 1px;
+	overflow: hidden;
 }
 
 #component_box {
