@@ -8,6 +8,11 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
+::-webkit-selection, ::selection {
+	background: #8BCA76;
+	color: #FFFFFF;
+}
+
 .error {
        border-color: DarkRed;
        font-color: Black;
