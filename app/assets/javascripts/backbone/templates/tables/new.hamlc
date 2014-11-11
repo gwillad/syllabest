@@ -4,11 +4,11 @@
 	.col-md-1.col-md-offset-6.col-sm-1.col-sm-offset-6.delete_col
 		%i.fa.fa-remove.delete_component#cancel_table{:title=>"Delete this component"}
 .row
-	.col-md-5.col-sm-5
-		%input.form-control#new_table_rows{:type => "text", :placeholder => "Number of rows"}
+	.col-md-3.col-sm-3
+		%input.form-control#new_table_rows{:type => "number", :placeholder => "Number of rows"}
 .row
-	.col-md-5.col-sm-5
-		%input.form-control#new_table_columns{:type => "text", :placeholder => "Number of columns"}
+	.col-md-3.col-sm-3
+		%input.form-control#new_table_columns{:type => "number", :placeholder => "Number of columns"}
 .row
 	.col-md-12.col-sm-12
 		%button.btn.btn-default#submit_table{:type => "submit"} Submit
