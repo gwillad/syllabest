@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  component_id: 1
+  contents: MyText
+  rows: 1
+  columns: 1
+  title: MyString
+
+two:
+  component_id: 1
+  contents: MyText
+  rows: 1
+  columns: 1
+  title: MyString

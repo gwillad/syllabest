@@ -14,8 +14,9 @@ class ComponentsController < ApplicationController
         @jsonResponse.push(record)
       elsif h.component_type == "table"
         @table = h.table.as_json
+        p @table
         record = h.as_json
-        record[:table_attributes] = @plaintext
+        record[:table_attributes] = @table
         @jsonResponse.push(record)
       end
     end
