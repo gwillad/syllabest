@@ -2,18 +2,22 @@ Syllabest.Views.Users ||= {}
 
 class Syllabest.Routers.UsersRouter extends Backbone.Router
   routes:
+    #'': 'reroute'
     '': 'index'
     'users/:userid/syllabuses/:syllabusid': 'showSyllabus'
     'users/:id' : 'show'
   
-  initialize: (options) ->
-    @collection = new Syllabest.Collections.UsersCollection()
-    @collection.fetch()
+  #reroute: ->
+    #Backbone.history.navigate("users", {trigger: true})
+    #this
 
   index: ->
-    view = new Syllabest.Views.Users.IndexView(collection: @collection)
-    $('#container').html(view.render().el)
-   
+    @collection = new Syllabest.Collections.UsersCollection()
+    @collection.fetch({success: (col) -> 
+      view = new Syllabest.Views.Users.IndexView(collection: col)
+      $('#container').html(view.render().el)
+   })
+
   show: (id) ->
     hash = 
       id: id 

@@ -12,11 +12,11 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
   initialize: ->
     @collection.on('reset', @render, this)
     @collection.on('add',@appendUser,this)
-
+    @collection.fetch()
+    
   render: ->
     $(@el).html(@template())
-    @appendUser model for model in @collection.models
-    #@collection.each(@appendUser)
+    @collection.each @appendUser 
     this
 
   addUserForm: (event) ->
@@ -34,7 +34,6 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     $('#add_user').show()
 
   appendUser: (user) ->
-    console.log(user)
     view = new Syllabest.Views.User(model: user)
     $('#users').append(view.render().el)
 
