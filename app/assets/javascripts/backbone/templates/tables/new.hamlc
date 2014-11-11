@@ -1,0 +1,17 @@
+%form.form-horizontal#new_plaintext{:role => "form"}
+	.form-group
+		%label.col-md-2.control-label.accent{:for => "new_table_title"} Title
+		.col-md-4
+			%input.form-control#new_table_title{:type => "text", :placeholder => "ex: Course Grades"}
+	.form-group
+		%label.col-md-2.control-label.accent{:for => "new_table_rows"} Row
+		.col-md-4
+			%input.form-control#new_table_rows{:type => "text", :placeholder => "ex: 10"}
+	.form-group
+		%label.col-md-2.control-label.accent{:for => "new_table_columns"} Column
+		.col-md-4
+			%input.form-control#new_table_columns{:type => "text", :placeholder => "ex: 14"}
+
+	.form_button_group
+		%button.btn.btn-default#submit_table{:type => "submit"} Submit
+		%button.btn.btn-default#cancel_table Cancel

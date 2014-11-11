@@ -7,10 +7,18 @@ class ComponentsController < ApplicationController
     @response = @syllabus.components.all
     @jsonResponse = []
     @response.each do |h|
-      @plaintext = h.plaintext.as_json
-      record = h.as_json
-      record[:plaintext_attributes] = @plaintext
-      @jsonResponse.push(record)
+      if h.component_type == "plaintext"
+        @plaintext = h.plaintext.as_json
+        record = h.as_json
+        record[:plaintext_attributes] = @plaintext
+        @jsonResponse.push(record)
+      elsif h.component_type == "table"
+        @table = h.table.as_json
+        p @table
+        record = h.as_json
+        record[:table_attributes] = @table
+        @jsonResponse.push(record)
+      end
     end
     respond_with @jsonResponse
   end
@@ -42,7 +50,7 @@ class ComponentsController < ApplicationController
   
   private
   def component_params
-    params.require(:component).permit(:id, :order, :component_type, :order, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id, :id])
+    params.require(:component).permit(:id, :order, :component_type, :order, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id, :id], table_attributes: [:title, :rows, :columns])
   end
 
   def find_syllabus

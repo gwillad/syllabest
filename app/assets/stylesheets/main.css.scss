@@ -8,6 +8,11 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
+::-webkit-selection, ::selection {
+	background: #8BCA76;
+	color: #FFFFFF;
+}
+
 .error {
        border-color: DarkRed;
        font-color: Black;
@@ -23,6 +28,10 @@ body {
 
 .accent {
 	color: #6CBC51;
+}
+
+.delete {
+	color: #D9534F !important;
 }
 
 .highlight {
@@ -52,14 +61,17 @@ body {
 	margin-top: 40px;
 }
 
-.table {
+#users, #syllabi {
 	margin-top: 2%;
+}
+
+#users tbody>tr>th, #syllabi tbody>tr>th {
+	color:#6CBC51;
 }
 
 .table>tbody>tr>th {
 	border-top: none;
 	padding-bottom: 20px;
-	color: #6CBC51;
 }
 
 .table>tbody>tr>td {
@@ -141,10 +153,8 @@ input[type="text"]:focus, input[type="password"]:focus {
 	overflow-y: auto !important;
 }
 
-.sort {
-    border: 3px dashed #6CBC51 !important;
-    border-radius: 8px;
-    overflow: auto;
+.select {
+    outline-color: #6CBC51 !important;
 }
 
 #header {
@@ -160,6 +170,10 @@ input[type="text"]:focus, input[type="password"]:focus {
 	text-align: left;
 	cursor: pointer;
 	background-color: #FFFFFF;
+	outline-color: #C0C0C0;
+	outline-style: hidden;
+	outline-width: 1px;
+	overflow: hidden;
 }
 
 #component_box {
@@ -175,8 +189,32 @@ input[type="text"]:focus, input[type="password"]:focus {
 	font-weight: bold;
 }
 
+.component-body[placeholder]:empty:before, .component-title[placeholder]:empty:before {
+	content: attr(placeholder);
+	color: #C0C0C0;
+}
+
+.delete_col {
+	text-align:right;
+}
+
+.delete_component {
+	cursor: pointer;
+	color: #C0C0C0;
+	margin-right: 7%;
+	display: none;
+}
+
+.show_delete {
+	display: inline !important;
+}
+
+.show_component_outline {
+	outline-style: solid !important;
+}
+
 [contenteditable=true]:focus {
-	outline-color: #6CBC51;
+	outline: none;
 	cursor: text;
 }
 

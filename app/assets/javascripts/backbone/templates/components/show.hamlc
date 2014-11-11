@@ -1,2 +1,0 @@
-%h4.component-title{:cid=>@plaintext['component_id']}= @plaintext["title"]
-.component-body{:cid=>@plaintext['component_id']}= @plaintext["contents"]

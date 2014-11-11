@@ -1,12 +1,16 @@
 class Syllabest.Views.Components.Show extends Backbone.View
 
-  template: JST["backbone/templates/components/show"]
-
   className: "component"
 
   initialize: (options)->
-    @plain = @model.get("plaintext_attributes")
+    @type = @model.get("component_type")
+    if @type is "plaintext"
+      @component = @model.get("plaintext_attributes")
+      @template = JST["backbone/templates/plaintexts/show"]
+    if @type is "table"
+      @component = @model.get("table_attributes")
+      @template = JST["backbone/templates/tables/show"]
 
   render: ->
-    $(@el).html(@template(plaintext: @plain))
+    $(@el).html(@template(component: @component, type: @type))
     this
