@@ -1,17 +1,14 @@
-%form.form-horizontal#new_plaintext{:role => "form"}
-	.form-group
-		%label.col-md-2.control-label.accent{:for => "new_table_title"} Title
-		.col-md-4
-			%input.form-control#new_table_title{:type => "text", :placeholder => "ex: Course Grades"}
-	.form-group
-		%label.col-md-2.control-label.accent{:for => "new_table_rows"} Row
-		.col-md-4
-			%input.form-control#new_table_rows{:type => "text", :placeholder => "ex: 10"}
-	.form-group
-		%label.col-md-2.control-label.accent{:for => "new_table_columns"} Column
-		.col-md-4
-			%input.form-control#new_table_columns{:type => "text", :placeholder => "ex: 14"}
-
-	.form_button_group
+.row
+	.col-md-5.col-sm-5
+		%input.form-control#new_table_title{:type => "text", :placeholder => "Title"}
+	.col-md-1.col-md-offset-6.col-sm-1.col-sm-offset-6.delete_col
+		%i.fa.fa-remove.delete_component#cancel_table{:title=>"Delete this component"}
+.row
+	.col-md-2.col-sm-2
+		%input.form-control#new_table_rows{:type => "number", :placeholder => "Rows"}
+.row
+	.col-md-2.col-sm-2
+		%input.form-control#new_table_columns{:type => "number", :placeholder => "Columns"}
+.row
+	.col-md-12.col-sm-12
 		%button.btn.btn-default#submit_table{:type => "submit"} Submit
-		%button.btn.btn-default#cancel_table Cancel
