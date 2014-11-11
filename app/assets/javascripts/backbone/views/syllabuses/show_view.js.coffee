@@ -5,7 +5,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #back_button': 'returnToUser'
     'click #new_component_button': 'addComponent'
     'hover #back_button, #new_component_button': 'highlight'
-    'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_title, #new_calendar_button, #new_calendar_title, #cancel_component_button': 'highlight2'
+    'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_label, #new_calendar_button, #new_calendar_label, #cancel_component_button': 'highlight2'
     'hover .component': 'animateComponent'
     'hover .delete_component': 'highlightDelete'
     'click .delete_component': 'deleteComponent'
@@ -63,6 +63,18 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).attr('contenteditable', true)
     $(e.currentTarget).attr('spellcheck', false)
     $(e.currentTarget).focus()
+    $(e.currentTarget).on('keydown', (event) ->
+      if event.keyCode is 9
+        console.log("got here")
+        if $(e.currentTarget).attr("class") isnt "component-title"
+          changeTo = ".component-title"
+        else
+          if $(e.currentTarget).attr("component_type") is "plaintext"
+            changeTo = ".component-body"
+          else
+            changeTo = ".component-table"
+        $(e.currentTarget).closest(".component").find(changeTo).trigger("dblclick")
+    )
 
   noedit: (e) ->
     $(e.currentTarget).closest(".component").removeClass("select")

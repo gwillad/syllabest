@@ -90,9 +90,13 @@ body {
 	color: #707070;
 }
 
-#submit_form, #submit_syllabus, #add_user, #add_syllabus {
+#submit_form, #submit_syllabus, #add_user, #add_syllabus, #submit_table {
 	color: #6CBC51;
 	border-color: #6CBC51;
+}
+
+#submit_table {
+	margin-top: 2%;
 }
 
 #add_user, #add_syllabus {
