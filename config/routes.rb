@@ -13,7 +13,7 @@ Syllabest::Application.routes.draw do
         resources :components do 
           resources :plaintexts
 #          resources :calendars
-#          resources :tables
+          resources :tables
         end
       end
     end

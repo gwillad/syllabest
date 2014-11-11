@@ -15,6 +15,7 @@ class Syllabest.Views.Components.New extends Backbone.View
       scope: "components",
       drop: (event, ui) ->
         doc.addPlaintext() if $(ui.draggable).attr("component_type") is "plaintext"
+        doc.addTable() if $(ui.draggable).attr("component_type") is "table"	
       over: (event, ui) ->
         ui.helper.css("color", "#6CBC51")
         ui.helper.css("opacity", "1")
@@ -30,6 +31,10 @@ class Syllabest.Views.Components.New extends Backbone.View
     #$('#new_component').remove()
     #syllabus_row = $('#syllabus_row').detach()
     #$('.container-fluid').append(syllabus_row)
+    $('#components').append(view.render().el)
+
+  addTable: (e) ->
+    view = new Syllabest.Views.Tables.New(model: @model, collection: @collection)
     $('#components').append(view.render().el)
     
   addComponentForm: (e) ->

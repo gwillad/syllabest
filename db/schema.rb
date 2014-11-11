@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141105210157) do
+ActiveRecord::Schema.define(version: 20141106200856) do
 
   create_table "components", force: true do |t|
     t.string   "component_type"
@@ -40,6 +40,16 @@ ActiveRecord::Schema.define(version: 20141105210157) do
     t.string   "section_num"
     t.string   "course_type"
     t.integer  "user_id"
+  end
+
+  create_table "tables", force: true do |t|
+    t.integer  "component_id"
+    t.text     "contents"
+    t.integer  "rows"
+    t.integer  "columns"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|
