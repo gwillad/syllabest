@@ -12,10 +12,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #cancel_component_button': 'cancelComponent'
     'dblclick .component-title': 'edit'
     'dblclick .component-body': 'edit'
-    #'dblclick .component-table': 'edit'
+    'dblclick .component-cell': 'edit'
     'blur .component-title': 'noedit'
     'blur .component-body': 'noedit'
-    #'blur .component-table': 'noedit'
+    'blur .component-cell': 'noedit'
     
   initialize: ->
     @usid = @model.get("user_id")
@@ -65,7 +65,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).focus()
     $(e.currentTarget).on('keydown', (event) ->
       if event.keyCode is 9
-        console.log("got here")
         if $(e.currentTarget).attr("class") isnt "component-title"
           changeTo = ".component-title"
         else
@@ -86,13 +85,22 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       if type is "plaintext"
         field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
       if type is "table"
-        field = if $(e.currentTarget).attr('class') == "component-table" then "table" else "title"
+        field = if $(e.currentTarget).attr('class') == "component-cell" then "contents" else "title"
       component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
       attributes = type + "_attributes"
       instance = component.get(attributes)
-      if $(e.currentTarget).text() is ""
-        $(e.currentTarget).text(instance[field])
-      instance[field] = $(e.currentTarget).text()
+      if type is "table" and field is "contents"
+        rowVals = []
+        for i in $("tr")
+          colVals = []
+          for j in $(i).find(".component-cell")
+            colVals.push $(j).text()
+          rowVals.push colVals
+        instance[field] = rowVals
+      else
+        if $(e.currentTarget).text() is ""
+          $(e.currentTarget).text(instance[field])
+        instance[field] = $(e.currentTarget).text()
       component.set(attributes, instance)
       component.save()
 

@@ -11,17 +11,26 @@ class Syllabest.Views.Tables.New extends Backbone.View
 
   createTable: (e) ->
     e.preventDefault()
+    numRows = parseInt($('#new_table_rows').val())
+    numCols = parseInt($('#new_table_columns').val())
+    cellContents = []
+    for i in [0 .. numRows]
+      colContents = []
+      for j in [0 .. numCols-1]
+        if i is 0
+          colContents.push "Column Title"
+        else
+          colContents.push "Cell Data"
+      cellContents.push colContents
     attributes =
       component_type: "table"
       syllabus_id: @model.get('id')
       order: @collection.length + 1
       table_attributes: 
        title: $('#new_table_title').val()
-       rows:  parseInt($('#new_table_rows').val())
-       columns:  parseInt($('#new_table_columns').val())
-       
-    console.log(attributes)
-    # @plain_comp = new Syllabest.Model.Components(attributes)	
+       rows:  numRows
+       columns:  numCols
+       contents:  cellContents
     @collection.create attributes, {wait: true}
     @collection.fetch()
     this.remove()
