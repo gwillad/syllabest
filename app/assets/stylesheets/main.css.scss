@@ -61,14 +61,17 @@ body {
 	margin-top: 40px;
 }
 
-.table {
+#users, #syllabi {
 	margin-top: 2%;
+}
+
+#users tbody>tr>th, #syllabi tbody>tr>th {
+	color:#6CBC51;
 }
 
 .table>tbody>tr>th {
 	border-top: none;
 	padding-bottom: 20px;
-	color: #6CBC51;
 }
 
 .table>tbody>tr>td {

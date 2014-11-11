@@ -12,8 +12,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #cancel_component_button': 'cancelComponent'
     'dblclick .component-title': 'edit'
     'dblclick .component-body': 'edit'
+    #'dblclick .component-table': 'edit'
     'blur .component-title': 'noedit'
     'blur .component-body': 'noedit'
+    #'blur .component-table': 'noedit'
     
   initialize: ->
     @usid = @model.get("user_id")
@@ -66,15 +68,20 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).closest(".component").removeClass("select")
     $(e.currentTarget).attr('contenteditable', false)
     $('#components').sortable("enable")
-    field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
     is_new = $(e.currentTarget).closest(".component").hasClass("new")
     if not is_new
+      type = $(e.currentTarget).attr('component_type')
+      if type is "plaintext"
+        field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
+      if type is "table"
+        field = if $(e.currentTarget).attr('class') == "component-table" then "table" else "title"
       component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
-      plaintext = component.get("plaintext_attributes")
+      attributes = type + "_attributes"
+      instance = component.get(attributes)
       if $(e.currentTarget).text() is ""
-        $(e.currentTarget).text(plaintext[field])
-      plaintext[field] = $(e.currentTarget).text()
-      component.set("plaintext_attributes", plaintext)
+        $(e.currentTarget).text(instance[field])
+      instance[field] = $(e.currentTarget).text()
+      component.set(attributes, instance)
       component.save()
 
   applyDrag: ->

@@ -1,6 +1,0 @@
-.row
-	.col-md-11.col-sm-11
-		%h4.component-title{:cid=>@plaintext['component_id'], :title=>"Drag to reorder, double-click to edit"}= @plaintext["title"]
-	.col-md-1.col-sm-1.delete_col
-		%i.fa.fa-remove.delete_component{:title=>"Delete this component"}
-.component-body{:cid=>@plaintext['component_id'], :title=>"Drag to reorder, double-click to edit"}= @plaintext["contents"]
