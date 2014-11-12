@@ -64,15 +64,16 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).attr('spellcheck', false)
     $(e.currentTarget).focus()
     $(e.currentTarget).on('keydown', (event) ->
-      if event.keyCode is 9
-        if $(e.currentTarget).attr("class") isnt "component-title"
-          changeTo = ".component-title"
-        else
-          if $(e.currentTarget).attr("component_type") is "plaintext"
-            changeTo = ".component-body"
-          else
-            changeTo = ".component-table"
-        $(e.currentTarget).closest(".component").find(changeTo).trigger("dblclick")
+      #console.log(event.keyCode)
+      #if event.keyCode is 13
+        #if $(e.currentTarget).attr("class") isnt "component-title"
+          #changeTo = ".component-title"
+        #else
+          #if $(e.currentTarget).attr("component_type") is "plaintext"
+            #changeTo = ".component-body"
+          #else
+            #changeTo = ".component-table"
+        #$(e.currentTarget).closest(".component").find(changeTo).trigger("dblclick")
     )
 
   noedit: (e) ->
