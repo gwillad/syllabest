@@ -5,7 +5,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click #back_button': 'returnToUser'
     'click #edit_button': 'openEditTab'
     'hover #back_button, #edit_button': 'highlight'
-    'hover #new_plaintext_button, #new_plaintext_label, #new_table_button, #new_table_label, #new_calendar_button, #new_calendar_label, #cancel_edit_button': 'highlight2'
+    'hover #new_plaintext, #new_table, #new_calendar, #cancel_edit_button': 'highlight2'
     'hover .component': 'animateComponent'
     'hover .delete_component': 'highlightDelete'
     'click .delete_component': 'deleteComponent'
@@ -110,7 +110,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       opacity: .5,
       scope: "components",
       containment: $('.container-fluid'),
-      cursor: "-webkit-grabbing"
+      cursor: "-webkit-grabbing",
+      drag: (event, ui) ->
+        $('#new_plaintext, #new_table, #new_calendar').removeClass("highlight")
     })
 
   appendComponent: (c) ->
@@ -124,7 +126,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).toggleClass("accent")
 
   highlight2: (e) ->
-    $(e.currentTarget).parent().toggleClass("highlight")
+    $(e.currentTarget).toggleClass("highlight")
 
   animateComponent: (e) ->
     $(e.currentTarget).find('.delete_component').toggleClass("show_delete")
