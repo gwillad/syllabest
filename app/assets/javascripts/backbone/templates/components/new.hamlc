@@ -1,19 +1,25 @@
-#new_component_tab
-	.row
-		.col-md-12.col-sm-12#cancel_component
-			%i.fa.fa-close.fa-lg#cancel_component_button
-	.row
-		.col-md-12.col-sm-12
-			%h3#new_component_title New Component
-	.row
-		.col-md-12.col-sm-12#new_plaintext{:title => "Drag to syllabus to add plain text"}
-			%i.fa.fa-file-text-o.fa-3x#new_plaintext_button{:component_type => "plaintext"} 
-			%h4#new_plaintext_label Plain Text
-	.row
-		.col-md-12.col-sm-12#new_table{:title => "Drag to syllabus to add table"}
-			%i.fa.fa-list.fa-3x#new_table_button{:component_type => "table"}
-			%h4#new_table_label Table
-	.row
-		.col-md-12.col-sm-12#new_calendar{:title => "Drag to syllabus to add calendar"}
-			%i.fa.fa-calendar.fa-3x#new_calendar_button{:component_type => "calendar"}
-			%h4#new_calendar_label Calendar
+.row
+	.col-md-12.col-sm-12#cancel_edit
+		%i.fa.fa-close.fa-lg#cancel_edit_button
+.row
+	.col-md-12.col-sm-12
+		%h3#header_label Header Options
+.row
+	.col-md-12.col-sm-12
+		%h3#new_component_label New Component
+.row
+	.col-md-2.col-sm-2
+	.col-md-4.col-sm-4#new_plaintext{:title => "Drag to syllabus to add plain text"}
+		%i.fa.fa-file-text-o.fa-3x#new_plaintext_button{:component_type => "plaintext"} 
+		%h4#new_plaintext_label Plain Text
+	.col-md-4.col-sm-4#new_table{:title => "Drag to syllabus to add table"}
+		%i.fa.fa-list.fa-3x#new_table_button{:component_type => "table"}
+		%h4#new_table_label Table
+	.col-md-2.col-sm-2
+.row
+	.col-md-2.col-sm-2
+	.col-md-4.col-sm-4#new_calendar{:title => "Drag to syllabus to add calendar"}
+		%i.fa.fa-calendar.fa-3x#new_calendar_button{:component_type => "calendar"}
+		%h4#new_calendar_label Calendar
+	.col-md-4.col-sm-4
+	.col-md-2.col-sm-2

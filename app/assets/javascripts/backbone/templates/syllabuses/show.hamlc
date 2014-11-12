@@ -17,9 +17,9 @@
 						%i.fa.fa-reply#back_arrow
 						Back
 		.col-md-3.col-sm-3#right_side
-			%span#new_component_button{:title=>"Add new content to the syllabus"}
-				%i.fa.fa-plus#plus_sign
-				New Component
+			%span#edit_button{:title=>"Add new content to the syllabus"}
+				%i.fa.fa-pencil#pencil
+				Edit
 	.row#syllabus_row
 		.col-md-12.col-sm-12
 			#syllabus

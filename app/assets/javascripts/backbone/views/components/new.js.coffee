@@ -3,7 +3,7 @@ Syllabest.Views.Components ||={}
 class Syllabest.Views.Components.New extends Backbone.View
   template: JST["backbone/templates/components/new"]
 
-  id: "new_component"
+  id: "edit_tab"
 
   initialize: ->
     doc = this

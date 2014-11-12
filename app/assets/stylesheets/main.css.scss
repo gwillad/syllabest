@@ -121,11 +121,11 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	border-color: #6CBC51;
 }
 
-#back_arrow, #plus_sign {
+#back_arrow, #pencil {
 	margin-right: 8px;
 }
 
-#new_component_button, #back_button {
+#back_button, #edit_button {
 	font-size: 20px;
 	white-space: nowrap;
 	cursor: pointer;
@@ -222,24 +222,24 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	cursor: text;
 }
 
-#new_component_tab {
+#edit_tab {
 	height: 1050px;
 	background-color: #6CBC51;
 	text-align: center;
 	color: #FFFFFF;
 }
 
-#cancel_component {
+#cancel_edit {
 	text-align: right;
 }
 
-#cancel_component_button {
+#cancel_edit_button {
 	cursor: pointer;
 	margin-right: 10px;
 	margin-top: 10px;
 }
 
-#new_component_title {
+#new_component_label, #header_label {
 	margin-top: 15%;
 	margin-bottom: 10%;
 	font-weight: normal;

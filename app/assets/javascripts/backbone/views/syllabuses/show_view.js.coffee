@@ -3,13 +3,13 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
 
   events:
     'click #back_button': 'returnToUser'
-    'click #new_component_button': 'addComponent'
-    'hover #back_button, #new_component_button': 'highlight'
-    'hover #new_plaintext_button, #new_plaintext_title, #new_table_button, #new_table_label, #new_calendar_button, #new_calendar_label, #cancel_component_button': 'highlight2'
+    'click #edit_button': 'openEditTab'
+    'hover #back_button, #edit_button': 'highlight'
+    'hover #new_plaintext_button, #new_plaintext_label, #new_table_button, #new_table_label, #new_calendar_button, #new_calendar_label, #cancel_edit_button': 'highlight2'
     'hover .component': 'animateComponent'
     'hover .delete_component': 'highlightDelete'
     'click .delete_component': 'deleteComponent'
-    'click #cancel_component_button': 'cancelComponent'
+    'click #cancel_edit_button': 'cancelEdit'
     'dblclick .component-title': 'edit'
     'dblclick .component-body': 'edit'
     'dblclick .component-cell': 'edit'
@@ -141,7 +141,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     if not is_new
       component.destroy()
 
-  addComponent: (e) ->
+  openEditTab: (e) ->
     e.preventDefault()
     hash = 
       sid: @model.get('id')
@@ -149,15 +149,15 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     #@components = new Syllabest.Collections.ComponentsCollection([],hash)
     
     view = new Syllabest.Views.Components.New(model: @model, collection: @collection)
-    $('#new_component_button').hide()
+    $('#edit_button').hide()
     syllabus_row = $('#syllabus_row').detach()
     $('#left_side').append(syllabus_row)
     $('#right_side').append(view.render().el)
     this.applyDrag()
 
-  cancelComponent: (e) ->
-    $('#new_component').remove()
-    $('#new_component_button').show()
+  cancelEdit: (e) ->
+    $('#edit_tab').remove()
+    $('#edit_button').show()
     syllabus_row = $('#syllabus_row').detach()
     $('.container-fluid').append(syllabus_row)
   
