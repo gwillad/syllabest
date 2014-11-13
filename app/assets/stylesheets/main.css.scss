@@ -121,6 +121,10 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	border-color: #6CBC51;
 }
 
+input[type="checkbox"]:checked {
+	//-webkit-appearance: none;
+}
+
 #back_arrow, #pencil {
 	margin-right: 8px;
 }
@@ -227,6 +231,18 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	background-color: #6CBC51;
 	text-align: center;
 	color: #FFFFFF;
+}
+
+#header_options {
+	text-align: left;
+}
+
+.header_option_left {
+	margin-left: 30%;
+}
+
+.header_option_right {
+	margin-left: 15%;
 }
 
 #cancel_edit {
