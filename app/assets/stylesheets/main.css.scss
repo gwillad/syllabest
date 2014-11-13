@@ -27,7 +27,7 @@ body {
 }
 
 .accent {
-	color: #6CBC51;
+	color: #6CBC51 !important;
 }
 
 .delete {
@@ -67,15 +67,16 @@ body {
 
 #users tbody>tr>th, #syllabi tbody>tr>th {
 	color:#6CBC51;
-}
-
-.table>tbody>tr>th {
-	border-top: none;
 	padding-bottom: 20px;
+	border-top: none;
 }
 
-.table>tbody>tr>td {
+#users tbody>tr>td, #syllabi tbody>tr>td {
 	border-top: none;
+}
+
+#components .table {
+	margin-bottom: 0px;
 }
 
 #new_user, #new_syllabus {
@@ -213,7 +214,21 @@ input[type="checkbox"]:checked {
 	display: none;
 }
 
-.show_delete {
+.toggle_grid {
+	cursor: pointer;
+	color: #C0C0C0;
+	display: none;
+}
+
+.border_visible {
+	border: 1px solid #C0C0C0 !important;
+}
+
+.border_hidden {
+	border: 1px hidden #C0C0C0 !important;
+}
+
+.show_component_icon {
 	display: inline !important;
 }
 

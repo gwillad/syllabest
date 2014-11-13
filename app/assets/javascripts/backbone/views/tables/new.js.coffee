@@ -31,6 +31,7 @@ class Syllabest.Views.Tables.New extends Backbone.View
        rows:  numRows
        columns:  numCols
        contents:  cellContents
+       border_class: "border_hidden"
     @collection.create attributes, {wait: true}
     @collection.fetch()
     this.remove()

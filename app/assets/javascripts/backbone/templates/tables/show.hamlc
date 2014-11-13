@@ -2,12 +2,13 @@
 	.col-md-11.col-sm-11
 		%h4.component-title{:cid=>@component['component_id'], :component_type=>@type, :title=>"Drag to reorder, double-click to edit"}= @component["title"]
 	.col-md-1.col-sm-1.delete_col
+		%i.fa.fa-bars.toggle_grid{:title=>"Toggle grid"}
 		%i.fa.fa-remove.delete_component{:title=>"Delete this component"}
 %table.table.component-table{:cid=>@component['component_id'], :component_type=>@type, :title=>"Drag to reorder, double-click to edit"}
 	%tr
 		- for i in [0 .. @component['columns']-1]
-			%th.component-cell{:cid=>@component['component_id'], :component_type=>@type}= @component['contents'][0][i]
+			%th.component-cell{:cid=>@component['component_id'], :component_type=>@type, :class=>@component['border_class']}= @component['contents'][0][i]
 	- for i in [1 .. @component['rows']]
 		%tr
 			- for j in [0 .. @component['columns']-1]
-				%td.component-cell{:cid=>@component['component_id'], :component_type=>@type}= @component['contents'][i][j]
+				%td.component-cell{:cid=>@component['component_id'], :component_type=>@type, :class=>@component['border_class']}= @component['contents'][i][j]
