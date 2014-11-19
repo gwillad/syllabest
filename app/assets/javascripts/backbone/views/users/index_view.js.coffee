@@ -42,7 +42,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     attributes = 
       first_name: $('#new_user_fname').val()
       last_name:  $('#new_user_lname').val()
-      email:      $('#new_user_email').val()
+      email:      $('#new_user_email').val().toLowerCase()
       password:   $('#new_user_password').val()
       school:     $('#new_user_school').val()
       office:     $('#new_user_office').val()
@@ -97,7 +97,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
           $('#fname_span').css("color", "DarkRed")
 
         if (attribute == "email")
-          alert(messages.length)
+          #alert(messages.length)
           $('#email_errors').empty()
           $('#email_errors').text('('+messages+')')
           $('#email_span').addClass('glyphicon glyphicon-remove form-control-feedback')
