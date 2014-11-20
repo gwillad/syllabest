@@ -179,8 +179,8 @@ input[type="checkbox"]:checked {
 	text-align: left;
 	cursor: pointer;
 	background-color: #FFFFFF;
-	outline-color: #C0C0C0;
-	outline-style: hidden;
+	outline-color: #FFFFFF;
+	outline-style: solid;
 	outline-width: 1px;
 	overflow: hidden;
 }
@@ -225,7 +225,7 @@ input[type="checkbox"]:checked {
 }
 
 .border_hidden {
-	border: 1px hidden #C0C0C0 !important;
+	border: 1px solid #FFFFFF !important;
 }
 
 .show_component_icon {
