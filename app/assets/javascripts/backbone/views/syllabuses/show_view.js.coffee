@@ -7,7 +7,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'hover #back_button, #edit_button, .toggle_grid, .delete_component': 'highlight'
     'hover #new_plaintext, #new_table, #new_calendar, #cancel_edit_button': 'highlight2'
     'hover .component': 'animateComponent'
-    #'hover .delete_component': 'highlightDelete'
     'click .delete_component': 'deleteComponent'
     'click .toggle_grid': 'toggleGrid'
     'click #cancel_edit_button': 'cancelEdit'
@@ -27,8 +26,13 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.comparator = "order"
     @collection.sort()
     @collection.each(@appendComponent)
-    doc = this
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
+    this.applySort()
+    $('#components').sortable("disable")
+    this
+
+  applySort: ->
+    doc = this
     $('#components').sortable({
       axis: "y",
       containment: "#syllabus",
@@ -44,7 +48,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(ui.item).removeClass("select")
         doc.updateComponentsOrder()
     })
-    this
 
   updateComponentsOrder: ()->
     doc = this
@@ -59,52 +62,54 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       component.save()
 
   edit: (e) ->
-    $('#components').sortable("disable")
-    $(e.currentTarget).closest(".component").addClass("select")
-    $(e.currentTarget).attr('contenteditable', true)
-    $(e.currentTarget).attr('spellcheck', false)
-    $(e.currentTarget).focus()
-    $(e.currentTarget).on('keydown', (event) ->
-      #console.log(event.keyCode)
-      #if event.keyCode is 13
-        #if $(e.currentTarget).attr("class") isnt "component-title"
-          #changeTo = ".component-title"
-        #else
-          #if $(e.currentTarget).attr("component_type") is "plaintext"
-            #changeTo = ".component-body"
+    if $('#syllabus').hasClass("editable")
+      $('#components').sortable("disable")
+      $(e.currentTarget).closest(".component").addClass("select")
+      $(e.currentTarget).attr('contenteditable', true)
+      $(e.currentTarget).attr('spellcheck', false)
+      $(e.currentTarget).focus()
+      $(e.currentTarget).on('keydown', (event) ->
+        #console.log(event.keyCode)
+        #if event.keyCode is 13
+          #if $(e.currentTarget).attr("class") isnt "component-title"
+            #changeTo = ".component-title"
           #else
-            #changeTo = ".component-table"
-        #$(e.currentTarget).closest(".component").find(changeTo).trigger("dblclick")
-    )
+            #if $(e.currentTarget).attr("component_type") is "plaintext"
+              #changeTo = ".component-body"
+            #else
+              #changeTo = ".component-table"
+          #$(e.currentTarget).closest(".component").find(changeTo).trigger("dblclick")
+      )
 
   noedit: (e) ->
-    $(e.currentTarget).closest(".component").removeClass("select")
-    $(e.currentTarget).attr('contenteditable', false)
-    $('#components').sortable("enable")
-    is_new = $(e.currentTarget).closest(".component").hasClass("new")
-    if not is_new
-      type = $(e.currentTarget).attr('component_type')
-      if type is "plaintext"
-        field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
-      if type is "table"
-        field = if $(e.currentTarget).attr('class') == "component-cell" then "contents" else "title"
-      component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
-      attributes = type + "_attributes"
-      instance = component.get(attributes)
-      if type is "table" and field is "contents"
-        rowVals = []
-        for i in $("tr")
-          colVals = []
-          for j in $(i).find(".component-cell")
-            colVals.push $(j).text()
-          rowVals.push colVals
-        instance[field] = rowVals
-      else
-        if $(e.currentTarget).text() is ""
-          $(e.currentTarget).text(instance[field])
-        instance[field] = $(e.currentTarget).text()
-      component.set(attributes, instance)
-      component.save()
+    if $('#syllabus').hasClass("editable")
+      $(e.currentTarget).closest(".component").removeClass("select")
+      $(e.currentTarget).attr('contenteditable', false)
+      $('#components').sortable("enable")
+      is_new = $(e.currentTarget).closest(".component").hasClass("new")
+      if not is_new
+        type = $(e.currentTarget).attr('component_type')
+        if type is "plaintext"
+          field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
+        if type is "table"
+          field = if $(e.currentTarget).attr('class') == "component-cell" then "contents" else "title"
+        component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
+        attributes = type + "_attributes"
+        instance = component.get(attributes)
+        if type is "table" and field is "contents"
+          rowVals = []
+          for i in $("tr")
+            colVals = []
+            for j in $(i).find(".component-cell")
+              colVals.push $(j).text()
+            rowVals.push colVals
+          instance[field] = rowVals
+        else
+          if $(e.currentTarget).text() is ""
+            $(e.currentTarget).text(instance[field])
+          instance[field] = $(e.currentTarget).text()
+        component.set(attributes, instance)
+        component.save()
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
@@ -131,12 +136,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $(e.currentTarget).toggleClass("highlight")
 
   animateComponent: (e) ->
-    $(e.currentTarget).find('.toggle_grid').toggleClass("show_component_icon")
-    $(e.currentTarget).find('.delete_component').toggleClass("show_component_icon")
-    $(e.currentTarget).toggleClass("show_component_outline")
-
-  highlightDelete: (e) ->
-    $(e.currentTarget).toggleClass("delete")
+    if $('#syllabus').hasClass("editable")
+      $(e.currentTarget).find('.toggle_grid').toggleClass("show_component_icon")
+      $(e.currentTarget).find('.delete_component').toggleClass("show_component_icon")
+      $(e.currentTarget).toggleClass("show_component_outline")
 
   deleteComponent: (e) ->
     is_new = $(e.currentTarget).closest(".component").hasClass("new")
@@ -185,10 +188,14 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#left_side').append(syllabus_row)
     $('#right_side').append(view.render().el)
     this.applyDrag()
+    $('#components').sortable("enable")
+    $('#syllabus').addClass("editable")
 
   cancelEdit: (e) ->
     $('#edit_tab').remove()
     $('#edit_button').show()
     syllabus_row = $('#syllabus_row').detach()
     $('.container-fluid').append(syllabus_row)
+    $('#components').sortable("disable")
+    $('#syllabus').removeClass("editable")
   
