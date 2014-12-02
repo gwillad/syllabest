@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141106200856) do
+ActiveRecord::Schema.define(version: 20141202194153) do
 
   create_table "components", force: true do |t|
     t.string   "component_type"
@@ -50,17 +50,18 @@ ActiveRecord::Schema.define(version: 20141106200856) do
     t.string   "title"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "border_class"
   end
 
   create_table "users", force: true do |t|
     t.string   "email"
-    t.string   "password"
     t.string   "last_name"
     t.string   "first_name"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "office"
     t.string   "school"
+    t.string   "password_digest"
   end
 
 end
