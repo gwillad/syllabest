@@ -11,6 +11,9 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     #Backbone.history.navigate("users", {trigger: true})
     #this
 
+  splash: ->
+    $('#container').html(JST["backbone/templates/splash"]())
+
   index: ->
     @collection = new Syllabest.Collections.UsersCollection()
     @collection.fetch({success: (col) -> 

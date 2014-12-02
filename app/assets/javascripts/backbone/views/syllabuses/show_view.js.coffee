@@ -27,9 +27,18 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.sort()
     @collection.each(@appendComponent)
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
-    this.applySort()
-    $('#components').sortable("disable")
     this
+
+  applyDrag: ->
+    $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
+      helper: "clone",
+      opacity: .5,
+      scope: "components",
+      containment: $('.container-fluid'),
+      cursor: "-webkit-grabbing",
+      drag: (event, ui) ->
+        $('#new_plaintext, #new_table, #new_calendar').removeClass("highlight")
+    })
 
   applySort: ->
     doc = this
@@ -111,17 +120,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         component.set(attributes, instance)
         component.save()
 
-  applyDrag: ->
-    $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
-      helper: "clone",
-      opacity: .5,
-      scope: "components",
-      containment: $('.container-fluid'),
-      cursor: "-webkit-grabbing",
-      drag: (event, ui) ->
-        $('#new_plaintext, #new_table, #new_calendar').removeClass("highlight")
-    })
-
   appendComponent: (c) ->
     view = new Syllabest.Views.Components.Show(model: c)
     $('#components').append(view.render().el)
@@ -180,7 +178,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     hash = 
       sid: @model.get('id')
       uid: @model.get('user_id')
-    #@components = new Syllabest.Collections.ComponentsCollection([],hash)
     
     view = new Syllabest.Views.Components.New(model: @model, collection: @collection)
     $('#edit_button').hide()
@@ -188,7 +185,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#left_side').append(syllabus_row)
     $('#right_side').append(view.render().el)
     this.applyDrag()
-    $('#components').sortable("enable")
+    this.applySort()
     $('#syllabus').addClass("editable")
 
   cancelEdit: (e) ->
@@ -196,6 +193,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#edit_button').show()
     syllabus_row = $('#syllabus_row').detach()
     $('.container-fluid').append(syllabus_row)
+    $('#new_plaintext_button, #new_table_button, #new_calendar_buttion').draggable("disable")
     $('#components').sortable("disable")
     $('#syllabus').removeClass("editable")
-  
+    for each in $('#components').children()
+      if $(each).hasClass("new")
+        $(each).remove()
