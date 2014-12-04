@@ -48,6 +48,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
       last_name:  $('#new_user_lname').val()
       email:      $('#new_user_email').val().toLowerCase()
       password:   $('#new_user_password').val()
+      password_confirmation: $('#confirm_password').val()
       school:     $('#new_user_school').val()
       office:     $('#new_user_office').val()
     @collection.create attributes,
@@ -92,7 +93,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
       errors = $.parseJSON(response.responseText).errors
 
       for attribute, messages of errors
-        #alert(attribute + ' ' +message) for message in messages
+        alert(attribute + ' ' +message) for message in messages
         if (attribute == "first_name")
           $('#fname_errors').empty()
           $('#fname_errors').text(' ('+messages+')')

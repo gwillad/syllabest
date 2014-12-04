@@ -3,7 +3,7 @@ Syllabest.Views.Tables ||={}
 class Syllabest.Views.Tables.New extends Backbone.View
   template: JST["backbone/templates/tables/new"]
 
-  className: "component"
+  className: "component new"
 
   events:
     'click #submit_table': 'createTable'
