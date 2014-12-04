@@ -10,6 +10,10 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
     alert "working!"
 
   initialize: ->
+    _.bindAll(this, 'render')
+#    this.listenTo(@collection, 'add', @appendUser)
+#    this.listenTo(@collection, 'reset', @render)
+
     @collection.on('reset', @render, this)
     @collection.on('add',@appendUser,this)
     @collection.fetch()

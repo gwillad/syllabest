@@ -22,10 +22,13 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     hash = 
       id: id 
     @syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
-    @syllabi.fetch()
-    @model = @collection.get(id)
-    view = new Syllabest.Views.Users.ShowView(model: @model, collection: @syllabi)
-    $('#container').html(view.render().el)
+ #   console.log @collection
+    model = @collection.get(id)
+#    console.log model    
+    @syllabi.fetch({success: (syl) ->
+      view = new Syllabest.Views.Users.ShowView(model: model, collection: syl)
+      $('#container').html(view.render().el)
+    })
 
   showSyllabus: (userid, syllabusid) ->
     hash = 
