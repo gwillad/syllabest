@@ -22,7 +22,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.on('reset', @render, this)
 
   render: ->
-    $(@el).html(@template(syllabus: @model))	
+    $(@el).html(@template(syllabus: @model))
     @collection.comparator = "order"
     @collection.sort()
     @collection.each(@appendComponent)
@@ -167,6 +167,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     component = @collection.get(parseInt($(e.currentTarget).closest(".component").find(".component-title").attr("cid")))
     attributes = "table_attributes"
     instance = component.get(attributes)
+    console.log(instance["border_class"])
     if $(e.currentTarget).closest(".component").find("th").first().hasClass("border_visible")
       newClass = "border_visible"
     else

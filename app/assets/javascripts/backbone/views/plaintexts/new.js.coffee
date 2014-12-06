@@ -6,8 +6,8 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
   className: "component new"
 
   events:
-    'click #submit_plaintext': 'createPlainText'
-    'click #cancel_plaintext': 'cancelPlainText'
+    #'click #submit_plaintext': 'createPlainText'
+    #'click #cancel_plaintext': 'cancelPlainText'
     'blur .component-title': 'createPlainText'
     'blur .component-body': 'createPlainText'
 
