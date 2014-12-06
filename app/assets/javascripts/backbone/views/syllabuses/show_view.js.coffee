@@ -85,9 +85,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     if not is_new
       type = $(e.currentTarget).attr('component_type')
       if type is "plaintext"
-        field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
+        field = if $(e.currentTarget).attr('class').contains("component-body") then "contents" else "title"
+        console.log field
       if type is "table"
-        field = if $(e.currentTarget).attr('class') == "component-cell" then "contents" else "title"
+        field = if $(e.currentTarget).attr('class').contains("component-cell") then "contents" else "title"
       component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
       attributes = type + "_attributes"
       instance = component.get(attributes)
@@ -102,7 +103,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       else
         if $(e.currentTarget).text() is ""
           $(e.currentTarget).text(instance[field])
-        instance[field] = $(e.currentTarget).text()
+        instance[field] = $(e.currentTarget).html()
+        console.log $(e.currentTarget).html()
+      console.log instance[field]
       component.set(attributes, instance)
       component.save()
 
