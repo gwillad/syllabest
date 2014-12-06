@@ -2,3 +2,4 @@
 	.row
 		.col-md-12.col-sm-12
 			%h1#syllabest Sylla<span class="accent">best</span>.
+%link{:href=>"/assets/splash.css.scss", :media=>"screen", :rel=>"stylesheet"}
