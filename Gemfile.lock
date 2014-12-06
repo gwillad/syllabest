@@ -158,12 +158,9 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   jquery-ui-rails
-<<<<<<< HEAD
   prawn
   prawn-table
-=======
   protected_attributes
->>>>>>> df2ffeb99acc03bdcdc6829ab673895b038cd676
   rails (= 4.0.0)
   rails-backbone
   sass-rails (~> 4.0.0)
