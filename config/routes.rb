@@ -6,6 +6,10 @@ Syllabest::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'main#index'
 
+  scope "pdf" do
+    resources :syllabuses, :only => [:show]
+  end
+
   scope "api" do 
     resources :users do
       resources :syllabuses do

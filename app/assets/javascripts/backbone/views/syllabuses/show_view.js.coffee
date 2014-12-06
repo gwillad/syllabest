@@ -91,34 +91,36 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       )
 
   noedit: (e) ->
-    if $('#syllabus').hasClass("editable")
-      $(e.currentTarget).closest(".component").removeClass("select")
-      $(e.currentTarget).attr('contenteditable', false)
-      $('#components').sortable("enable")
-      is_new = $(e.currentTarget).closest(".component").hasClass("new")
-      if not is_new
-        type = $(e.currentTarget).attr('component_type')
-        if type is "plaintext"
-          field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
-        if type is "table"
-          field = if $(e.currentTarget).attr('class') == "component-cell" then "contents" else "title"
-        component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
-        attributes = type + "_attributes"
-        instance = component.get(attributes)
-        if type is "table" and field is "contents"
-          rowVals = []
-          for i in $("tr")
-            colVals = []
-            for j in $(i).find(".component-cell")
-              colVals.push $(j).text()
-            rowVals.push colVals
-          instance[field] = rowVals
-        else
-          if $(e.currentTarget).text() is ""
-            $(e.currentTarget).text(instance[field])
-          instance[field] = $(e.currentTarget).text()
-        component.set(attributes, instance)
-        component.save()
+    $(e.currentTarget).closest(".component").removeClass("select")
+    $(e.currentTarget).attr('contenteditable', false)
+    $('#components').sortable("enable")
+    is_new = $(e.currentTarget).closest(".component").hasClass("new")
+    if not is_new
+      type = $(e.currentTarget).attr('component_type')
+      if type is "plaintext"
+        field = if $(e.currentTarget).attr('class').contains("component-body") then "contents" else "title"
+        console.log field
+      if type is "table"
+        field = if $(e.currentTarget).attr('class').contains("component-cell") then "contents" else "title"
+      component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
+      attributes = type + "_attributes"
+      instance = component.get(attributes)
+      if type is "table" and field is "contents"
+        rowVals = []
+        for i in $("tr")
+          colVals = []
+          for j in $(i).find(".component-cell")
+            colVals.push $(j).text()
+          rowVals.push colVals
+        instance[field] = rowVals
+      else
+        if $(e.currentTarget).text() is ""
+          $(e.currentTarget).text(instance[field])
+        instance[field] = $(e.currentTarget).html()
+        console.log $(e.currentTarget).html()
+      console.log instance[field]
+      component.set(attributes, instance)
+      component.save()
 
   appendComponent: (c) ->
     view = new Syllabest.Views.Components.Show(model: c)
