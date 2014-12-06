@@ -9,6 +9,12 @@ gem 'rails-backbone'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 
+gem 'bcrypt-ruby', :require => 'bcrypt'
+gem 'email_validator'
+gem 'protected_attributes'
+
+
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
