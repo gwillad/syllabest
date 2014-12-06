@@ -150,32 +150,31 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       component.destroy()
 
   toggleGrid: (e) ->
-    if $('#syllabus').hasClass("editable")
-      for each in $(e.currentTarget).closest(".component").find("th")
-        if $(each).hasClass("border_hidden")
-          $(each).removeClass("border_hidden")
-          $(each).addClass("border_visible")
-        else
-          $(each).removeClass("border_visible")
-          $(each).addClass("border_hidden")
-      for each in $(e.currentTarget).closest(".component").find("td")
-        if $(each).hasClass("border_hidden")
-          $(each).removeClass("border_hidden")
-          $(each).addClass("border_visible")
-        else
-          $(each).removeClass("border_visible")
-          $(each).addClass("border_hidden")
-      component = @collection.get(parseInt($(e.currentTarget).closest(".component").find(".component-title").attr("cid")))
-      attributes = "table_attributes"
-      instance = component.get(attributes)
-      console.log(instance["border_class"])
-      if $(e.currentTarget).closest(".component").find("th").first().hasClass("border_visible")
-        newClass = "border_visible"
+    for each in $(e.currentTarget).closest(".component").find("th")
+      if $(each).hasClass("border_hidden")
+        $(each).removeClass("border_hidden")
+        $(each).addClass("border_visible")
       else
-        newClass = "border_hidden"
-      instance["border_class"] = newClass
-      component.set(attributes, instance)
-      component.save()
+        $(each).removeClass("border_visible")
+        $(each).addClass("border_hidden")
+    for each in $(e.currentTarget).closest(".component").find("td")
+      if $(each).hasClass("border_hidden")
+        $(each).removeClass("border_hidden")
+        $(each).addClass("border_visible")
+      else
+        $(each).removeClass("border_visible")
+        $(each).addClass("border_hidden")
+    component = @collection.get(parseInt($(e.currentTarget).closest(".component").find(".component-title").attr("cid")))
+    attributes = "table_attributes"
+    instance = component.get(attributes)
+    console.log(instance["border_class"])
+    if $(e.currentTarget).closest(".component").find("th").first().hasClass("border_visible")
+      newClass = "border_visible"
+    else
+      newClass = "border_hidden"
+    instance["border_class"] = newClass
+    component.set(attributes, instance)
+    component.save()
 
   openEditTab: (e) ->
     e.preventDefault()
