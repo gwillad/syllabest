@@ -6,8 +6,8 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
   className: "component new"
 
   events:
-    'click #submit_plaintext': 'createPlainText'
-    'click #cancel_plaintext': 'cancelPlainText'
+    #'click #submit_plaintext': 'createPlainText'
+    #'click #cancel_plaintext': 'cancelPlainText'
     'blur .component-title': 'createPlainText'
     'blur .component-body': 'createPlainText'
 
@@ -15,6 +15,8 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
     e.preventDefault()
     new_title = $(e.currentTarget).closest(".component").find(".component-title").text()
     new_contents = $(e.currentTarget).closest(".component").find(".component-body").text()
+    console.log(new_title)
+    console.log(new_contents)
     if new_title isnt "" and new_contents isnt ""
       attributes =
         component_type: "plaintext"
