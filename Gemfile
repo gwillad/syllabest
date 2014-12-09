@@ -64,3 +64,7 @@ end
 
 # Use debugger
 gem 'debugger', group: [:development, :test]
+
+# For PDF Generation
+gem 'prawn'
+gem 'prawn-table'

@@ -1,14 +1,28 @@
 class SyllabusesController < ApplicationController
 
-  respond_to :json
-  before_action :find_user, only: [:create, :show, :index, :update, :destroy]
+  respond_to :json, :pdf, :html
+  before_action :find_user, only: [:create, :index, :update, :destroy]
 
   def index
     respond_with @user.syllabuses.all
   end
 
   def show
-    respond_with Syllabus.find(params[:id])
+    @syllabus = Syllabus.find(params[:id])
+    respond_to do |format|
+      format.pdf do
+        components = @syllabus.components.all
+        pdf = SyllabusPdf.new(@syllabus, components)
+        title = @syllabus.title + ".pdf"
+        send_data pdf.render, filename: title, type: "application/pdf", disposition: "inline"
+      end
+      format.json do 
+        respond_with @syllabus
+      end
+      format.html do
+        resond_with @syllabus
+      end
+    end
   end
   
   def update

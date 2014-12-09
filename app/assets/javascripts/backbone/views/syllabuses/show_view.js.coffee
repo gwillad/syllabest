@@ -22,7 +22,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.on('reset', @render, this)
 
   render: ->
-    $(@el).html(@template(syllabus: @model))	
+    $(@el).html(@template(syllabus: @model))
     @collection.comparator = "order"
     @collection.sort()
     @collection.each(@appendComponent)
@@ -99,9 +99,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       if not is_new
         type = $(e.currentTarget).attr('component_type')
         if type is "plaintext"
-          field = if $(e.currentTarget).attr('class') == "component-body" then "contents" else "title"
+          field = if $(e.currentTarget).hasClass("component-body") then "contents" else "title"
         if type is "table"
-          field = if $(e.currentTarget).attr('class') == "component-cell" then "contents" else "title"
+          field = if $(e.currentTarget).hasClass("component-cell") then "contents" else "title"
         component = @collection.get(parseInt($(e.currentTarget).attr("cid")))
         attributes = type + "_attributes"
         instance = component.get(attributes)
@@ -116,7 +116,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         else
           if $(e.currentTarget).text() is ""
             $(e.currentTarget).text(instance[field])
-          instance[field] = $(e.currentTarget).text()
+          instance[field] = $(e.currentTarget).html()
         component.set(attributes, instance)
         component.save()
 
@@ -148,30 +148,31 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       component.destroy()
 
   toggleGrid: (e) ->
-    for each in $(e.currentTarget).closest(".component").find("th")
-      if $(each).hasClass("border_hidden")
-        $(each).removeClass("border_hidden")
-        $(each).addClass("border_visible")
+    if $('#syllabus').hasClass("editable")
+      for each in $(e.currentTarget).closest(".component").find("th")
+        if $(each).hasClass("border_hidden")
+          $(each).removeClass("border_hidden")
+          $(each).addClass("border_visible")
+        else
+          $(each).removeClass("border_visible")
+          $(each).addClass("border_hidden")
+      for each in $(e.currentTarget).closest(".component").find("td")
+        if $(each).hasClass("border_hidden")
+          $(each).removeClass("border_hidden")
+          $(each).addClass("border_visible")
+        else
+          $(each).removeClass("border_visible")
+          $(each).addClass("border_hidden")
+      component = @collection.get(parseInt($(e.currentTarget).closest(".component").find(".component-title").attr("cid")))
+      attributes = "table_attributes"
+      instance = component.get(attributes)
+      if $(e.currentTarget).closest(".component").find("th").first().hasClass("border_visible")
+        newClass = "border_visible"
       else
-        $(each).removeClass("border_visible")
-        $(each).addClass("border_hidden")
-    for each in $(e.currentTarget).closest(".component").find("td")
-      if $(each).hasClass("border_hidden")
-        $(each).removeClass("border_hidden")
-        $(each).addClass("border_visible")
-      else
-        $(each).removeClass("border_visible")
-        $(each).addClass("border_hidden")
-    component = @collection.get(parseInt($(e.currentTarget).closest(".component").find(".component-title").attr("cid")))
-    attributes = "table_attributes"
-    instance = component.get(attributes)
-    if $(e.currentTarget).closest(".component").find("th").first().hasClass("border_visible")
-      newClass = "border_visible"
-    else
-      newClass = "border_hidden"
-    instance["border_class"] = newClass
-    component.set(attributes, instance)
-    component.save()
+        newClass = "border_hidden"
+      instance["border_class"] = newClass
+      component.set(attributes, instance)
+      component.save()
 
   openEditTab: (e) ->
     e.preventDefault()

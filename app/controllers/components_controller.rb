@@ -50,7 +50,7 @@ class ComponentsController < ApplicationController
   
   private
   def component_params
-    params.require(:component).permit(:id, :order, :component_type, :order, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id, :id], table_attributes: [:title, :rows, :columns])
+    params.require(:component).permit(:id, :order, :component_type, :order, :syllabus_id, plaintext_attributes: [:title, :contents, :component_id, :id], table_attributes: [:title, :rows, :columns, :border_class])
   end
 
   def find_syllabus
