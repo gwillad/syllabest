@@ -6,6 +6,21 @@ class SessionsController < ApplicationController
 	def new
 	end
 
+        def create
+          user = User.find_by(email: params[:session][:email].downcase)
+          if user && user.authenticate(params[:session][:email], params[:session][:password])
+            # Log user in and
+            sign_in user
+            #....redirect where?
+            redirect_to "/#users/" + user.id.to_s
+            p "-----------------------------------------Success"
+          else
+            #create an errors messages
+            p "-----------------------------------------Failure"
+            render 'new'
+          end
+        end
+
 	def destroy
 	end
 	
