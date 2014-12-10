@@ -3,6 +3,7 @@ class User < ActiveRecord::Base
   attr_accessor :password
   attr_accessor :password_confirmation
   attr_protected :password_digest
+  #has_secure_password
 
   validates :password, :presence => true, :confirmation => true
   validates :password_confirmation, :presence => true
@@ -19,5 +20,10 @@ class User < ActiveRecord::Base
     self.password_digest = BCrypt::Password.create(pass)
   end
 
+  def authenticate(email, pass)
+    user = User.find_by(email: email.downcase)
+    user && BCrypt::Password.new(user.password_digest) == pass ? true : nil
+  end
+    
 
 end

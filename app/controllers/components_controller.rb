@@ -34,7 +34,9 @@ class ComponentsController < ApplicationController
   
   def update
     params.permit!
+    p "--------------------------------------------------------------------------------"
     p params
+    p "--------------------------------------------------------------------------------"
     @record = @syllabus.components.update(params[:id].to_i, params[:component])
     respond_with @user, @syllabus, @record
   end

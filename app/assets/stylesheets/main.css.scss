@@ -287,6 +287,7 @@ input[type="checkbox"]:checked {
 	cursor: pointer;
 	color: #C0C0C0;
 	display: none;
+	margin-right: 7%;
 }
 
 .border_visible {
@@ -337,10 +338,21 @@ input[type="checkbox"]:checked {
 
 .header_option_left {
 	margin-left: 30%;
+
 }
 
 .header_option_right {
 	margin-left: 15%;
+}
+
+#header_option_title_left {
+	margin-left: 18%;
+	margin-bottom: 10%;
+}
+
+#header_option_title_right {
+	margin-left: 4%;
+	margin-bottom: 10%;
 }
 
 #cancel_edit {

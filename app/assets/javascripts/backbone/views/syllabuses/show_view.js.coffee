@@ -111,7 +111,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         instance = component.get(attributes)
         if type is "table" and field is "contents"
           rowVals = []
-          for i in $("tr")
+          for i in $(e.currentTarget).closest("tbody").find("tr")
             colVals = []
             for j in $(i).find(".component-cell")
               colVals.push $(j).text()
@@ -196,7 +196,20 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       $('#edit_tab').addClass("slide")
     $('#syllabus').addClass("editable")
     @editMode = true
+    this.makeComponentsEditable()
+
+  makeComponentsEditable: ->
     for each in $(".component")
+      title = $(each).find(".component-title").detach()
+      $(each).find(".col-md-12").replaceWith("<div class='col-md-11 col-sm-11'></div>")
+      $(each).find(".col-md-11").append(title)
+      $(each).find(".col-md-11").after("<div class='col-md-1 col-sm-1 delete_col'></div>")
+      is_table = $(each).find(".component-title").attr("component_type") is "table"
+      if is_table
+        grid_button = "<i class='fa fa-bars toggle_grid' title='Toggle grid'></i>"
+        $(each).find(".delete_col").append($(grid_button))
+      delete_button = "<i class='fa fa-remove delete_component' title='Delete this component'></i>"
+      $(each).find(".delete_col").append($(delete_button))
       $(each).attr("title", "Drag to reorder, double-click to edit")
 
   cancelEdit: (e) ->
@@ -211,6 +224,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#syllabus').addClass("expanded")
     @editMode = false
     for each in $(".component")
+      $(each).find(".delete_col").remove()
+      title = $(each).find(".component-title").detach()
+      $(each).find(".col-md-11").replaceWith("<div class='col-md-12 col-sm-12'></div>")
+      $(each).find(".col-md-12").append(title)
       $(each).attr("title", "")
       if $(each).hasClass("new")
         $(each).remove()
