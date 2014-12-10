@@ -41,7 +41,7 @@ class ComponentsController < ApplicationController
   
   def create
     params.permit!
-    if params[:component][:component_type]=="calendar"
+    if params[:component][:component_type]=="calendar" #creates calendar out of table
       params[:component][:component_type] = "table"
       dates = generate_dates(Date.parse(params[:component][:start_date]), Date.parse(params[:component][:end_date]), params[:component][:meeting_days], vacation_days)
       new_contents = []
@@ -49,7 +49,7 @@ class ComponentsController < ApplicationController
       new_contents[0][0] = "Dates"
       dates.each do |day|
         new_row = Array.new(params[:component][:table_attributes][:columns], "Cell Data")
-        new_row[0] = day.to_s
+        new_row[0] = [day_of_week(day) + ",", month(day.month), day.day.to_s + ",", day.year].join(" ")
         new_contents.push(new_row)
       end
       params[:component][:table_attributes][:rows] = dates.length
@@ -99,5 +99,69 @@ class ComponentsController < ApplicationController
     end
     return v_days
   end
+
+  def day_of_week(day)
+    if day.monday?
+      return "Monday"
+    end
+    if day.tuesday?
+      return "Tuesday"
+    end
+    if day.wednesday?
+      return "Wednesday"
+    end
+    if day.thursday?
+      return "Thursday"
+    end
+    if day.friday?
+      return "Friday"
+    end
+    if day.saturday?
+      return "Saturday"
+    end
+    if day.sunday?
+      return "Sunday"
+    end
+  end
   
+  def month(mon)
+    if mon == 1
+      return "Jan"
+    end
+    if mon == 2
+      return "Feb"
+    end
+    if mon == 3
+      return "Mar"
+    end
+    if mon == 4
+      return "Apr"
+    end
+    if mon == 5
+      return "May"
+    end
+    if mon == 6
+      return "Jun"
+    end
+    if mon == 7
+      return "Jul"
+    end
+    if mon == 8
+      return "Aug"
+    end
+    if mon == 9
+      return "Sep"
+    end
+    if mon == 10
+      return "Oct"
+    end
+    if mon == 11
+      return "Nov"
+    end
+    if mon == 12
+      return "Dec"
+    end
+
+    
+  end
 end
