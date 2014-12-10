@@ -13,7 +13,7 @@
 	.col-md-1.col-sm-1
 		%label 
 
-.row
+.row#tablerow3
 	.col-md-5.col-sm-5
 		%input.form-control#new_table_title{:type => "text", :placeholder => "Title"}
 	.col-md-2.col-sm-2

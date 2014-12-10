@@ -13,7 +13,7 @@
 	.col-md-3.col-sm-3
 		%label End Date
 		%input.form-control#end_date{:type => "date"}
-.row#calrow2
+.row#calrow3
 	.col-md-3.col-sm-3
 		%label Number of Columns
 		%input.form-control#new_calendar_columns{:type => "number", :placeholder => "Select"}
@@ -23,25 +23,25 @@
 				%label Meeting Days
 		.row
 			.col-md-1.col-sm-1
-				SU
+				.day SU
 				%input#sun{:type => "checkbox", :day_num => 0}
 			.col-md-1.col-sm-1
-				MO
+				.day MO
 				%input#mon{:type => "checkbox", :day_num => 1}
 			.col-md-1.col-sm-1
-				TU
+				.day TU
 				%input#tues{:type => "checkbox", :day_num => 2}
 			.col-md-1.col-sm-1
-				WE
+				.day WE
 				%input#wed{:type => "checkbox", :day_num => 3}
 			.col-md-1.col-sm-1
-				TH
+				.day TH
 				%input#thurs{:type => "checkbox", :day_num => 4}
 			.col-md-1.col-sm-1
-				FR
+				.day FR
 				%input#fri{:type => "checkbox", :day_num => 5}
 			.col-md-1.col-sm-1
-				SA
+				.day SA
 				%input#sat{:type => "checkbox", :day_num => 6}
 			.col-md-1.col-sm-1
 			.col-md-3.col-sm-3
