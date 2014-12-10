@@ -1,26 +1,49 @@
 .row
-	.col-md-5.col-sm-5
-		%input.form-control#new_table_title{:type => "text", :placeholder => "Title"}
-	.col-md-1.col-md-offset-6.col-sm-1.col-sm-offset-6.delete_col
+	.col-md-11.col-sm-11
+		%h4 New Calendar
+	.col-md-1.col-sm-1.delete_col
 		%i.fa.fa-remove.delete_component#cancel_calendar{:title=>"Delete this component"}
 .row
+	.col-md-5.col-sm-5
+		%label Title
+		%input.form-control#new_table_title{:type => "text", :placeholder => "Title"}
 	.col-md-3.col-sm-3
+		%label Start Date
 		%input.form-control#start_date{:type => "date"}
-.row
 	.col-md-3.col-sm-3
+		%label End Date
 		%input.form-control#end_date{:type => "date"}
-.row
-	.col-md-7.col-sm-7
-		%input#sun{:type => "checkbox", :day_num => 0}  Sunday
-		%input#mon{:type => "checkbox", :day_num => 1}  Monday
-		%input#tues{:type => "checkbox", :day_num => 2}  Tuesday
-		%input#wed{:type => "checkbox", :day_num => 3}  Wednesday
-		%input#thurs{:type => "checkbox", :day_num => 4}  Thursday
-		%input#fri{:type => "checkbox", :day_num => 5}  Friday
-		%input#sat{:type => "checkbox", :day_num => 6}  Saturday
-.row
-	.col-md-2.col-sm-2
-		%input.form-control#new_calendar_columns{:type => "number", :placeholder => "Columns"}
-.row
-	.col-md-12.col-sm-12
-		%button.btn.btn-default#submit_calendar{:type => "submit"} Submit
+.row#calrow2
+	.col-md-3.col-sm-3
+		%label Number of Columns
+		%input.form-control#new_calendar_columns{:type => "number", :placeholder => "Select"}
+	.col-md-8.col-sm-8
+		.row
+			.col-md-12.col-sm-12
+				%label Meeting Days
+		.row
+			.col-md-1.col-sm-1
+				SU
+				%input#sun{:type => "checkbox", :day_num => 0}
+			.col-md-1.col-sm-1
+				MO
+				%input#mon{:type => "checkbox", :day_num => 1}
+			.col-md-1.col-sm-1
+				TU
+				%input#tues{:type => "checkbox", :day_num => 2}
+			.col-md-1.col-sm-1
+				WE
+				%input#wed{:type => "checkbox", :day_num => 3}
+			.col-md-1.col-sm-1
+				TH
+				%input#thurs{:type => "checkbox", :day_num => 4}
+			.col-md-1.col-sm-1
+				FR
+				%input#fri{:type => "checkbox", :day_num => 5}
+			.col-md-1.col-sm-1
+				SA
+				%input#sat{:type => "checkbox", :day_num => 6}
+			.col-md-1.col-sm-1
+			.col-md-3.col-sm-3
+				%button.btn.btn-default#submit_calendar{:type => "submit"} Create Calendar
+

@@ -19,7 +19,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'blur .component-cell': 'noedit'
     
   initialize: ->
-    console.log 222
     @usid = @model.get("user_id")
     @collection.on('reset', @render, this)
 
