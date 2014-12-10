@@ -5,6 +5,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     'submit #new_syllabus': 'createSyllabus'
     'click #add_syllabus': 'addSyllabusForm'
     'click #cancel_syllabus': 'removeSyllabusForm'
+    'click #back_button': 'returnToUsers'
 
   initialize: -> 
     @collection.on('reset', @render, this)
@@ -47,6 +48,9 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     $('#new_syllabus').remove()
     $('#add_syllabus').show()
     $('#syllabi').show()
+
+  returnToUsers: ->
+    Backbone.history.navigate("", true)
 
 ###
 

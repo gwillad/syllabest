@@ -1,4 +1,19 @@
+%link{:href=>"/assets/splash.css.scss", :media=>"screen", :rel=>"stylesheet"}
+%script{:type=>"text/javascript", :src=>"/javascripts/splash.js.coffee"}
+
 .container-fluid
 	.row
 		.col-md-12.col-sm-12
 			%h1#syllabest Sylla<span class="accent">best</span>.
+	.row#user_prompt
+		.col-md-12.col-sm-12
+		.row#returning_user
+			.col-md-4.col-sm-4
+			.col-md-2.col-sm-2.prompt Returning User?
+			.col-md-2.col-sm-2.accent#sign_in Sign In
+			.col-md-4.col-sm-4
+		.row#new_account
+			.col-md-4.col-sm-4
+			.col-md-2.col-sm-2.prompt New User?
+			.col-md-2.col-sm-2.accent#get_started Get Started
+			.col-md-4.col-sm-4

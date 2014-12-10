@@ -10,6 +10,12 @@
 		.col-md-12.col-sm-12
 			#line
 	.row
+		.col-md-6.col-sm-6
+			%span#back_button{:title=>"Return to syllabi"}
+				%i.fa.fa-reply#back_arrow
+				Back
+		.col-md-6.col-sm-6
+	.row
 		.col-md-12.col-sm-12
 			%table.table#syllabi
 				%tr
