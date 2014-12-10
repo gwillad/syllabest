@@ -1,10 +1,10 @@
 .row
 	.col-md-11.col-sm-11
-		%h4.component-title{:cid=>@component['component_id'], :component_type=>@type, :title=>"Drag to reorder, double-click to edit"}= @component["title"]
+		%h4.component-title{:cid=>@component['component_id'], :component_type=>@type}= @component["title"]
 	.col-md-1.col-sm-1.delete_col
 		%i.fa.fa-bars.toggle_grid{:title=>"Toggle grid"}
 		%i.fa.fa-remove.delete_component{:title=>"Delete this component"}
-%table.table.component-table{:cid=>@component['component_id'], :component_type=>@type, :title=>"Drag to reorder, double-click to edit"}
+%table.table.component-table{:cid=>@component['component_id'], :component_type=>@type}
 	%tr
 		- for i in [0 .. @component['columns']-1]
 			%th.component-cell{:cid=>@component['component_id'], :component_type=>@type, :class=>@component['border_class']}= @component['contents'][0][i]

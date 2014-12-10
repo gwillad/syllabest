@@ -189,7 +189,10 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#right_side').append(view.render().el)
     this.applyDrag()
     this.applySort()
+    $('#syllabus').removeClass("restore")
     $('#syllabus').addClass("editable")
+    for each in $(".component")
+      $(each).attr("title", "Drag to reorder, double-click to edit")
 
   cancelEdit: (e) ->
     $('#edit_tab').remove()
@@ -199,7 +202,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#new_plaintext_button, #new_table_button, #new_calendar_buttion').draggable("disable")
     $('#components').sortable("disable")
     $('#syllabus').removeClass("editable")
-    for each in $('#components').children()
+    $('#syllabus').addClass("restore")
+    for each in $(".component")
+      $(each).attr("title", "")
       if $(each).hasClass("new")
         $(each).remove()
 

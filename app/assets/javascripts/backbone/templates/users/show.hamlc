@@ -11,7 +11,7 @@
 			#line
 	.row
 		.col-md-6.col-sm-6
-			%span#back_button{:title=>"Return to syllabi"}
+			%span#back_button{:title=>"Return to users"}
 				%i.fa.fa-reply#back_arrow
 				Back
 		.col-md-6.col-sm-6
