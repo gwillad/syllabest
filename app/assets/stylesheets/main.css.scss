@@ -8,6 +8,26 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
+.editable {
+	font-size: 12px;
+}
+
+.editable h1 {
+	font-size: 30px;
+}
+
+.editable h2 {
+	font-size: 24px;
+}
+
+.editable h3 {
+	font-size: 18px;
+}
+
+.editable h4 {
+	font-size: 14px;
+}
+
 ::-webkit-selection, ::selection {
 	background: #8BCA76;
 	color: #FFFFFF;
@@ -150,7 +170,7 @@ input[type="checkbox"]:checked {
 
 #syllabus {
 	height: 1000px;
-	width: 95%;
+	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
 	margin-top: 2%;
@@ -159,7 +179,37 @@ input[type="checkbox"]:checked {
 	border: 1px solid #909090;
 	border-radius: 30px;
 	color: black;
-	//font-family: "Baskerville";
+}
+
+#syllabus.editable {
+	margin-top: 3.1%;
+	animation-duration: .35s;
+	animation-name: shrink;
+}
+
+#syllabus.restore {
+	animation-duration: .25s;
+	animation-name: grow;
+}
+
+@keyframes shrink {
+	from {
+		width: 150%;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+@keyframes grow {
+	from {
+		width: 66%;
+		margin-left: 0%;
+	}
+	to {
+		width: 100%;
+		margin-left: 0%;
+	}
 }
 
 .scrolling {
@@ -181,12 +231,15 @@ input[type="checkbox"]:checked {
 	margin-left: 2%;
 	margin-right: 2%;
 	text-align: left;
-	cursor: pointer;
 	background-color: #FFFFFF;
 	outline-color: #C0C0C0;
 	outline-style: hidden;
 	outline-width: 1px;
 	overflow: hidden;
+}
+
+#syllabus.editable .component {
+	cursor: pointer;
 }
 
 #component_box {
@@ -245,11 +298,22 @@ input[type="checkbox"]:checked {
 	cursor: text;
 }
 
+@keyframes slidein {
+	from {
+		margin-left: 110%;
+	}
+	to {
+		margin-left: 0%;
+	}
+}
+
 #edit_tab {
 	height: 1050px;
 	background-color: #6CBC51;
 	text-align: center;
 	color: #FFFFFF;
+	animation-duration: .35s;
+	animation-name: slidein;
 }
 
 #header_options {
