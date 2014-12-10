@@ -21,31 +21,36 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
       $('#container').html(view.render().el)
    })
 
-  show: (id) ->
+  userVisit: (id) ->	
     @collection ?=  new Syllabest.Collections.UsersCollection()
     @collection.fetch({async: false})
+    @collection
+
+  syllabiVisit: (hash) ->
+    @syllabi ?=  new Syllabest.Collections.SyllabusesCollection([],hash)
+    @syllabi.fetch({async: false})
+    @syllabi
+
+  show: (id) ->
+    @collection ?= @userVisit(id)
     hash = 
       id: id 
     @syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
     @syllabi.fetch()
     @model = @collection.get(id)
-    console.log 22
-    console.log @syllabi
     view = new Syllabest.Views.Users.ShowView(model: @model, collection: @syllabi)
     $('#container').html(view.render().el)
 
   showSyllabus: (userid, syllabusid) ->
     hash = 
       id: userid
-    @syllabi ?= new Syllabest.Collections.SyllabusesCollection([],hash)
-    @syllabi.fetch({async: false})
+    @syllabi ?= @syllabiVisit(hash)
+    # @syllabi.fetch({async: false})
     hash = 
       uid: userid
       sid: syllabusid
     @components = new Syllabest.Collections.ComponentsCollection([],hash)
     @model = @syllabi.get(syllabusid)
-    console.log @syllabi
-    console.log @syllabi.get(syllabusid)
     @components.fetch()
     view = new Syllabest.Views.Syllabuses.ShowView(model: @model, collection: @components)
     $('#container').html(view.render().el)
