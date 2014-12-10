@@ -17,6 +17,9 @@
 						%i.fa.fa-reply#back_arrow
 						Back
 		.col-md-3.col-sm-3#right_side
+			%span#pdf_button{:title=>"Add new content to the syllabus"}
+				%i.fa.fa-file-pdf-o#pdf
+				PDF
 			%span#edit_button{:title=>"Add new content to the syllabus"}
 				%i.fa.fa-pencil#pencil
 				Edit

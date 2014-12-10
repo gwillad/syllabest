@@ -21,7 +21,18 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
       $('#container').html(view.render().el)
    })
 
+  userVisit: (id) ->	
+    @collection ?=  new Syllabest.Collections.UsersCollection()
+    @collection.fetch({async: false})
+    @collection
+
+  syllabiVisit: (hash) ->
+    @syllabi ?=  new Syllabest.Collections.SyllabusesCollection([],hash)
+    @syllabi.fetch({async: false})
+    @syllabi
+
   show: (id) ->
+    @collection ?= @userVisit(id)
     hash = 
       id: id 
     @syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
@@ -34,6 +45,10 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     })
 
   showSyllabus: (userid, syllabusid) ->
+    hash = 
+      id: userid
+    @syllabi ?= @syllabiVisit(hash)
+    # @syllabi.fetch({async: false})
     hash = 
       uid: userid
       sid: syllabusid

@@ -4,11 +4,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   events:
     'click #back_button': 'returnToUser'
     'click #edit_button': 'openEditTab'
-    'hover #back_button, #edit_button, .toggle_grid, .delete_component': 'highlight'
+    'hover #pdf_button, #back_button, #edit_button, .toggle_grid, .delete_component': 'highlight'
     'hover #new_plaintext, #new_table, #new_calendar, #cancel_edit_button': 'highlight2'
     'hover .component': 'animateComponent'
     'click .delete_component': 'deleteComponent'
     'click .toggle_grid': 'toggleGrid'
+    'click #pdf_button': 'goToPDF'
     'click #cancel_edit_button': 'cancelEdit'
     'dblclick .component-title': 'edit'
     'dblclick .component-body': 'edit'
@@ -18,6 +19,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'blur .component-cell': 'noedit'
     
   initialize: ->
+    console.log 222
     @usid = @model.get("user_id")
     @collection.on('reset', @render, this)
 
@@ -200,3 +202,8 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     for each in $('#components').children()
       if $(each).hasClass("new")
         $(each).remove()
+
+  goToPDF: ->
+    window.location.href = "pdf/syllabuses/#{@model.get('id')}.pdf"
+
+

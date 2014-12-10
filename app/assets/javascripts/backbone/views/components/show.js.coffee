@@ -14,3 +14,6 @@ class Syllabest.Views.Components.Show extends Backbone.View
   render: ->
     $(@el).html(@template(component: @component, type: @type))
     this
+
+  br2nl: (contents) ->
+    contents.replace("<br>", "\n")
