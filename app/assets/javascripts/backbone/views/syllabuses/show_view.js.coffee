@@ -20,6 +20,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     
   initialize: ->
     @usid = @model.get("user_id")
+    @editMode = false
     @collection.on('reset', @render, this)
 
   render: ->
@@ -28,6 +29,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.sort()
     @collection.each(@appendComponent)
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
+    this.openEditTab() if @editMode
     this
 
   applyDrag: ->
@@ -175,8 +177,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       component.set(attributes, instance)
       component.save()
 
-  openEditTab: (e) ->
-    e.preventDefault()
+  openEditTab: ->
     hash = 
       sid: @model.get('id')
       uid: @model.get('user_id')
@@ -188,8 +189,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#right_side').append(view.render().el)
     this.applyDrag()
     this.applySort()
-    $('#syllabus').removeClass("restore")
+    $('#syllabus').removeClass("expanded")
+    if not @editMode
+      $('#syllabus').addClass("shrunken")
+      $('#edit_tab').addClass("slide")
     $('#syllabus').addClass("editable")
+    @editMode = true
     for each in $(".component")
       $(each).attr("title", "Drag to reorder, double-click to edit")
 
@@ -201,7 +206,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#new_plaintext_button, #new_table_button, #new_calendar_buttion').draggable("disable")
     $('#components').sortable("disable")
     $('#syllabus').removeClass("editable")
-    $('#syllabus').addClass("restore")
+    $('#syllabus').removeClass("shrunken")
+    $('#syllabus').addClass("expanded")
+    @editMode = false
     for each in $(".component")
       $(each).attr("title", "")
       if $(each).hasClass("new")
