@@ -8,6 +8,26 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
+.editable {
+	font-size: 12px;
+}
+
+.editable h1 {
+	font-size: 30px;
+}
+
+.editable h2 {
+	font-size: 24px;
+}
+
+.editable h3 {
+	font-size: 18px;
+}
+
+.editable h4 {
+	font-size: 14px;
+}
+
 ::-webkit-selection, ::selection {
 	background: #8BCA76;
 	color: #FFFFFF;
