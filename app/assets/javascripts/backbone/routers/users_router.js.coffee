@@ -37,7 +37,6 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
       id: id 
     #@syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
     syllabi = @syllabiVisit(hash)
-    console.log id
     model = @collection.get(id)
     view = new Syllabest.Views.Users.ShowView(model: model, collection: syllabi)
     $('#container').html(view.render().el)
@@ -59,7 +58,5 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     @components = new Syllabest.Collections.ComponentsCollection([],hash)
     @model = @syllabi.get(syllabusid)
     @components.fetch()
-    console.log "bbb"
-    console.log @user
     view = new Syllabest.Views.Syllabuses.ShowView(model: @model, collection: @components, user: @user)
     $('#container').html(view.render().el)
