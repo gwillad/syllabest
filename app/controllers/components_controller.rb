@@ -1,5 +1,6 @@
+require 'date'
 class ComponentsController < ApplicationController
-  
+
   respond_to :json
   before_action :find_syllabus, only: [:index, :show, :update, :create, :destroy]
 
@@ -57,4 +58,29 @@ class ComponentsController < ApplicationController
     @syllabus = Syllabus.find(params[:syllabus_id])
     @user = User.find(@syllabus[:user_id])
   end
+
+  def generate_dates(start_date, end_date, meeting_days, vacation_days)
+    # returns a list of dates the class meets on
+    res = Array.new
+    index = start_date.wday
+    (start_date .. end_date).each do |i|
+      if not (vacation_days.include?(i))
+        if meeting_days[index]
+          res.push(i)
+        end
+      end
+      index = (index + 1) % 7
+    end
+    return res
+  end
+  
+  vacation_days = [Date.new(2014, 10, 16),
+                   Date.new(2014, 10, 17),
+                   Date.new(2014, 10, 18),
+                   Date.new(2014, 10, 19),
+                   Date.new(2014, 10, 16)]
+  (Date.new(2014, 11, 22) .. Date.new(2014, 11, 30)).each do |d|
+    vacation_days.push(d)
+  end
+  
 end
