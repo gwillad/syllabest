@@ -126,7 +126,7 @@ input[type="checkbox"]:checked {
 	//-webkit-appearance: none;
 }
 
-#back_arrow, #pencil, #pdf {
+#back_arrow, #pencil, #pdf_icon {
 	margin-right: 8px;
 }
 
@@ -142,6 +142,10 @@ input[type="checkbox"]:checked {
 
 #back {
 	text-align: left;
+}
+
+#pdf {
+	text-align: center;
 }
 
 #syllabus {
