@@ -111,13 +111,9 @@ body {
 	color: #707070;
 }
 
-#submit_form, #submit_syllabus, #add_user, #add_syllabus, #submit_table {
+#submit_form, #submit_syllabus, #add_user, #add_syllabus, #submit_table, #submit_calendar {
 	color: #6CBC51;
 	border-color: #6CBC51;
-}
-
-#submit_table {
-	margin-top: 2%;
 }
 
 #add_user, #add_syllabus {
@@ -242,13 +238,17 @@ input[type="checkbox"]:checked {
 	cursor: pointer;
 }
 
-#component_box {
-	margin-top: 2%;
-	margin-bottom: 2%;
-	margin-left: 2%;
-	margin-right: 2%;
-	border: 3px dashed #6CBC51;
-	border-radius: 8px;
+#calrow2 {
+	margin-top: 10px;
+}
+
+.component.new label {
+	color: #6CBC51;
+}
+
+.component.new h4 {
+	font-weight: bold;
+	color: #6CBC51;
 }
 
 .component .component-title {
