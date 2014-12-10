@@ -1,0 +1,54 @@
+                                Prefix Verb   URI Pattern                                                                                        Controller#Action
+                                  root GET    /                                                                                                  main#index
+                                signin GET    /signin(.:format)                                                                                  sessions#new
+                                       POST   /signin(.:format)                                                                                  sessions#create
+                               signout DELETE /signout(.:format)                                                                                 sessions#destroy
+                              syllabus GET    /pdf/syllabuses/:id(.:format)                                                                      syllabuses#show
+                user_syllabus_students GET    /api/users/:user_id/syllabuses/:syllabus_id/students(.:format)                                     students#index
+                                       POST   /api/users/:user_id/syllabuses/:syllabus_id/students(.:format)                                     students#create
+             new_user_syllabus_student GET    /api/users/:user_id/syllabuses/:syllabus_id/students/new(.:format)                                 students#new
+            edit_user_syllabus_student GET    /api/users/:user_id/syllabuses/:syllabus_id/students/:id/edit(.:format)                            students#edit
+                 user_syllabus_student GET    /api/users/:user_id/syllabuses/:syllabus_id/students/:id(.:format)                                 students#show
+                                       PATCH  /api/users/:user_id/syllabuses/:syllabus_id/students/:id(.:format)                                 students#update
+                                       PUT    /api/users/:user_id/syllabuses/:syllabus_id/students/:id(.:format)                                 students#update
+                                       DELETE /api/users/:user_id/syllabuses/:syllabus_id/students/:id(.:format)                                 students#destroy
+    user_syllabus_component_plaintexts GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts(.:format)          plaintexts#index
+                                       POST   /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts(.:format)          plaintexts#create
+ new_user_syllabus_component_plaintext GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts/new(.:format)      plaintexts#new
+edit_user_syllabus_component_plaintext GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts/:id/edit(.:format) plaintexts#edit
+     user_syllabus_component_plaintext GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts/:id(.:format)      plaintexts#show
+                                       PATCH  /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts/:id(.:format)      plaintexts#update
+                                       PUT    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts/:id(.:format)      plaintexts#update
+                                       DELETE /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/plaintexts/:id(.:format)      plaintexts#destroy
+        user_syllabus_component_tables GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables(.:format)              tables#index
+                                       POST   /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables(.:format)              tables#create
+     new_user_syllabus_component_table GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables/new(.:format)          tables#new
+    edit_user_syllabus_component_table GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables/:id/edit(.:format)     tables#edit
+         user_syllabus_component_table GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables/:id(.:format)          tables#show
+                                       PATCH  /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables/:id(.:format)          tables#update
+                                       PUT    /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables/:id(.:format)          tables#update
+                                       DELETE /api/users/:user_id/syllabuses/:syllabus_id/components/:component_id/tables/:id(.:format)          tables#destroy
+              user_syllabus_components GET    /api/users/:user_id/syllabuses/:syllabus_id/components(.:format)                                   components#index
+                                       POST   /api/users/:user_id/syllabuses/:syllabus_id/components(.:format)                                   components#create
+           new_user_syllabus_component GET    /api/users/:user_id/syllabuses/:syllabus_id/components/new(.:format)                               components#new
+          edit_user_syllabus_component GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:id/edit(.:format)                          components#edit
+               user_syllabus_component GET    /api/users/:user_id/syllabuses/:syllabus_id/components/:id(.:format)                               components#show
+                                       PATCH  /api/users/:user_id/syllabuses/:syllabus_id/components/:id(.:format)                               components#update
+                                       PUT    /api/users/:user_id/syllabuses/:syllabus_id/components/:id(.:format)                               components#update
+                                       DELETE /api/users/:user_id/syllabuses/:syllabus_id/components/:id(.:format)                               components#destroy
+                       user_syllabuses GET    /api/users/:user_id/syllabuses(.:format)                                                           syllabuses#index
+                                       POST   /api/users/:user_id/syllabuses(.:format)                                                           syllabuses#create
+                     new_user_syllabus GET    /api/users/:user_id/syllabuses/new(.:format)                                                       syllabuses#new
+                    edit_user_syllabus GET    /api/users/:user_id/syllabuses/:id/edit(.:format)                                                  syllabuses#edit
+                         user_syllabus GET    /api/users/:user_id/syllabuses/:id(.:format)                                                       syllabuses#show
+                                       PATCH  /api/users/:user_id/syllabuses/:id(.:format)                                                       syllabuses#update
+                                       PUT    /api/users/:user_id/syllabuses/:id(.:format)                                                       syllabuses#update
+                                       DELETE /api/users/:user_id/syllabuses/:id(.:format)                                                       syllabuses#destroy
+                                 users GET    /api/users(.:format)                                                                               users#index
+                                       POST   /api/users(.:format)                                                                               users#create
+                              new_user GET    /api/users/new(.:format)                                                                           users#new
+                             edit_user GET    /api/users/:id/edit(.:format)                                                                      users#edit
+                                  user GET    /api/users/:id(.:format)                                                                           users#show
+                                       PATCH  /api/users/:id(.:format)                                                                           users#update
+                                       PUT    /api/users/:id(.:format)                                                                           users#update
+                                       DELETE /api/users/:id(.:format)                                                                           users#destroy
