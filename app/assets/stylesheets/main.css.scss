@@ -179,11 +179,14 @@ input[type="checkbox"]:checked {
 
 #syllabus.editable {
 	margin-top: 3.1%;
+}
+
+#syllabus.shrunken {
 	animation-duration: .35s;
 	animation-name: shrink;
 }
 
-#syllabus.restore {
+#syllabus.expanded {
 	animation-duration: .25s;
 	animation-name: grow;
 }
@@ -316,13 +319,16 @@ input[type="checkbox"]:checked {
 	}
 }
 
+#edit_tab.slide {
+	animation-duration: .35s;
+	animation-name: slidein;
+}
+
 #edit_tab {
 	height: 1050px;
 	background-color: #6CBC51;
 	text-align: center;
 	color: #FFFFFF;
-	animation-duration: .35s;
-	animation-name: slidein;
 }
 
 #header_options {
