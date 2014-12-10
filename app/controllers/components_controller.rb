@@ -41,6 +41,20 @@ class ComponentsController < ApplicationController
   
   def create
     params.permit!
+    if params[:component][:component_type]=="calendar"
+      params[:component][:component_type] = "table"
+      dates = generate_dates(Date.parse(params[:component][:start_date]), Date.parse(params[:component][:end_date]), params[:component][:meeting_days], vacation_days)
+      new_contents = []
+      new_contents.push(Array.new(params[:component][:table_attributes][:columns], "Column Title"))
+      new_contents[0][0] = "Dates"
+      dates.each do |day|
+        new_row = Array.new(params[:component][:table_attributes][:columns], "Cell Data")
+        new_row[0] = day.to_s
+        new_contents.push(new_row)
+      end
+      params[:component][:table_attributes][:rows] = dates.length
+      params[:component][:table_attributes][:contents] = new_contents
+    end
     @record = @syllabus.components.create(params[:component])
     respond_with @user, @syllabus, @record
   end
@@ -74,13 +88,16 @@ class ComponentsController < ApplicationController
     return res
   end
   
-  vacation_days = [Date.new(2014, 10, 16),
-                   Date.new(2014, 10, 17),
-                   Date.new(2014, 10, 18),
-                   Date.new(2014, 10, 19),
-                   Date.new(2014, 10, 16)]
-  (Date.new(2014, 11, 22) .. Date.new(2014, 11, 30)).each do |d|
-    vacation_days.push(d)
+  def vacation_days
+    v_days = [Date.new(2014, 10, 16),
+              Date.new(2014, 10, 17),
+              Date.new(2014, 10, 18),
+              Date.new(2014, 10, 19),
+              Date.new(2014, 10, 16)]
+    (Date.new(2014, 11, 22) .. Date.new(2014, 11, 30)).each do |d|
+      v_days.push(d)
+    end
+    return v_days
   end
   
 end

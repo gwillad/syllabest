@@ -7,12 +7,12 @@ class Syllabest.Views.Components.New extends Backbone.View
 
   initialize: ->
     doc = this
-    #view = new Syllabest.Views.Plaintexts.New(model: @model, collection: @collection)
     $('#syllabus').droppable({
       scope: "components",
       drop: (event, ui) ->
         doc.addPlaintext() if $(ui.draggable).attr("component_type") is "plaintext"
         doc.addTable() if $(ui.draggable).attr("component_type") is "table"	
+        doc.addCalendar() if $(ui.draggable).attr("component_type") is "calendar"	
       over: (event, ui) ->
         ui.helper.css("color", "#6CBC51")
         ui.helper.css("opacity", "1")
@@ -27,6 +27,10 @@ class Syllabest.Views.Components.New extends Backbone.View
 
   addTable: (e) ->
     view = new Syllabest.Views.Tables.New(model: @model, collection: @collection)
+    $('#components').append(view.render().el)
+
+  addCalendar: (e) ->
+    view = new Syllabest.Views.Calendars.New(model: @model, collection: @collection)
     $('#components').append(view.render().el)
 
   render: ->
