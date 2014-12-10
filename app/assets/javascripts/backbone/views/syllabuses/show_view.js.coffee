@@ -18,12 +18,14 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'blur .component-body': 'noedit'
     'blur .component-cell': 'noedit'
     
-  initialize: ->
+  initialize: (options)->
     @usid = @model.get("user_id")
+    @user = options["user"]
+    
     @collection.on('reset', @render, this)
 
   render: ->
-    $(@el).html(@template(syllabus: @model))
+    $(@el).html(@template(syllabus: @model, user: @user))
     @collection.comparator = "order"
     @collection.sort()
     @collection.each(@appendComponent)

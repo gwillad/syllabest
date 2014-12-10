@@ -4,6 +4,7 @@ class SyllabusesController < ApplicationController
   before_action :find_user, only: [:create, :index, :update, :destroy]
 
   def index
+    p @user.syllabuses.all
     respond_with @user.syllabuses.all
   end
 

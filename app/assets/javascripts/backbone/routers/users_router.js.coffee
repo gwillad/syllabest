@@ -22,29 +22,33 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
    })
 
   userVisit: (id) ->	
-    @collection ?=  new Syllabest.Collections.UsersCollection()
+    @collection =  new Syllabest.Collections.UsersCollection()
     @collection.fetch({async: false})
     @collection
 
   syllabiVisit: (hash) ->
-    @syllabi ?=  new Syllabest.Collections.SyllabusesCollection([],hash)
-    @syllabi.fetch({async: false})
-    @syllabi
+    syllabi =  new Syllabest.Collections.SyllabusesCollection([],hash)
+    syllabi.fetch({async: false})
+    syllabi
 
   show: (id) ->
     @collection ?= @userVisit(id)
     hash = 
       id: id 
-    @syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
- #   console.log @collection
+    #@syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
+    syllabi = @syllabiVisit(hash)
+    console.log id
     model = @collection.get(id)
-#    console.log model    
-    @syllabi.fetch({success: (syl) ->
-      view = new Syllabest.Views.Users.ShowView(model: model, collection: syl)
-      $('#container').html(view.render().el)
-    })
+    view = new Syllabest.Views.Users.ShowView(model: model, collection: syllabi)
+    $('#container').html(view.render().el)
+    #@syllabi.fetch({success: (syl) ->
+     # view = new Syllabest.Views.Users.ShowView(model: model, collection: syl)
+      #$('#container').html(view.render().el)
+    #})
 
   showSyllabus: (userid, syllabusid) ->
+    @collection ?= @userVisit(userid)
+    @user = @collection.get(userid)
     hash = 
       id: userid
     @syllabi ?= @syllabiVisit(hash)
@@ -55,5 +59,7 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     @components = new Syllabest.Collections.ComponentsCollection([],hash)
     @model = @syllabi.get(syllabusid)
     @components.fetch()
-    view = new Syllabest.Views.Syllabuses.ShowView(model: @model, collection: @components)
+    console.log "bbb"
+    console.log @user
+    view = new Syllabest.Views.Syllabuses.ShowView(model: @model, collection: @components, user: @user)
     $('#container').html(view.render().el)

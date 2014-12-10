@@ -12,4 +12,5 @@ class Syllabest.Views.Syllabus extends Backbone.View
   render: ->
     $(@el).attr("syllabus-id", @model["id"])
     $(@el).html(@template(syllabus: @model))
+    console.log $(@el)
     this

@@ -9,4 +9,5 @@ class Syllabest.Collections.SyllabusesCollection extends Backbone.Collection
 
   model: Syllabest.Models.Syllabus
   url: -> 
+    console.log "#{@id} is the id"
     '/api/users/'+ @id + '/syllabuses'

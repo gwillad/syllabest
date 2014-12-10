@@ -13,12 +13,10 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     #this.listenTo(@collection, 'add', @appendSyllabus)
     @collection.on('reset', @render, this)
     @collection.on('add', @appendSyllabus, this)
+    @collection.fetch()
 
   render: ->
-   # console.log @model    
-  #  console.log @collection
     $(@el).html(@template(user: @model))
- #    console.log @collection
     @collection.each(@appendSyllabus)
     this
 
@@ -30,7 +28,6 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     $('#add_syllabus').hide()
 
   appendSyllabus: (syllabus) ->
-    console.log syllabus
     view = new Syllabest.Views.Syllabus(model: syllabus)
     $('#syllabi').append(view.render().el)
 
