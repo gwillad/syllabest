@@ -4,9 +4,12 @@ Syllabest::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
+
   root to: 'main#index'
 
   get 'signin' => 'sessions#new'
+  post 'signin' => 'sessions#create'
+  delete 'signout' => 'sessions#destroy'
 
   scope "pdf" do
     resources :syllabuses, :only => [:show]
