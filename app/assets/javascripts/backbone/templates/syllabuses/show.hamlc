@@ -10,19 +10,23 @@
 		.col-md-12.col-sm-12
 			#line
 	.row
-		.col-md-9.col-sm-9#left_side
+		.col-md-8.col-sm-8#left_side
 			.row
-				.col-md-12.col-sm-12#back
+				.col-md-6.col-sm-6#back
 					%span#back_button{:title=>"Return to syllabi"}
 						%i.fa.fa-reply#back_arrow
 						Back
-		.col-md-3.col-sm-3#right_side
-			%span#pdf_button{:title=>"Add new content to the syllabus"}
-				%i.fa.fa-file-pdf-o#pdf
-				PDF
+				.col-md-6.col-sm-6#pdf
+					%span#pdf_button{:title=>"Add new content to the syllabus"}
+						%i.fa.fa-file-pdf-o#pdf_icon
+						PDF
+		.col-md-4.col-sm-4#right_side
 			%span#edit_button{:title=>"Add new content to the syllabus"}
 				%i.fa.fa-pencil#pencil
 				Edit
+	.row
+		.col-md-9.col-sm-9#left_side
+		.col-md-3.col-sm-3#right_side
 	.row#syllabus_row
 		.col-md-12.col-sm-12
 			#syllabus
