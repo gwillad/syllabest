@@ -6,23 +6,32 @@
 		%h3#header_label Header Options
 .row#header_options
 	.col-md-6.col-sm-6
+		%h4#header_option_title_left Course
 		.checkbox.header_option_left
-			%input{:type=>"checkbox"} Office
+			%input{:type=>"checkbox"} Title
 		.checkbox.header_option_left
-			%input{:type=>"checkbox"} Office Hours
-		.checkbox.header_option_left
-			%input{:type=>"checkbox"} Email
+			%input{:type=>"checkbox"} ID
 		.checkbox.header_option_left
 			%input{:type=>"checkbox"} School
-	.col-md-6.col.sm-6#header_options_right
-		.checkbox.header_option_right
+		.checkbox.header_option_left
+			%input{:type=>"checkbox"} Term
+		.checkbox.header_option_left
 			%input{:type=>"checkbox"} Room
-		.checkbox.header_option_right
+		.checkbox.header_option_left
 			%input{:type=>"checkbox"} Meeting Time
+	.col-md-6.col.sm-6#header_options_right
+		%h4#header_option_title_right Instructor
+		.checkbox.header_option_right
+			%input{:type=>"checkbox"} Name
+		.checkbox.header_option_right
+			%input{:type=>"checkbox"} Office
+		.checkbox.header_option_right
+			%input{:type=>"checkbox"} Office Hours
+		.checkbox.header_option_right
+			%input{:type=>"checkbox"} Email
 		.checkbox.header_option_right
 			%input{:type=>"checkbox"} Phone
-		.checkbox.header_option_right
-			%input{:type=>"checkbox"} Term
+
 .row
 	.col-md-12.col-sm-12
 		%h3#new_component_label New Component
