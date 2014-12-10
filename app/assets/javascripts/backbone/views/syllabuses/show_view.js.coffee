@@ -111,7 +111,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         instance = component.get(attributes)
         if type is "table" and field is "contents"
           rowVals = []
-          for i in $("tr")
+          for i in $(e.currentTarget).closest("tbody").find("tr")
             colVals = []
             for j in $(i).find(".component-cell")
               colVals.push $(j).text()
