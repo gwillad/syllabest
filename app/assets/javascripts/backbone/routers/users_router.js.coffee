@@ -21,14 +21,25 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
       $('#container').html(view.render().el)
    })
 
+  handleRoutingError: (id) ->	
+    #console.log "error"
+    #console.log #{id}
+    Backbone.history.navigate("#users/#{id}", true)
+ # if its a 403 redirect to the users own page
+ # if its a 401 we want to redirect to signin
+
   userVisit: (id) ->	
     @collection =  new Syllabest.Collections.UsersCollection()
     @collection.fetch({async: false})
     @collection
 
-  syllabiVisit: (hash) ->
+  syllabiVisit: (hash, id) ->
+    router = this
     syllabi =  new Syllabest.Collections.SyllabusesCollection([],hash)
-    syllabi.fetch({async: false})
+    syllabi.fetch({wait: true,
+    async: false,
+    error:(collection, response, options)-> 
+      Backbone.history.navigate("#users/#{JSON.parse(response["responseText"])["user"]}",true)})
     syllabi
 
   show: (id) ->
@@ -36,7 +47,7 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     hash = 
       id: id 
     #@syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
-    syllabi = @syllabiVisit(hash)
+    syllabi = @syllabiVisit(hash, id)
     model = @collection.get(id)
     view = new Syllabest.Views.Users.ShowView(model: model, collection: syllabi)
     $('#container').html(view.render().el)
@@ -60,3 +71,5 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     @components.fetch()
     view = new Syllabest.Views.Syllabuses.ShowView(model: @model, collection: @components, user: @user)
     $('#container').html(view.render().el)
+
+  
