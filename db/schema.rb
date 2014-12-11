@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141211195538) do
+ActiveRecord::Schema.define(version: 20141211215854) do
 
   create_table "components", force: true do |t|
     t.string   "component_type"
@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 20141211195538) do
     t.string   "section_num"
     t.string   "course_type"
     t.integer  "user_id"
+    t.text     "header_options"
     t.time     "office_hrs"
   end
 

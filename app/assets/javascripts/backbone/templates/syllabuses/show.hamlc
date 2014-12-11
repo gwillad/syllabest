@@ -32,8 +32,25 @@
 			#syllabus
 				.row
 					.col-md-12.col-sm-12#header
-						%h1= @syllabus.get("title")
-						%h3= @syllabus.get("department") + ' ' + @syllabus.get("course_num")
-						%h5= @syllabus.get("term")
+						- if @syllabus.get("header_options")[0] is "1"
+							%h1= @syllabus.get("title")
+						- if @syllabus.get("header_options")[1] is "1" and @syllabus.get("header_options")[2] is "1" and @syllabus.get("header_options")[3] is "1"
+							%h3= @syllabus.get("department") + " " + @syllabus.get("course_num") + " " + @syllabus.get("section_num")
+						- if @syllabus.get("header_options")[4] is "1"
+							%h5=@user.get("school")
+						- if @syllabus.get("header_options")[5] is "1"
+							%h5=@syllabus.get("term")
+						- if @syllabus.get("header_options")[6] is "1"
+							=@syllabus.get("location")
+						- if @syllabus.get("header_options")[7] is "1" and @syllabus.get("header_options")[8] is "1"
+							=@user.get("first_name") + " " + @user.get("last_name")
+						- if @syllabus.get("header_options")[9] is "1"
+							=@user.get("office")
+						- if @syllabus.get("header_options")[10] is "1"
+							this is where office hours will go
+						- if @syllabus.get("header_options")[11] is "1"
+							=@user.get("email")
+						- if @syllabus.get("header_options")[12] is "1"
+							this is where phone will go
 				.row
 					.col-md-12.col-sm-12#components
