@@ -32,6 +32,10 @@ class SyllabusesController < ApplicationController
   
   def create
     params.permit!
+    p "----------------------------------------"
+    p params
+    p "----------------------------------------"
+
     @record = @user.syllabuses.create(params[:syllabus])
     respond_with @user, @record
   end

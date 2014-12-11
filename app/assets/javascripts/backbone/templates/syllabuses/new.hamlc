@@ -29,6 +29,30 @@
 				%label.col-md-2.control-label.accent{:for => "new_syllabus_location"} Location
 				.col-md-4
 					%input.form-control#new_syllabus_location{:type => "text", :placeholder => "ex: SCCT 3040"}
+			.form-group
+				%label.col-md-2.control-label.accent{:for => "new_syllabus_office_hrs"} Office Hours
+				.col-md-1
+					Sunday
+					%input.form-control#new_syllabus_office_hrs_su_start{:type => "time"} 
+					%input.form-control#new_syllabus_office_hrs_su_end{:type => "time"} 
+					Monday
+					%input.form-control#new_syllabus_office_hrs_mo_start{:type => "time"} 
+					%input.form-control#new_syllabus_office_hrs_mo_end{:type => "time"}
+					Tuesday
+					%input.form-control#new_syllabus_office_hrs_tu_start{:type => "time"} 
+					%input.form-control#new_syllabus_office_hrs_tu_end{:type => "time"} 
+					Wednesday
+					%input.form-control#new_syllabus_office_hrs_we_start{:type => "time"} 
+					%input.form-control#new_syllabus_office_hrs_we_end{:type => "time"} 
+					Thursday
+					%input.form-control#new_syllabus_office_hrs_th_start{:type => "time"} 
+					%input.form-control#new_syllabus_office_hrs_th_end{:type => "time"} 
+					Friday
+					%input.form-control#new_syllabus_office_hrs_fr_start{:type => "time"} 
+					%input.form-control#new_syllabus_office_hrs_fr_end{:type => "time"} 
+					Saturday
+					%input.form-control#new_syllabus_office_hrs_sa_start{:type => "time"} 
+					%input.form-control#new_syllabus_office_hrs_sa_end{:type => "time"} 
 			.form_button_group
 				%button.btn.btn-default#submit_syllabus{:type => "submit"} Submit
 				%button.btn.btn-default#cancel_syllabus Cancel

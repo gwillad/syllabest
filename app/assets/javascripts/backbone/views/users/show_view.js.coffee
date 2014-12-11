@@ -39,6 +39,18 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
 
   createSyllabus: (event) ->
     event.preventDefault()
+
+    office_hours = []
+    office_hours.push [$('#new_syllabus_office_hrs_su_start').val(), $('#new_syllabus_office_hrs_su_end').val()]
+    office_hours.push [$('#new_syllabus_office_hrs_mo_start').val(), $('#new_syllabus_office_hrs_mo_end').val()]
+    office_hours.push [$('#new_syllabus_office_hrs_tu_start').val(), $('#new_syllabus_office_hrs_tu_end').val()]
+    office_hours.push [$('#new_syllabus_office_hrs_we_start').val(), $('#new_syllabus_office_hrs_we_end').val()]
+    office_hours.push [$('#new_syllabus_office_hrs_th_start').val(), $('#new_syllabus_office_hrs_th_end').val()]
+    office_hours.push [$('#new_syllabus_office_hrs_fr_start').val(), $('#new_syllabus_office_hrs_fr_end').val()]
+    office_hours.push [$('#new_syllabus_office_hrs_sa_start').val(), $('#new_syllabus_office_hrs_sa_end').val()]
+
+    console.log(office_hours)
+
     attributes = 
       title: $('#new_syllabus_title').val()
       location: $('#new_syllabus_location').val()
@@ -47,6 +59,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
       term: $('#new_syllabus_term').val()
       section_num: $('#new_syllabus_section_num').val()
       course_type: $('#new_syllabus_course_type').val()
+      office_hrs: office_hours
       user_id: @model.get("id")
     @collection.create attributes
     $('#new_syllabus').remove()
