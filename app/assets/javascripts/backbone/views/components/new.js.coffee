@@ -34,5 +34,5 @@ class Syllabest.Views.Components.New extends Backbone.View
     $('#components').append(view.render().el)
 
   render: ->
-    $(@el).html(@template())
+    $(@el).html(@template(syllabus: @model, user: @user))
     this

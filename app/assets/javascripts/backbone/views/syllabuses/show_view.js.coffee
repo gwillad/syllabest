@@ -17,6 +17,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'blur .component-title': 'noedit'
     'blur .component-body': 'noedit'
     'blur .component-cell': 'noedit'
+    'click .checkbox': 'updateHeader'
     
   initialize: (options)->
     @usid = @model.get("user_id")
@@ -183,11 +184,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       sid: @model.get('id')
       uid: @model.get('user_id')
     
-    view = new Syllabest.Views.Components.New(model: @model, collection: @collection)
+    view = new Syllabest.Views.Components.New(model: @model, collection: @collection, user: @user)
     $('#edit_button').hide()
     syllabus_row = $('#syllabus_row').detach()
     $('#left_side').append(syllabus_row)
     $('#right_side').append(view.render().el)
+    this.applyChecked()
     this.applyDrag()
     this.applySort()
     $('#syllabus').removeClass("expanded")
@@ -197,6 +199,27 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#syllabus').addClass("editable")
     @editMode = true
     this.makeComponentsEditable()
+
+  applyChecked: ->
+    headers = @model.get("header_options")
+    checks = $("#header_options").find("input")
+    for i in [0 .. headers.length]
+      if headers[i] is "1"
+        $(checks[i]).prop("checked", "true")
+
+  updateHeader: (e) ->
+    clicked = $(e.currentTarget).find("input")
+    headers = @model.get("header_options")
+    checks = $("#header_options").find("input")
+    for i in [0 .. headers.length]
+      if ($(clicked)).is($(checks[i]))
+        if headers[i] is "1"
+          headers[i] = "0"
+        else
+          headers[i] = "1" 
+        @model.set("header_options", headers)
+        @model.save()
+        @model.fetch()
 
   makeComponentsEditable: ->
     for each in $(".component")

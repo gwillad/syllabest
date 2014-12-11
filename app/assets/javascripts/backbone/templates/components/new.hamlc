@@ -8,27 +8,27 @@
 	.col-md-6.col-sm-6
 		%h4#header_option_title_left Course
 		.checkbox.header_option_left
-			%input{:type=>"checkbox"} Title
+			%input#course_title{:type=>"checkbox"} Title
 		.checkbox.header_option_left
-			%input{:type=>"checkbox"} ID
+			%input#course_id{:type=>"checkbox"} ID
 		.checkbox.header_option_left
-			%input{:type=>"checkbox"} School
+			%input#course_school{:type=>"checkbox"} School
 		.checkbox.header_option_left
-			%input{:type=>"checkbox"} Term
+			%input#course_term{:type=>"checkbox"} Term
 		.checkbox.header_option_left
-			%input{:type=>"checkbox"} Room
+			%input#course_room{:type=>"checkbox"} Room
 	.col-md-6.col.sm-6#header_options_right
 		%h4#header_option_title_right Instructor
 		.checkbox.header_option_right
-			%input{:type=>"checkbox"} Name
+			%input#instructor_name{:type=>"checkbox"} Name
 		.checkbox.header_option_right
-			%input{:type=>"checkbox"} Office
+			%input#instructor_office{:type=>"checkbox"} Office
 		.checkbox.header_option_right
-			%input{:type=>"checkbox"} Office Hours
+			%input#instructor_office_hrs{:type=>"checkbox"} Office Hours
 		.checkbox.header_option_right
-			%input{:type=>"checkbox"} Email
+			%input#instructor_email{:type=>"checkbox"} Email
 		.checkbox.header_option_right
-			%input{:type=>"checkbox"} Phone
+			%input#instructor_phone{:type=>"checkbox"} Phone
 
 .row
 	.col-md-12.col-sm-12
