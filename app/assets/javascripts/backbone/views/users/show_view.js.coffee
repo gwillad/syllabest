@@ -48,12 +48,12 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
       section_num: $('#new_syllabus_section_num').val()
       course_type: $('#new_syllabus_course_type').val()
       user_id: @model.get("id")
-      header_options: [true, false, false, false, false, false, false, false, false, false, false, false]
+      header_options: ["1", "0", "1", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
     ###
     # HEADER OPTIONS: [title, dept, course_num, course_type, 
-    #                  school(user), term, location, name(user),
-    #                  office(user), officehours, email(user), 
-    #                  phone(user)] --> 12 <--
+    #                  school(user), term, location, first_name(user),
+    #                  last_name(user), office(user), officehours, 
+    #                  email(user), phone(user)] --> 13 <--
     ###
     @collection.create attributes
     $('#new_syllabus').remove()
