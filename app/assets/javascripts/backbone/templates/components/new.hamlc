@@ -17,8 +17,6 @@
 			%input{:type=>"checkbox"} Term
 		.checkbox.header_option_left
 			%input{:type=>"checkbox"} Room
-		.checkbox.header_option_left
-			%input{:type=>"checkbox"} Meeting Time
 	.col-md-6.col.sm-6#header_options_right
 		%h4#header_option_title_right Instructor
 		.checkbox.header_option_right
