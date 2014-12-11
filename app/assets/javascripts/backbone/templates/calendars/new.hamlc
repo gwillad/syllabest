@@ -9,10 +9,10 @@
 		%input.form-control#new_table_title{:type => "text", :placeholder => "Title"}
 	.col-md-3.col-sm-3
 		%label Start Date
-		%input.form-control#start_date{:type => "date"}
+		%input.form-control#start_date{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='date')", :onblur=>"(this.type='text')"}
 	.col-md-3.col-sm-3
 		%label End Date
-		%input.form-control#end_date{:type => "date"}
+		%input.form-control#end_date{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='date')", :onblur=>"(this.type='text')"}
 .row#calrow3
 	.col-md-3.col-sm-3
 		%label Number of Columns
