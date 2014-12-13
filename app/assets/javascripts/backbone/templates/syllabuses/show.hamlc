@@ -35,22 +35,46 @@
 						- if @syllabus.get("header_options")[0] is "1"
 							%h1= @syllabus.get("title")
 						- if @syllabus.get("header_options")[1] is "1"
-							%h3= @syllabus.get("department") + " " + @syllabus.get("course_num") + " " + @syllabus.get("section_num")
+							%h3= @syllabus.get("department") + " " + @syllabus.get("course_num") + "-" + @syllabus.get("section_num")
 						- if @syllabus.get("header_options")[2] is "1"
-							%h5=@user.get("school")
+							= @user.get("school")
 						- if @syllabus.get("header_options")[3] is "1"
-							%h5=@syllabus.get("term")
+							= " " + @syllabus.get("term")
 						- if @syllabus.get("header_options")[4] is "1"
-							=@syllabus.get("location")
+							= @syllabus.get("location")
+				.row
+					.col-md-10.col-sm-10#instructor
 						- if @syllabus.get("header_options")[5] is "1"
-							=@user.get("first_name") + " " + @user.get("last_name")
+							.row
+								.col-md-2.col-sm-2
+									%p.ilabel Instructor:
+								.col-md-10.col-sm-10
+									%p= @user.get("first_name") + " " + @user.get("last_name")
 						- if @syllabus.get("header_options")[6] is "1"
-							=@user.get("office")
+							.row
+								.col-md-2.col-sm-2
+									%p.ilabel Office:
+								.col-md-10.col-sm-10
+									%p= @user.get("office")
 						- if @syllabus.get("header_options")[7] is "1"
-							this is where office hours will go
+							.row
+								.col-md-2.col-sm-2
+									%p.ilabel Office Hours:
+								.col-md-10.col-sm-10
+									%p this is where office hours will go
 						- if @syllabus.get("header_options")[8] is "1"
-							=@user.get("email")
+							.row
+								.col-md-2.col-sm-2
+									%p.ilabel Email:
+								.col-md-10.col-sm-10
+									%p= @user.get("email")
 						- if @syllabus.get("header_options")[9] is "1"
-							this is where phone will go
+							.row
+								.col-md-2.col-sm-2
+									%p.ilabel Phone:
+								.col-md-10.col-sm-10
+									%p this is where phone will go
+					.col-md-2.col-sm-2
+
 				.row
 					.col-md-12.col-sm-12#components

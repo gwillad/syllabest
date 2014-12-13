@@ -219,7 +219,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
           headers[i] = "1" 
         @model.set("header_options", headers)
         @model.save()
-        @model.fetch()
+        @render()
 
   makeComponentsEditable: ->
     for each in $(".component")
