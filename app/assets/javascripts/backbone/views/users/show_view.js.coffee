@@ -6,6 +6,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     'click #add_syllabus': 'addSyllabusForm'
     'click #cancel_syllabus': 'removeSyllabusForm'
     'click #back_button': 'returnToUsers'
+    'hover #back_button, #destroy_syllabus': 'highlight'
 
   initialize: -> 
     _.bindAll(this, 'render')
@@ -19,6 +20,9 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     $(@el).html(@template(user: @model))
     @collection.each(@appendSyllabus)
     this
+
+  highlight: (e) ->
+    $(e.currentTarget).toggleClass("accent")
 
   addSyllabusForm: (event) ->
     event.preventDefault()

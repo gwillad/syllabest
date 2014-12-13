@@ -125,6 +125,16 @@ body {
 	border-color: #D9534F;
 }
 
+td button {
+	margin-top: -2%;
+}
+
+#destroy_syllabus {
+	margin-left: 5px;
+	margin-top: -5%;
+	color: #C0C0C0;
+}
+
 .form_button_group {
 	margin-top: 2%;
 	margin-left: 17%;
@@ -142,11 +152,11 @@ input[type="checkbox"]:checked {
 	//-webkit-appearance: none;
 }
 
-#back_arrow, #pencil, #pdf_icon {
+#back_arrow, #pencil, #pdf_icon, #users_icon {
 	margin-right: 8px;
 }
 
-#back_button, #edit_button, #pdf_button {
+#back_button, #edit_button, #pdf_button, #view_students_button {
 	font-size: 20px;
 	white-space: nowrap;
 	cursor: pointer;
@@ -160,8 +170,12 @@ input[type="checkbox"]:checked {
 	text-align: left;
 }
 
-#pdf {
+#view_students {
 	text-align: center;
+}
+
+#pdf {
+	text-align: right;
 }
 
 #syllabus {
