@@ -6,6 +6,6 @@
 %td= @syllabus.get("term")
 %td= @syllabus.get("location")
 %td
-	%button.btn.btn-default#view_syllabus{:type => "button"} View Syllabus
-	%button.btn.btn-default#view_roster{:type => "button"} View Students
+	%button.btn.syllabutton#view_syllabus{:type => "button"} View Syllabus
+	%button.btn.syllabutton#view_roster{:type => "button"} View Students
 	%i.fa.fa-remove.fa-lg#destroy_syllabus{:title => "Delete this syllabus"}

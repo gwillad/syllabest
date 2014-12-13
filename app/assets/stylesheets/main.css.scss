@@ -103,26 +103,25 @@ body {
 	margin-top: 2%;
 }
 
-.btn {
+.syllabutton {
+	color: #909090;
+	background-color: transparent;
+	border-color: #A0A0A0;
 	border-radius: 6px;
 }
 
-.btn-default {
-	color: #707070;
+.syllabutton:hover {
+	color: #909090;
+	border-color: #6CBC51;
 }
 
-#submit_form, #submit_syllabus, #add_user, #add_syllabus, #submit_table, #submit_calendar {
-	color: #6CBC51;
-	border-color: #6CBC51;
+.syllabutton:active {
+	color: #909090 !important;
+	outline-style: none !important;
 }
 
 #add_user, #add_syllabus {
 	margin-left: .5%;
-}
-
-#cancel_form, #cancel_syllabus {
-	color: #D9534F;
-	border-color: #D9534F;
 }
 
 td button {
