@@ -48,6 +48,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
             hrs += range[0][1] - "2"
         else
           hrs += range[0][1]
+        hrs += range[0][2..]
         if (range[0][0] == "0" or (range[0][0] == "1" and (range[0][1] == "0" or range[0][1] == "1")))
           hrs += "AM"
         else
@@ -61,6 +62,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
             hrs += range[1][1] - "2"
         else
           hrs += range[1][1]
+        hrs += range[1][2..]
         hrs += if (range[1][0] == "0" or (range[1][0] == "1" and (range[1][1] == "0" or range[1][1] == "1"))) then "AM" else "PM"
       days.push hrs
     res.push "Sun " + days[0] if days[0]
