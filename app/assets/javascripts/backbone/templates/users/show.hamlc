@@ -29,4 +29,4 @@
 					%th
 	.row
 		.col-md-12.col-sm-12
-			%button.btn.btn-default#add_syllabus{:type => "button"} Add Syllabus
+			%button.btn.syllabutton#add_syllabus{:type => "button"} Add Syllabus

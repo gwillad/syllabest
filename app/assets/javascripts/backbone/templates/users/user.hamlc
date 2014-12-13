@@ -4,4 +4,4 @@
 %td= @user.get("school")
 %td= @user.get("office")
 %td
-	%button.btn.btn-default#view_user{:type => "button"} View
+	%button.btn.syllabutton#view_user{:type => "button"} View

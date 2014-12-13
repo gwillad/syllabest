@@ -21,7 +21,7 @@ class SyllabusesController < ApplicationController
         respond_with @syllabus
       end
       format.html do
-        resond_with @syllabus
+        respond_with @syllabus
       end
     end
   end

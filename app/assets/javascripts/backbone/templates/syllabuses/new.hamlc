@@ -54,5 +54,5 @@
 					%input.form-control#new_syllabus_office_hrs_sa_start{:type => "time"} 
 					%input.form-control#new_syllabus_office_hrs_sa_end{:type => "time"} 
 			.form_button_group
-				%button.btn.btn-default#submit_syllabus{:type => "submit"} Submit
-				%button.btn.btn-default#cancel_syllabus Cancel
+				%button.btn.syllabutton#submit_syllabus{:type => "submit"} Submit
+				%button.btn.syllabutton#cancel_syllabus Cancel

@@ -45,5 +45,5 @@
 				%input#sat{:type => "checkbox", :day_num => 6}
 			.col-md-1.col-sm-1
 			.col-md-3.col-sm-3
-				%button.btn.btn-default#submit_calendar{:type => "submit"} Create Calendar
+				%button.btn.syllabutton#submit_calendar{:type => "submit"} Create Calendar
 

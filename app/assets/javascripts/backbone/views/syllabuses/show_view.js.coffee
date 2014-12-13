@@ -4,7 +4,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   events:
     'click #back_button': 'returnToUser'
     'click #edit_button': 'openEditTab'
-    'hover #pdf_button, #back_button, #edit_button, .toggle_grid, .delete_component': 'highlight'
+    'hover #pdf_button, #view_students_button, #back_button, #edit_button, .toggle_grid, .delete_component': 'highlight'
     'hover #new_plaintext, #new_table, #new_calendar, #cancel_edit_button': 'highlight2'
     'hover .component': 'animateComponent'
     'click .delete_component': 'deleteComponent'
@@ -20,19 +20,58 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click .checkbox': 'updateHeader'
     
   initialize: (options)->
-    @usid = @model.get("user_id")
+    #@usid = @model.get("user_id")
     @user = options["user"]
     @editMode = false
     @collection.on('reset', @render, this)
 
   render: ->
-    $(@el).html(@template(syllabus: @model, user: @user))
+    $(@el).html(@template(syllabus: @model, user: @user, office_hrs_string: @military_to_ampm()))
     @collection.comparator = "order"
     @collection.sort()
     @collection.each(@appendComponent)
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
     this.openEditTab() if @editMode
     this
+
+  military_to_ampm: ->
+    res = ""
+    days = []
+    for range in @model.get("office_hrs")
+      hrs = ""
+      if (range[0] != "" and range[1] != "")
+        if (range[0][0] >= "1")
+          if (range[0][0] == "1" and (range[0][1] == "0" or range[0][1] == "1" or range[0][1] == "2"))
+            hrs += range[0][0] + range[0][1]
+          else 
+            hrs += range[0][0] - "1"
+            hrs += range[0][1] - "2"
+        else
+          hrs += range[0][1]
+        if (range[0][0] == "0" or (range[0][0] == "1" and (range[0][1] == "0" or range[0][1] == "1")))
+          hrs += "AM"
+        else
+          hrs += "PM"
+        hrs += "-"
+        if (range[1][0] >= "1")
+          if (range[1][0] == "1" and (range[1][1] == "0" or range[1][1] == "1" or range[1][1] == "2"))
+            hrs += range[1][0] + range[1][1]
+          else 
+            hrs += range[1][0] - "1"
+            hrs += range[1][1] - "2"
+        else
+          hrs += range[1][1]
+        hrs += if (range[1][0] == "0" or (range[1][0] == "1" and (range[1][1] == "0" or range[1][1] == "1"))) then "AM" else "PM"
+      days.push hrs
+    res += if days[0] then "Sun " + days[0] + "; " else ""
+    res += if days[1] then "Mon " + days[1] + "; " else ""
+    res += if days[2] then "Tues " + days[2] + "; " else ""
+    res += if days[3] then "Wed " + days[3] + "; " else ""
+    res += if days[4] then "Thur " + days[4] + "; " else ""
+    res += if days[5] then "Fri " + days[5] + "; " else ""
+    res += if days[6] then "Sat " + days[6] + "; " else ""
+    res
+    
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
@@ -220,7 +259,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
           headers[i] = "1" 
         @model.set("header_options", headers)
         @model.save()
-        @model.fetch()
+        @render()
 
   makeComponentsEditable: ->
     for each in $(".component")

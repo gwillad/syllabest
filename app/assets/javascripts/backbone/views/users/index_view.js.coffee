@@ -51,6 +51,7 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
       password_confirmation: $('#confirm_password').val()
       school:     $('#new_user_school').val()
       office:     $('#new_user_office').val()
+      phone:      $('#new_user_phone').val()
     @collection.create attributes,
       wait: true
       success: ->
