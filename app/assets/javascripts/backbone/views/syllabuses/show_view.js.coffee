@@ -122,6 +122,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
           if $(e.currentTarget).text() is ""
             $(e.currentTarget).text(instance[field])
           instance[field] = $(e.currentTarget).html()
+
         component.set(attributes, instance)
         component.save()
 

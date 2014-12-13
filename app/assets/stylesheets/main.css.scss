@@ -270,6 +270,7 @@ input[type="checkbox"]:checked {
 .component-body[placeholder]:empty:before, .component-title[placeholder]:empty:before {
 	content: attr(placeholder);
 	color: #C0C0C0;
+	white-space: pre-wrap; 
 }
 
 .delete_col {
