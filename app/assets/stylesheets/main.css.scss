@@ -61,7 +61,7 @@ body {
 #syllabest {
 	font-family: "Courier New";
 	color: #707070;
-	padding-top: 4%;
+	margin-top: 5%;
 }
 
 #account {
@@ -74,11 +74,20 @@ body {
 	margin-left: 5px;
 }
 
+#navbar {
+	margin-top: 6%;
+	font-size: 20px;
+}
+
+#syllabus_tab, #students_tab {
+	cursor: pointer;
+}
+
 #line {
 	background-color: #6CBC51;
 	width: 100%;
 	height: 1px;
-	margin-top: 40px;
+	//margin-top: 40px;
 }
 
 #users, #syllabi {
@@ -151,18 +160,22 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	border-color: #6CBC51;
 }
 
-input[type="checkbox"]:checked {
-	//-webkit-appearance: none;
-}
-
-#back_arrow, #pencil, #pdf_icon, #users_icon {
+#back_arrow, #pencil, #pdf_icon {
 	margin-right: 8px;
 }
 
-#back_button, #edit_button, #pdf_button, #view_students_button {
-	font-size: 20px;
+#back_button, #edit_button, #pdf_button {
+	font-size: 18px;
 	white-space: nowrap;
 	cursor: pointer;
+}
+
+#back, #pdf {
+	margin-top: 2%;
+}
+
+#pencil {
+	margin-top: 5%;
 }
 
 #right_side {
@@ -173,12 +186,8 @@ input[type="checkbox"]:checked {
 	text-align: left;
 }
 
-#view_students {
-	text-align: center;
-}
-
 #pdf {
-	text-align: right;
+	text-align: center;
 }
 
 #syllabus {
@@ -186,16 +195,16 @@ input[type="checkbox"]:checked {
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
-	margin-top: 2%;
 	margin-left: auto;
 	margin-right: auto;
+	margin-top: 1%;
 	border: 1px solid #909090;
 	border-radius: 30px;
 	color: black;
 }
 
 #syllabus.editable {
-	margin-top: 3.1%;
+	margin-top: 1.7%;
 }
 
 #syllabus.shrunken {
