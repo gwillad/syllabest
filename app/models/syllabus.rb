@@ -4,5 +4,6 @@ class Syllabus < ActiveRecord::Base
   has_many :components, dependent: :destroy
   accepts_nested_attributes_for :components
   serialize :header_options, Array
-  attr_accessible :title, :location, :course_num, :department, :term, :section_num, :course_type, :user_id, :header_options
+  serialize :office_hrs, Array
+  attr_accessible :title, :location, :course_num, :department, :term, :section_num, :course_type, :user_id, :header_options, :office_hrs
 end

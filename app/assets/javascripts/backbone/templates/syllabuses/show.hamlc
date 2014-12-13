@@ -61,7 +61,7 @@
 								.col-md-2.col-sm-2
 									%p.ilabel Office Hours:
 								.col-md-10.col-sm-10
-									%p this is where office hours will go
+									%p @syllabus.get("office_hrs")
 						- if @syllabus.get("header_options")[8] is "1"
 							.row
 								.col-md-2.col-sm-2

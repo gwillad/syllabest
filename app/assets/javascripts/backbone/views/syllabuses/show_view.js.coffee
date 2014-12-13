@@ -20,12 +20,13 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click .checkbox': 'updateHeader'
     
   initialize: (options)->
-    @usid = @model.get("user_id")
+    #@usid = @model.get("user_id")
     @user = options["user"]
     @editMode = false
     @collection.on('reset', @render, this)
 
   render: ->
+    @military_to_ampm
     $(@el).html(@template(syllabus: @model, user: @user))
     @collection.comparator = "order"
     @collection.sort()
@@ -33,6 +34,9 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#syllabus').hover(->$('#syllabus').toggleClass("scrolling"))
     this.openEditTab() if @editMode
     this
+
+  military_to_ampm: ->
+    console.log @model.get("office_hrs")
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
