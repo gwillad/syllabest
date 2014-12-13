@@ -6,6 +6,7 @@
 			#account.accent
 				= @user.get("first_name") + ' ' + @user.get("last_name")
 				%i.fa.fa-caret-down#show_user_menu
+	.row#navbar
 	.row
 		.col-md-12.col-sm-12
 			#line
@@ -26,7 +27,6 @@
 					%th Course Type
 					%th Term
 					%th Location
-					%th
 					%th
 					%th
 	.row

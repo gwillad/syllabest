@@ -2,6 +2,7 @@
 	.row
 		.col-md-6.col-sm-6
 			%h1#syllabest Sylla<span class="accent">best</span>.
+	.row#navbar
 	.row
 		.col-md-12.col-sm-12
 			#line

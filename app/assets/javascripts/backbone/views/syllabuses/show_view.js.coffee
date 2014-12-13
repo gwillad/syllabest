@@ -4,7 +4,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   events:
     'click #back_button': 'returnToUser'
     'click #edit_button': 'openEditTab'
-    'hover #pdf_button, #view_students_button, #back_button, #edit_button, .toggle_grid, .delete_component': 'highlight'
+    'hover #pdf_button, #back_button, #edit_button, .toggle_grid, .delete_component': 'highlight'
     'hover #new_plaintext, #new_table, #new_calendar, #cancel_edit_button': 'highlight2'
     'hover .component': 'animateComponent'
     'click .delete_component': 'deleteComponent'

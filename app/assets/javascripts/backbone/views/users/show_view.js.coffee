@@ -53,8 +53,6 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     office_hours.push [$('#new_syllabus_office_hrs_fr_start').val(), $('#new_syllabus_office_hrs_fr_end').val()]
     office_hours.push [$('#new_syllabus_office_hrs_sa_start').val(), $('#new_syllabus_office_hrs_sa_end').val()]
 
-    console.log(office_hours)
-
     attributes = 
       title: $('#new_syllabus_title').val()
       location: $('#new_syllabus_location').val()
@@ -65,7 +63,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
       course_type: $('#new_syllabus_course_type').val()
       office_hrs: office_hours
       user_id: @model.get("id")
-      header_options: ["1", "0", "0", "0", "0", "0", "0", "0", "0", "0"]
+      header_options: ["1", "1", "0", "0", "0", "0", "0", "0", "0", "0"]
     ###
     # HEADER OPTIONS: [title, dept + course_num + course_type, 
     #                  school(user), term, location, first_name(user),
