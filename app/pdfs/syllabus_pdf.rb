@@ -4,6 +4,7 @@ class SyllabusPdf < Prawn::Document
     @syllabus = syllabus
     @components = components
     @user = user
+    #    font "ZapfDingbats"
     header
     @components.each do |c|
       if c.component_type == "plaintext"
@@ -34,21 +35,22 @@ class SyllabusPdf < Prawn::Document
     if header_opts[4] == "1"
       text @syllabus.location, size: 14, align: :center
     end
+    font_size 11
     if header_opts[5] == "1"
-      table [["Instructor:", @user.first_name + " " + @user.last_name]], cell_style: {borders: []}, width: 300
+      table [["Instructor:", @user.first_name + " " + @user.last_name]], cell_style: {borders: [], padding: 0}, width: 300
     end
     if header_opts[6] == "1"
-      table [[ "Office:", @user.office]], cell_style: {borders: []}, width: 300
+      table [[ "Office:", @user.office]], cell_style: {borders: [], padding: 0}, width: 300
     end
     if header_opts[7] == "1"
-      table [[ "Office Hours:", @syllabus.office_hrs.join(" ") ]], cell_style: {borders: []}, width: 300
+      table [[ "Office Hours:", @syllabus.office_hrs.join(" ") ]], cell_style: {borders: [], padding: 0}, width: 300
       #TODO!
     end
     if header_opts[8] == "1"
-      table [[ "Email:", @user.email]], cell_style: {borders: []}, width: 300
+      table [[ "Email:", @user.email]], cell_style: {borders: [], padding: 0}, width: 300
     end
     if header_opts[9] == "1"
-      table [[ "Phone:", @user.phone]], cell_style: {borders: []}, width: 300
+      table [[ "Phone:", @user.phone]], cell_style: {borders: [], padding: 0}, width: 300
     end
     text "\n"
   end
