@@ -26,7 +26,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.on('reset', @render, this)
 
   render: ->
-    $(@el).html(@template(syllabus: @model, user: @user, office_hrs_string: @military_to_ampm()))
+    $(@el).html(@template(syllabus: @model, user: @user, office_hrs: @military_to_ampm()))
     @collection.comparator = "order"
     @collection.sort()
     @collection.each(@appendComponent)
@@ -35,7 +35,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     this
 
   military_to_ampm: ->
-    res = ""
+    res = []
     days = []
     for range in @model.get("office_hrs")
       hrs = ""
@@ -48,11 +48,12 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
             hrs += range[0][1] - "2"
         else
           hrs += range[0][1]
+        hrs += range[0][2..]
         if (range[0][0] == "0" or (range[0][0] == "1" and (range[0][1] == "0" or range[0][1] == "1")))
           hrs += "AM"
         else
           hrs += "PM"
-        hrs += "-"
+        hrs += " - "
         if (range[1][0] >= "1")
           if (range[1][0] == "1" and (range[1][1] == "0" or range[1][1] == "1" or range[1][1] == "2"))
             hrs += range[1][0] + range[1][1]
@@ -61,15 +62,16 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
             hrs += range[1][1] - "2"
         else
           hrs += range[1][1]
+        hrs += range[1][2..]
         hrs += if (range[1][0] == "0" or (range[1][0] == "1" and (range[1][1] == "0" or range[1][1] == "1"))) then "AM" else "PM"
       days.push hrs
-    res += if days[0] then "Sun " + days[0] + "; " else ""
-    res += if days[1] then "Mon " + days[1] + "; " else ""
-    res += if days[2] then "Tues " + days[2] + "; " else ""
-    res += if days[3] then "Wed " + days[3] + "; " else ""
-    res += if days[4] then "Thur " + days[4] + "; " else ""
-    res += if days[5] then "Fri " + days[5] + "; " else ""
-    res += if days[6] then "Sat " + days[6] + "; " else ""
+    res.push "Sun " + days[0] if days[0]
+    res.push "Mon " + days[1] if days[1]
+    res.push "Tues " + days[2] if days[2]
+    res.push "Wed " + days[3] if days[3]
+    res.push "Thur " + days[4] if days[4]
+    res.push "Fri " + days[5] if days[5]
+    res.push "Sat " + days[6] if days[6]
     res
     
 
@@ -296,6 +298,6 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(each).remove()
 
   goToPDF: ->
-    window.location.href = "pdf/syllabuses/#{@model.get('id')}.pdf"
+    window.location.href = "pdf/users/#{@model.get('user_id')}/syllabuses/#{@model.get('id')}.pdf"
 
 

@@ -12,7 +12,9 @@ Syllabest::Application.routes.draw do
   delete 'signout' => 'sessions#destroy'
 
   scope "pdf" do
-    resources :syllabuses, :only => [:show]
+    resources :users, :only =>[:show] do
+      resources :syllabuses, :only => [:show]
+    end
   end
 
   scope "api" do 
