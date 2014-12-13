@@ -13,6 +13,9 @@ class Syllabest.Views.Tables.New extends Backbone.View
     e.preventDefault()
     numRows = parseInt($('#new_table_rows').val())
     numCols = parseInt($('#new_table_columns').val())
+    tableTitle = $('#new_table_title').val()
+    if tableTitle is ""
+      tableTitle = "Add a title"
     cellContents = []
     for i in [0 .. numRows]
       colContents = []
@@ -27,7 +30,7 @@ class Syllabest.Views.Tables.New extends Backbone.View
       syllabus_id: @model.get('id')
       order: @collection.length + 1
       table_attributes: 
-       title: $('#new_table_title').val()
+       title: tableTitle
        rows:  numRows
        columns:  numCols
        contents:  cellContents
