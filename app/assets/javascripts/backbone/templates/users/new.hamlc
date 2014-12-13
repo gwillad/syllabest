@@ -51,5 +51,5 @@
 					%span#office_span{:class=>"glyphicon form-control-feedback"}
 					%p#office_errors{:class=>"error-text"}
 			.form_button_group
-				%button.btn.btn-default#submit_form{:type => "submit"} Submit
-				%button.btn.btn-default#cancel_form Cancel
+				%button.btn.syllabutton#submit_form{:type => "submit"} Submit
+				%button.btn.syllabutton#cancel_form Cancel

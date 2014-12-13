@@ -21,6 +21,6 @@
 	.col-md-2.col-sm-2
 		%input.form-control#new_table_columns{:type => "number", :placeholder => "Select"}
 	.col-md-2.col-sm-2
-		%button.btn.btn-default#submit_table{:type => "submit"} Create Table
+		%button.btn.syllabutton#submit_table{:type => "submit"} Create Table
 
 
