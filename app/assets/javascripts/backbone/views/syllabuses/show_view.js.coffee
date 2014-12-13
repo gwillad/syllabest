@@ -26,8 +26,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     @collection.on('reset', @render, this)
 
   render: ->
-    @military_to_ampm
-    $(@el).html(@template(syllabus: @model, user: @user))
+    $(@el).html(@template(syllabus: @model, user: @user, office_hrs_string: @military_to_ampm()))
     @collection.comparator = "order"
     @collection.sort()
     @collection.each(@appendComponent)
@@ -36,7 +35,43 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     this
 
   military_to_ampm: ->
-    console.log @model.get("office_hrs")
+    res = ""
+    days = []
+    for range in @model.get("office_hrs")
+      hrs = ""
+      if (range[0] != "" and range[1] != "")
+        if (range[0][0] >= "1")
+          if (range[0][0] == "1" and (range[0][1] == "0" or range[0][1] == "1" or range[0][1] == "2"))
+            hrs += range[0][0] + range[0][1]
+          else 
+            hrs += range[0][0] - "1"
+            hrs += range[0][1] - "2"
+        else
+          hrs += range[0][1]
+        if (range[0][0] == "0" or (range[0][0] == "1" and (range[0][1] == "0" or range[0][1] == "1")))
+          hrs += "AM"
+        else
+          hrs += "PM"
+        hrs += "-"
+        if (range[1][0] >= "1")
+          if (range[1][0] == "1" and (range[1][1] == "0" or range[1][1] == "1" or range[1][1] == "2"))
+            hrs += range[1][0] + range[1][1]
+          else 
+            hrs += range[1][0] - "1"
+            hrs += range[1][1] - "2"
+        else
+          hrs += range[1][1]
+        hrs += if (range[1][0] == "0" or (range[1][0] == "1" and (range[1][1] == "0" or range[1][1] == "1"))) then "AM" else "PM"
+      days.push hrs
+    res += if days[0] then "Sun " + days[0] + "; " else ""
+    res += if days[1] then "Mon " + days[1] + "; " else ""
+    res += if days[2] then "Tues " + days[2] + "; " else ""
+    res += if days[3] then "Wed " + days[3] + "; " else ""
+    res += if days[4] then "Thur " + days[4] + "; " else ""
+    res += if days[5] then "Fri " + days[5] + "; " else ""
+    res += if days[6] then "Sat " + days[6] + "; " else ""
+    res
+    
 
   applyDrag: ->
     $('#new_plaintext_button, #new_table_button, #new_calendar_button').draggable({
