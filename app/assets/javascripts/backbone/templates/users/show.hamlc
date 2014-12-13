@@ -27,6 +27,8 @@
 					%th Term
 					%th Location
 					%th
+					%th
+					%th
 	.row
 		.col-md-12.col-sm-12
 			%button.btn.syllabutton#add_syllabus{:type => "button"} Add Syllabus
