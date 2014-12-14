@@ -1,5 +1,5 @@
-class Syllabest.Models.Studentt extends Backbone.Model
-  paramRoot: 'component'
+class Syllabest.Models.Student extends Backbone.Model
+  paramRoot: 'student'
 
  
 
@@ -8,7 +8,7 @@ class Syllabest.Collections.StudentsCollection extends Backbone.Collection
     @uid = options.uid
     @sid = options.sid
 
-  model: Syllabest.Models.Component
+  model: Syllabest.Models.Student
   url: -> 
     '/api/users/'+ @uid + '/syllabuses/' + @sid + '/students'
  

@@ -18,11 +18,14 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'blur .component-body': 'noedit'
     'blur .component-cell': 'noedit'
     'click .checkbox': 'updateHeader'
+    'click #students_tab': 'viewStudents'
+    'click #syllabus_tab': 'viewSyllabus'
     
   initialize: (options)->
     #@usid = @model.get("user_id")
     @user = options["user"]
     @editMode = false
+    @viewingSyllabus = true
     @collection.on('reset', @render, this)
 
   render: ->
@@ -281,7 +284,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     $('#edit_tab').remove()
     $('#edit_button').show()
     syllabus_row = $('#syllabus_row').detach()
-    $('.container-fluid').append(syllabus_row)
+    $('#button_row').after(syllabus_row)
     $('#new_plaintext_button, #new_table_button, #new_calendar_buttion').draggable("disable")
     $('#components').sortable("disable")
     $('#syllabus').removeClass("editable")
@@ -300,4 +303,24 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
   goToPDF: ->
     window.location.href = "pdf/users/#{@model.get('user_id')}/syllabuses/#{@model.get('id')}.pdf"
 
+  viewStudents: (e) ->
+    if @viewingSyllabus
+      @viewingSyllabus = false;
+      $('#syllabus_tab').removeClass("accent")
+      $(e.currentTarget).addClass("accent")
+      if @editMode
+        $('#syllabus').removeClass("shrunken")
+        $('#edit_tab').removeClass("slide")
+      else
+        $('#syllabus').removeClass("expanded")
+      @syllabus = $('#syllabus_view').detach()
+      view = new Syllabest.Views.Students.Index(syllabus: @model)
+      $('#line').after(view.render().el)
 
+  viewSyllabus: (e) ->
+    if not @viewingSyllabus
+      @viewingSyllabus = true;
+      $('#student_view').remove()
+      $('#students_tab').removeClass("accent")
+      $(e.currentTarget).addClass("accent")
+      $('#line').after(@syllabus)

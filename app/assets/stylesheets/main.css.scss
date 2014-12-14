@@ -101,20 +101,22 @@ body {
 }
 
 #back_button_row {
-	margin-top: 1.2%;
+	margin-top: -0.8%;
 }
 
-#users, #syllabi {
+
+
+#users, #syllabi, #students {
 	margin-top: 2%;
 }
 
-#users tbody>tr>th, #syllabi tbody>tr>th {
+#users tbody>tr>th, #syllabi tbody>tr>th, #students tbody>tr>th {
 	color:#6CBC51;
 	padding-bottom: 20px;
 	border-top: none;
 }
 
-#users tbody>tr>td, #syllabi tbody>tr>td {
+#users tbody>tr>td, #syllabi tbody>tr>td, #students tbody>tr>td {
 	border-top: none;
 }
 
@@ -153,6 +155,10 @@ body {
 
 #add_user, #add_syllabus {
 	margin-left: .5%;
+}
+
+#add_student {
+	margin-left: 1.5%;
 }
 
 td button {
@@ -209,7 +215,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 }
 
 #syllabus {
-	height: 1000px;
+	height: 100%;
+	padding-bottom: 92%;
 	width: 100%;
 	overflow-x: hidden;
 	overflow-y: hidden;
@@ -385,7 +392,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 }
 
 #edit_tab {
-	height: 1050px;
+	height: 100%;
+	padding-bottom: 89%;
 	background-color: #6CBC51;
 	text-align: center;
 	color: #FFFFFF;
@@ -436,4 +444,8 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 
 #new_plaintext_button, #new_table_button, #new_calendar_button {
 	cursor: -webkit-grab;
+}
+
+#destroy_student:hover {
+	color: #6CBC51;
 }
