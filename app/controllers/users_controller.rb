@@ -10,7 +10,11 @@ class UsersController < ApplicationController
     respond_with User.find(params[:id])
   end
 
-  def new 
+  def new
+    #if (logged_in?)
+    #  error(403)
+    #  p "_________________________________**************Created eror"
+    #end
     @user = User.new
   end
   

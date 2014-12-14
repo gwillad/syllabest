@@ -35,6 +35,8 @@ class ApplicationController < ActionController::Base
       render status: 401, json: {message: "Unauthenticated, please log in", user: current_user.id}
     elsif code == 304
       render status: 304, json: {message: "Logout successful"}
+    elsif code == 403
+      render status: 403, json: {message: "Forbidden"}
     end
   end
 

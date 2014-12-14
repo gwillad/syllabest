@@ -23,7 +23,7 @@ class Syllabest.Views.Users.New extends Backbone.View
     #window.location.replace("http://google.com")
 
   createUser: (event) ->
-    #alert("Here")
+    alert("Here")
     #console.log 45
     event.preventDefault()
     attributes = 
