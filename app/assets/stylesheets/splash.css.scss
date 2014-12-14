@@ -18,16 +18,21 @@
 	margin-top: 2%;
 }
 
-a, a:active, a:visited, a:link  {
+#which_user a, #which_user a:active, #which_user a:visited, #which_user a:link  {
 	color: #6CBC51;
 	text-decoration: none;
 }
 
-a:hover{
+#which_user a:hover {
 	color: #8BCA76;
 }
 
-#sign_in .syllabutton {
+#cancel_signin a, #cancel_signin a:active, #cancel_signin a:visited, #cancel_signin a:link {
+	color: #909090;
+	text-decoration: none;
+}
+
+#sign_in .syllabutton[type="submit"] {
 	margin-left: 26.5% !important;
 }
 
