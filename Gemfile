@@ -76,3 +76,6 @@ gem 'debugger', group: [:development, :test]
 # For PDF Generation
 gem 'prawn'
 gem 'prawn-table'
+
+# Heroku Rails Logging
+gem 'rails_12factor', group: :production
