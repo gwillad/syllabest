@@ -14,6 +14,33 @@ body {
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
 
+input:-webkit-autofill, input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+}
+
+.cc_img {
+	margin-bottom: 10px;
+}
+
+.cc_license {
+	position: fixed;
+	text-align: center;
+	bottom: 2%;
+	width: 75%;
+	left: 50%;
+	margin: 0 0 0 -37.5%;
+}
+
+.cc_license a, .cc_license a:link, .cc_license a:visited, .cc_license a:active {
+	color: $primary-green;
+	text-decoration: none;
+}
+
+
+.cc_license a:hover {
+	color: $secondary-green;	
+}
+
 .editable {
 	font-size: 12px;
 }
