@@ -4,7 +4,7 @@ class Syllabest.Views.Users.New extends Backbone.View
   id: "sign_up"
 
   events:
-    'submit #new_user': 'createUser'
+    'click #submit_form': 'createUser'
     'click #cancel_form': 'cancelCreateUser'
 
   initialize:->
