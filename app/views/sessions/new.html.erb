@@ -23,6 +23,9 @@
 			<div class="row" id="sign_in_row">
 				<div class="col-md-4 col-sm-4"></div>
 				<div class="col-md-4 col-sm-4 accent" id="sign_in">
+				<% if flash[:danger] -%>
+				  <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><%= flash[:danger]%></div>
+				<% end -%>
     				<%= form_for(:session, url: signin_path) do |f| %>
       					<%= f.label :email %>
       					<%= f.text_field :email, class: 'form-control'%>
