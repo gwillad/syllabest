@@ -20,6 +20,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
     'click .checkbox': 'updateHeader'
     'click #students_tab': 'viewStudents'
     'click #syllabus_tab': 'viewSyllabus'
+    'click #logout': 'logout_user'
     
   initialize: (options)->
     #@usid = @model.get("user_id")
@@ -324,3 +325,8 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       $('#students_tab').removeClass("accent")
       $(e.currentTarget).addClass("accent")
       $('#line').after(@syllabus)
+
+  logout_user: (event) ->
+    event.preventDefault()
+    $.ajax({url:"/signout",type:"DELETE",success: (response, b, c)->
+      window.location.href = "/signin"})

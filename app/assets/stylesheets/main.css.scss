@@ -67,12 +67,17 @@ body {
 #account {
 	text-align: right;
 	white-space: nowrap;
-	padding-top: 6%;
+	padding-top: 8%;
 	margin-right: 2%;
+}
+
+#username {
+	display: inline-block;
 }
 
 #logout {
 	cursor: pointer;
+	display: inline-block;
 }
 
 #logout:hover {
@@ -108,7 +113,7 @@ body {
 }
 
 #back_button_row {
-	margin-top: -0.8%;
+	margin-top: 1.3%;
 }
 
 

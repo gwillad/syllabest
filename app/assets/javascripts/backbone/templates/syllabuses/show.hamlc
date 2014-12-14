@@ -4,8 +4,8 @@
 			%h1#syllabest Sylla<span class="accent">best</span>.
 		.col-md-6.col-sm-6
 			#account.accent
-				="#{@user.get("first_name")} #{@user.get("last_name")}"
-				%i.fa.fa-caret-down#show_user_menu
+				#username= @user.get("first_name") + ' ' + @user.get("last_name") + " | "
+				#logout Log Out 
 	.row#navbar
 		.col-md-2.col-sm-2
 			#syllabus_tab.accent{:title=>"View syllabus"} Syllabus
