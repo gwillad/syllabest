@@ -7,31 +7,31 @@
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_title"} Title
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_title{:type => "text", :placeholder => "ex: Intro to Computer Science"}
+					%input.form-control#new_syllabus_title{:type => "text", :placeholder => "ex: Intro to Computer Science", :spellcheck=>"false"}
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_department"} Department
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_department{:type => "text", :placeholder => "ex: CPSCI"}
+					%input.form-control#new_syllabus_department{:type => "text", :placeholder => "ex: CPSCI", :spellcheck=>"false"}
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_course_num"} Course Number
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_course_num{:type => "text", :placeholder => "ex: 110"}
+					%input.form-control#new_syllabus_course_num{:type => "text", :placeholder => "ex: 110", :spellcheck=>"false"}
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_section_num"} Section Number
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_section_num{:type => "text", :placeholder => "ex: 01"}
+					%input.form-control#new_syllabus_section_num{:type => "text", :placeholder => "ex: 01", :spellcheck=>"false"}
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_course_type"} Course Type
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_course_type{:type => "text", :placeholder => "ex: QSR"}
+					%input.form-control#new_syllabus_course_type{:type => "text", :placeholder => "ex: QSR", :spellcheck=>"false"}
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_term"} Term
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_term{:type => "text", :placeholder => "ex: Fall 2014"}
+					%input.form-control#new_syllabus_term{:type => "text", :placeholder => "ex: Fall 2014", :spellcheck=>"false"}
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_location"} Location
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_location{:type => "text", :placeholder => "ex: SCCT 3040"}
+					%input.form-control#new_syllabus_location{:type => "text", :placeholder => "ex: SCCT 3040", :spellcheck=>"false"}
 			.form-group
 				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_office_hrs"} Office Hours
 				.col-md-5
