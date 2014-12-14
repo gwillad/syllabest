@@ -498,3 +498,46 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 #destroy_student:hover {
 	color: $primary-green;
 }
+
+// SPLASH -------------------------------------------------------
+
+.user_prompt {
+	margin-top: 5%;
+}
+
+#new_account {
+	margin-top: 2%;
+}
+
+#sign_in, #get_started {
+	cursor: pointer;
+}
+
+#sign_in_row {
+	margin-top: 2%;
+}
+
+#which_user a, #which_user a:active, #which_user a:visited, #which_user a:link  {
+	color: #6CBC51;
+	text-decoration: none;
+}
+
+#which_user a:hover {
+	color: #8BCA76;
+}
+
+#cancel_signin a, #cancel_signin a:active, #cancel_signin a:visited, #cancel_signin a:link {
+	color: #909090;
+	text-decoration: none;
+}
+
+#sign_in .syllabutton[type="submit"] {
+	margin-left: 26.5% !important;
+}
+
+.control-label {
+	text-align: left !important;
+	font-weight: normal !important;
+}
+
+// SPLASH -------------------------------------------------------
