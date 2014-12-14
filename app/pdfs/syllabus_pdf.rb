@@ -1,3 +1,5 @@
+require 'time'
+
 class SyllabusPdf < Prawn::Document
   def initialize(syllabus, components, user)
     super()
@@ -19,7 +21,6 @@ class SyllabusPdf < Prawn::Document
   
   def header
     header_opts = @syllabus.header_options
-    puts header_opts
     if header_opts[0] == "1"
       text @syllabus.title, size: 24, align: :center
     end
@@ -37,20 +38,36 @@ class SyllabusPdf < Prawn::Document
     end
     font_size 11
     if header_opts[5] == "1"
-      table [["Instructor:", @user.first_name + " " + @user.last_name]], cell_style: {borders: [], padding: 0}, width: 300
+      table [["Instructor: ", @user.first_name + " " + @user.last_name]], cell_style: {borders: [], padding: 0}, column_widths: {0 => 70}
     end
     if header_opts[6] == "1"
-      table [[ "Office:", @user.office]], cell_style: {borders: [], padding: 0}, width: 300
+      table [[ "Office: ", @user.office]], cell_style: {borders: [], padding: 0}, column_widths: {0 => 70}
     end
     if header_opts[7] == "1"
-      table [[ "Office Hours:", @syllabus.office_hrs.join(" ") ]], cell_style: {borders: [], padding: 0}, width: 300
-      #TODO!
+      office_hours_list = [[""]]
+      day_list = @days
+      count = 0
+      @syllabus.office_hrs.each do |range|
+        new_range = ["", ""]
+        if count == 0
+          new_range[0] = "Office Hours:"
+        end
+        if range[0] != "" and range[1] != ""
+          new_range[1] = days[count]
+          new_range[1] += (Time.parse(range[0]).strftime("%I:%M%p"))
+          new_range[1] += " - "
+          new_range[1] += (Time.parse(range[1]).strftime("%I:%M%p"))
+        end
+        count += 1
+        office_hours_list.push(new_range)
+      end
+      table office_hours_list, cell_style: {borders: [], padding: 0}, column_widths: {0 => 70}
     end
     if header_opts[8] == "1"
-      table [[ "Email:", @user.email]], cell_style: {borders: [], padding: 0}, width: 300
+      table [[ "Email: ", @user.email]], cell_style: {borders: [], padding: 0}, column_widths: {0 => 70}
     end
     if header_opts[9] == "1"
-      table [[ "Phone:", @user.phone]], cell_style: {borders: [], padding: 0}, width: 300
+      table [[ "Phone: ", @user.phone]], cell_style: {borders: [], padding: 0}, column_widths: {0 => 70}
     end
     text "\n"
   end
@@ -66,6 +83,10 @@ class SyllabusPdf < Prawn::Document
     text p.title, size: 14
     text p.contents, size: 11
     text "\n\n"
+  end
+
+  def days
+    return ["Sun ", "Mon ", "Tues ", "Wed ", "Thur ", "Fri ", "Sat "]
   end
 
 end
