@@ -2,10 +2,10 @@
 	.row
 		.col-md-6.col-sm-6
 			%h1#syllabest Sylla<span class="accent">best</span>.
-		.col-md-6.col-sm-
+		.col-md-6.col-sm-6
 			#account.accent
-				= @user.get("first_name") + ' ' + @user.get("last_name")
-				%i.fa.fa-caret-down#show_user_menu
+				= @user.get("first_name") + ' ' + @user.get("last_name") + " | " + "hello"
+				#logout Log Out 
 	.row#navbar
 		.col-md-2.col-sm-2
 			#sections_tab.accent{:title=>"View sections"} Sections
@@ -18,7 +18,6 @@
 			%span#back_button{:title=>"Return to users"}
 				%i.fa.fa-reply#back_arrow
 				Back
-			%button.btn.btn-default#logout{:type => "button"}Log out
 		.col-md-6.col-sm-6
 	.row
 		.col-md-12.col-sm-12

@@ -1,0 +1,12 @@
+%td
+	%input.form-control#new_student_first_name{:placeholder=>"First Name", :type=>"text"}
+%td
+	%input.form-control#new_student_last_name{:placeholder=>"Last Name", :type=>"text"}
+%td
+	%input.form-control#new_student_class_year{:placeholder=>"Class Year", :type=>"text"}
+%td
+	%input.form-control#new_student_email{:placeholder=>"Email Address", :type=>"text"}
+%td
+	.btn.syllabutton#new_student{:type=>"submit"} Submit
+%td
+	%i.fa.fa-remove.fa-lg#destroy_student{:title => "Delete this student"}

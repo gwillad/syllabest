@@ -1,0 +1,6 @@
+%td= @student.get("first_name")
+%td= @student.get("last_name")
+%td= @student.get("class_year")
+%td= @student.get("email")
+%td
+	%i.fa.fa-remove.fa-lg#destroy_student{:title => "Delete this student"}
