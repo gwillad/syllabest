@@ -5,7 +5,7 @@ Syllabest::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
 
-  root to: 'main#index'
+  root to: 'sessions#show'
 
   get 'signin' => 'sessions#new'
   post 'signin' => 'sessions#create'

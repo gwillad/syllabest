@@ -19,7 +19,7 @@ class Syllabest.Views.Users.New extends Backbone.View
     event.preventDefault()
     $('#warning-box').remove()
     $('#new_user').remove()
-    window.location.href = "signin"
+    window.location.href = "/"
     #window.location.replace("http://google.com")
 
   createUser: (event) ->

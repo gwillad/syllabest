@@ -1,3 +1,13 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12 col-sm-12">
+			<h1>
+				<div id="syllabest">
+					Sylla<span class="accent">best</span>.
+				</div>
+			</h1>
+		</div>
+	</div>
 <p></p><div id="warnings"></div>
 .row
 	.col-md-12
