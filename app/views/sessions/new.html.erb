@@ -23,12 +23,10 @@
 			<div class="row" id="sign_in_row">
 				<div class="col-md-4 col-sm-4"></div>
 				<div class="col-md-4 col-sm-4 accent" id="sign_in">
-    				<%= form_for(:session, url: signin_path) do |f| %>
-      					<%= f.label :email %>
-      					<%= f.text_field :email, class: 'form-control'%>
-      					<%= f.label :password %>
-      					<%= f.password_field :password, class: 'form-control' %>
-      					<%= f.submit "Sign in", class: "btn btn-default" %>
+    				<%= bootstrap_form_for(:session, url: signin_path, layout: :horizontal, label_col: "col-md-3 col-sm-3", control_col: "col-md-9 col-sm-9") do |f| %>
+      					<%= f.email_field :email %>
+      					<%= f.password_field :password %>
+      				    <%= f.submit "Sign in", class:"btn syllabutton"%>
     				<% end %>
 				</div>
 				<div class="col-md-4 col-sm-4"></div>

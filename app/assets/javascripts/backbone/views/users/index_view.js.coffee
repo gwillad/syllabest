@@ -3,7 +3,6 @@ class Syllabest.Views.Users.IndexView extends Backbone.View
 
   events:
     'submit #new_user': 'createUser'
-    'click #add_user': 'addUserForm'
     'click #cancel_form': 'removeUserForm'
 
   testAlert: ->
