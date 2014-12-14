@@ -48,6 +48,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     $('#add_syllabus').show()
 
   createSyllabus: (event) ->
+    console.log "running create syllabus" 
     event.preventDefault()
 
     office_hours = []
