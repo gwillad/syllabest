@@ -69,7 +69,14 @@ body {
 	white-space: nowrap;
 	padding-top: 6%;
 	margin-right: 2%;
+}
+
+#logout {
 	cursor: pointer;
+}
+
+#logout:hover {
+	color: #8BCA76;
 }
 
 #show_user_menu {
