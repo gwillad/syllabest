@@ -23,9 +23,15 @@ class ApplicationController < ActionController::Base
     end
   end
 
+  def require_not_login
+    unless !logged_in?
+      redirect_to "/users/" + current_user.id.to_s
+    end
+  end
+
   def error(code)
     if code == 401
-      p current_user.id
+      #p current_user.id
       render status: 401, json: {message: "Unauthenticated, please log in", user: current_user.id}
     elsif code == 304
       render status: 304, json: {message: "Logout successful"}
