@@ -2,8 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+$primary-green: #6CBC51;
+$secondary-green: #8BCA76;
+$lightest-gray: #C0C0C0;
+$medium-gray: #707070;
+$darkest-gray: #909090;
+
 body {
-	color: #707070;
+	color: $medium-gray;
 	font-size: 16px;
 	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
 }
@@ -29,7 +35,7 @@ body {
 }
 
 ::-webkit-selection, ::selection {
-	background: #8BCA76;
+	background: $secondary-green;
 	color: #FFFFFF;
 }
 
@@ -47,11 +53,7 @@ body {
 }
 
 .accent {
-	color: #6CBC51 !important;
-}
-
-.delete {
-	color: #D9534F !important;
+	color: $primary-green !important;
 }
 
 .highlight {
@@ -60,7 +62,7 @@ body {
 
 #syllabest {
 	font-family: "Courier New";
-	color: #707070;
+	color: $medium-gray;
 	margin-top: 5%;
 }
 
@@ -81,7 +83,7 @@ body {
 }
 
 #logout:hover {
-	color: #8BCA76;
+	color: $secondary-green;
 }
 
 #show_user_menu {
@@ -106,7 +108,7 @@ body {
 }
 
 #line {
-	background-color: #6CBC51;
+	background-color: $primary-green;
 	width: 100%;
 	height: 1px;
 }
@@ -120,7 +122,7 @@ body {
 }
 
 #users tbody>tr>th, #syllabi tbody>tr>th, #students tbody>tr>th {
-	color:#6CBC51;
+	color: $primary-green;
 	padding-bottom: 20px;
 	border-top: none;
 	font-weight: normal;
@@ -142,6 +144,14 @@ label {
 	margin-left: 18.5%;
 }
 
+#new_user label {
+	text-align: left;
+}
+
+#new_user .form_button_group {
+	margin-left: 25.7%;
+}
+
 #components .table {
 	margin-bottom: 0px;
 }
@@ -155,19 +165,19 @@ label {
 }
 
 .syllabutton {
-	color: #909090;
+	color: $darkest-gray;
 	background-color: transparent;
 	border-color: #A0A0A0;
 	border-radius: 6px;
 }
 
 .syllabutton:hover {
-	color: #909090;
-	border-color: #6CBC51;
+	color: $darkest-gray;
+	border-color: $primary-green;
 }
 
 .syllabutton:active, .syllabutton:visited {
-	color: #909090 !important;
+	color: $darkest-gray !important;
 	outline-style: none !important;
 }
 
@@ -189,7 +199,7 @@ td button {
 
 #destroy_syllabus {
 	margin-top: -5%;
-	color: #C0C0C0;
+	color: $lightest-gray;
 	cursor: pointer;
 }
 
@@ -199,11 +209,11 @@ td button {
 }
 
 .form-control::-webkit-input-placeholder {
-	color: #909090;
+	color: $darkest-gray;
 }
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:focus, input[type="date"]:focus, input[type="time"]:focus, input[type="email"]:focus {
-	border-color: #6CBC51;
+	border-color: $primary-green;
 }
 
 #back_arrow, #pencil, #pdf_icon {
@@ -245,7 +255,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 1%;
-	border: 1px solid #909090;
+	border: 1px solid $darkest-gray;
 	border-radius: 30px;
 	color: black;
 }
@@ -289,7 +299,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 }
 
 .select {
-    outline-color: #6CBC51 !important;
+    outline-color: $primary-green !important;
 }
 
 #header {
@@ -318,7 +328,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	margin-right: 2%;
 	text-align: left;
 	background-color: #FFFFFF;
-	outline-color: #C0C0C0;
+	outline-color: $lightest-gray;
 	outline-style: hidden;
 	outline-width: 1px;
 	overflow: hidden;
@@ -338,16 +348,16 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 }
 
 .component.new label {
-	color: #6CBC51;
+	color: $primary-green;
 }
 
 .component.new h4 {
 	font-weight: bold;
-	color: #6CBC51;
+	color: $primary-green;
 }
 
 .day {
-	color: #707070;
+	color: $medium-gray;
 }
 
 .component .component-title {
@@ -356,11 +366,11 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 
 .component-body[placeholder]:empty:before, .component-title[placeholder]:empty:before {
 	content: attr(placeholder);
-	color: #C0C0C0;
+	color: $lightest-gray;
 }
 
 .component-body {
-    	white-space: pre-wrap; 
+	white-space: pre-wrap; 
 }
 
 .delete_col {
@@ -369,20 +379,20 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 
 .delete_component {
 	cursor: pointer;
-	color: #C0C0C0;
+	color: $lightest-gray;
 	margin-right: 7%;
 	display: none;
 }
 
 .toggle_grid {
 	cursor: pointer;
-	color: #C0C0C0;
+	color: $lightest-gray;
 	display: none;
 	margin-right: 7%;
 }
 
 .border_visible {
-	border: 1px solid #C0C0C0 !important;
+	border: 1px solid $lightest-gray!important;
 }
 
 .border_hidden {
@@ -419,7 +429,7 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 #edit_tab {
 	height: 100%;
 	padding-bottom: 89%;
-	background-color: #6CBC51;
+	background-color: $primary-green;
 	text-align: center;
 	color: #FFFFFF;
 }
@@ -476,5 +486,5 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 }
 
 #destroy_student:hover {
-	color: #6CBC51;
+	color: $primary-green;
 }

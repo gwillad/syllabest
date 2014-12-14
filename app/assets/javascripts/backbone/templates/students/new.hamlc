@@ -1,11 +1,11 @@
 %td
-	%input.form-control#new_student_first_name{:placeholder=>"First Name", :type=>"text"}
+	%input.form-control#new_student_first_name{:placeholder=>"First Name", :type=>"text", :spellcheck=>"false"}
 %td
-	%input.form-control#new_student_last_name{:placeholder=>"Last Name", :type=>"text"}
+	%input.form-control#new_student_last_name{:placeholder=>"Last Name", :type=>"text", :spellcheck=>"false"}
 %td
-	%input.form-control#new_student_class_year{:placeholder=>"Class Year", :type=>"text"}
+	%input.form-control#new_student_class_year{:placeholder=>"Class Year", :type=>"text", :spellcheck=>"false"}
 %td
-	%input.form-control#new_student_email{:placeholder=>"Email Address", :type=>"text"}
+	%input.form-control#new_student_email{:placeholder=>"Email Address", :type=>"text", :spellcheck=>"false"}
 %td
 	.btn.syllabutton#new_student{:type=>"submit"} Submit
 %td

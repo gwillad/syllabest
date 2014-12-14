@@ -15,7 +15,7 @@
 
 .row#tablerow3
 	.col-md-5.col-sm-5
-		%input.form-control#new_table_title{:type => "text", :placeholder => "Title"}
+		%input.form-control#new_table_title{:type => "text", :placeholder => "Title", :spellcheck=>"false"}
 	.col-md-2.col-sm-2
 		%input.form-control#new_table_rows{:type => "number", :placeholder => "Select"}
 	.col-md-2.col-sm-2
