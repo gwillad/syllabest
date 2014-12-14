@@ -23,7 +23,7 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
       $('#container').html(view.render().el)
    })
 
-  handleRoutingError: (id) ->	
+  handleRoutingError: (id) ->
     Backbone.history.navigate("#users/#{id}", true)
  # if its a 403 redirect to the users own page
  # if its a 401 we want to redirect to signin
