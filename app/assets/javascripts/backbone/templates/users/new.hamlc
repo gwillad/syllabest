@@ -55,11 +55,11 @@
 					%span#office_span{:class=>"glyphicon form-control-feedback"}
 					%p#office_errors{:class=>"error-text"}
 			.form-group.has-feedback
-				%label.col-md-2.control-label.accent{:for => "new_user_phone", :id=>"new_user_office_label"} Phone Number
+				%label.col-md-2.control-label.accent{:for => "new_user_phone", :id=>"new_user_phone_label"} Phone Number (optional)
 				.col-md-4
-					%input.form-control#new_user_phone{:type => "text", :placeholder => "ex: (xxx) yyy-zzzz"}
-					%span#office_span{:class=>"glyphicon form-control-feedback"}
-					%p#office_errors{:class=>"error-text"}
+					%input.form-control#new_user_phone{:type => "text", :placeholder => "ex: (xxx)-yyy-zzzz"}
+					%span#phone_span{:class=>"glyphicon form-control-feedback"}
+					%p#phone_errors{:class=>"error-text"}
 			.form_button_group
 				%button.btn.syllabutton#submit_form{:type => "submit"} Submit
 				%button.btn.syllabutton#cancel_form Cancel
