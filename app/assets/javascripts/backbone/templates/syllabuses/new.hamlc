@@ -38,52 +38,52 @@
 					.row
 						.col-md-3.col-sm-3.date_label Sunday
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_su_start{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_su_start{:type => "time"}
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_su_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_su_end{:type => "time"}
 					.row
 						.col-md-3.col-sm-3.date_label Monday
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_mo_start{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_mo_start{:type => "time"}
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_mo_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_mo_end{:type => "time"}
 					.row
 						.col-md-3.col-sm-3.date_label Tuesday
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_tu_start{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_tu_start{:type => "time"}
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_tu_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_tu_end{:type => "time"}
 					.row
 						.col-md-3.col-sm-3.date_label Wednesday
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_we_start{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_we_start{:type => "time"}
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_we_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_we_end{:type => "time"}
 					.row
 						.col-md-3.col-sm-3.date_label Thursday
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_th_start{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_th_start{:type => "time"}
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_th_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_th_end{:type => "time"}
 					.row
 						.col-md-3.col-sm-3.date_label Friday
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_fr_start{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_fr_start{:type => "time"}
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_fr_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_fr_end{:type => "time"}
 					.row
 						.col-md-3.col-sm-3.date_label Saturday
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_sa_start{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_sa_start{:type => "time"}
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
-							%input.form-control#new_syllabus_office_hrs_sa_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
+							%input.form-control#new_syllabus_office_hrs_sa_end{:type => "time"}
 .row
 	.col-md-11.col-md-offset-1.col-sm-11.col-sm-offset-1
 		.form_button_group
