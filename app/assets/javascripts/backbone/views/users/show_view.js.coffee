@@ -11,14 +11,17 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
 
   initialize: -> 
     _.bindAll(this, 'render')
-    @collection.fetch({async: false})
     #this.listenTo(@collection, 'reset', @render)
     #this.listenTo(@collection, 'add', @appendSyllabus)
     @collection.on('reset', @render, this)
     @collection.on('add', @appendSyllabus, this)
+    @test = false
     
 
   render: ->
+    if @test is false
+      @collection.fetch()
+      @test = true
     $(@el).html(@template(user: @model))
     @collection.each(@appendSyllabus)
     this
@@ -76,6 +79,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     $('#new_syllabus').remove()
     $('#add_syllabus').show()
     $('#syllabi').show()
+    @collection.fetch()
 
   returnToUsers: ->
     Backbone.history.navigate("", true)

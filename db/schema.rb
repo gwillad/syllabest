@@ -49,8 +49,8 @@ ActiveRecord::Schema.define(version: 20141213210906) do
     t.string   "section_num"
     t.string   "course_type"
     t.integer  "user_id"
-    t.text     "header_options"
     t.text     "office_hrs"
+    t.text     "header_options"
   end
 
   create_table "tables", force: true do |t|

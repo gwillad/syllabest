@@ -125,4 +125,3 @@ class Syllabest.Views.Users.New extends Backbone.View
           
 
 
->>>>>>> paul
