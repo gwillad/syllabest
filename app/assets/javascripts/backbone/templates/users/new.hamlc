@@ -1,75 +1,67 @@
-<head>
-	<link rel="stylesheet" type="text/css" href="stylesheets/splash.css.scss">
-</head>
-<div class="container-fluid">
-	<div class="row">
-		<div class="col-md-12 col-sm-12">
-			<h1>
-				<div id="syllabest">
-					Sylla<span class="accent">best</span>.
-				</div>
-			</h1>
-		</div>
-	</div>
-<p></p><div id="warnings"></div>
-.row
-	.col-md-10.col-md-offset-2.col-sm-10.col-sm-offset-2
-		%form.form-horizontal#new_user{:role => "form"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_fname", :id=> "new_user_fname_label"} First Name*
-				.col-md-4.col-sm-4
-					%input.form-control#new_user_fname{:type => "text", :placeholder => "ex: Joel", :spellcheck=>"false"}
-					%span#fname_span{:class=>"glyphicon form-control-feedback"}
-					%p#fname_errors{:class=>"error-text"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_lname", :id=>"new_user_lname_label"} Last Name*
-				.col-md-4.col-sm-4
-					%input.form-control#new_user_lname{:type => "text", :placeholder => "ex: Winkelman", :spellcheck=>"false"}
-					%span#lname_span{:class=>"glyphicon form-control-feedback"}
-					%p#lname_errors{:class=>"error-text"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_email", :id=>"new_user_email_label"} Email*
-				.col-md-4.col-sm-4
-					%input.form-control#new_user_email{:type => "text", :placeholder => "ex: jwinkelm@hamilton.edu", :spellcheck=>"false"}
-					%span#email_span{:class=>"glyphicon form-control-feedback"}
-					%p#email_errors{:class=>"error-text"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_password", :id=>"new_user_password_label"} Password*
-				.col-md-4.col-sm-4
-					%input.form-control#new_user_password{:type => "password", :placeholder => "ex: abc123", :spellcheck=>"false"}
-					%span#password_span{:class=>"glyphicon form-control-feedback"}
-					%p#password_errors{:class=>"error-text"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "confirm_password", :id=."confirm_password_label"} Confirm Password*
-				.col-md-4.col-sm-4
-					%input.form-control#confirm_password{:type => "password", :placeholder => "ex: abc123", :spellcheck=>"false"}
-					%span#confirm_password_span{:class=>"glyphicon form-control-feedback"}
-					%p#confirm_password_errors{:class=>"error-text"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_school", :id => "new_user_school_label"} School
-				.col-md-4.col-sm-4
-					%input.form-control#new_user_school{:type => "text", :placeholder => "ex: Hamilton College", :spellcheck=>"false"}
-					%span#school_span{:class=>"glyphicon form-control-feedback"}
-					%p#school_errors{:class=>"error-text"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_office", :id=>"new_user_office_label"} Office
-				.col-md-4.col-sm-4
-					%input.form-control#new_user_office{:type => "text", :placeholder => "ex: KJ 137", :spellcheck=>"false"}
-					%span#office_span{:class=>"glyphicon form-control-feedback"}
-					%p#office_errors{:class=>"error-text"}
-			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_phone", :id=>"new_user_phone_label"} Phone Number
-				.col-md-4.col-sm-4
-					%input.form-control#new_user_phone{:type => "text", :placeholder => "ex: (111) 111-1111", :spellcheck=>"false"}
-					%span#phone_span{:class=>"glyphicon form-control-feedback"}
-					%p#phone_errors{:class=>"error-text"}
-		.row
-			.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1
-				.form-group
-					%label
-						#asterisk *
-						#required_field required_field
-			.col-md-9.col-sm-9
-				.form_button_group
-					%button.btn.syllabutton#submit_form{:type => "submit"} Submit
-					%button.btn.syllabutton#cancel_form Cancel
+.container-fluid
+	.row
+		.col-md-12.col-sm-12
+			%h1#syllabest{:style=>"text-align:center"} Sylla<span class="accent">best</span>.
+	%p
+	#warnings
+	.row
+		.col-md-9.col-md-offset-3.col-sm-9.col-sm-offset-3
+			%form.form-horizontal#new_user{:role => "form"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_fname", :id=> "new_user_fname_label"} First Name*
+					.col-md-4.col-sm-4
+						%input.form-control#new_user_fname{:type => "text", :placeholder => "ex: Joel", :spellcheck=>"false"}
+						%span#fname_span{:class=>"glyphicon form-control-feedback"}
+						%p#fname_errors{:class=>"error-text"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_lname", :id=>"new_user_lname_label"} Last Name*
+					.col-md-4.col-sm-4
+						%input.form-control#new_user_lname{:type => "text", :placeholder => "ex: Winkelman", :spellcheck=>"false"}
+						%span#lname_span{:class=>"glyphicon form-control-feedback"}
+						%p#lname_errors{:class=>"error-text"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_email", :id=>"new_user_email_label"} Email*
+					.col-md-4.col-sm-4
+						%input.form-control#new_user_email{:type => "text", :placeholder => "ex: jwinkelm@hamilton.edu", :spellcheck=>"false"}
+						%span#email_span{:class=>"glyphicon form-control-feedback"}
+						%p#email_errors{:class=>"error-text"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_password", :id=>"new_user_password_label"} Password*
+					.col-md-4.col-sm-4
+						%input.form-control#new_user_password{:type => "password", :placeholder => "ex: abc123", :spellcheck=>"false"}
+						%span#password_span{:class=>"glyphicon form-control-feedback"}
+						%p#password_errors{:class=>"error-text"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "confirm_password", :id=."confirm_password_label"} Confirm Password*
+					.col-md-4.col-sm-4
+						%input.form-control#confirm_password{:type => "password", :placeholder => "ex: abc123", :spellcheck=>"false"}
+						%span#confirm_password_span{:class=>"glyphicon form-control-feedback"}
+						%p#confirm_password_errors{:class=>"error-text"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_school", :id => "new_user_school_label"} School
+					.col-md-4.col-sm-4
+						%input.form-control#new_user_school{:type => "text", :placeholder => "ex: Hamilton College", :spellcheck=>"false"}
+						%span#school_span{:class=>"glyphicon form-control-feedback"}
+						%p#school_errors{:class=>"error-text"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_office", :id=>"new_user_office_label"} Office
+					.col-md-4.col-sm-4
+						%input.form-control#new_user_office{:type => "text", :placeholder => "ex: KJ 137", :spellcheck=>"false"}
+						%span#office_span{:class=>"glyphicon form-control-feedback"}
+						%p#office_errors{:class=>"error-text"}
+				.form-group.has-feedback
+					%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_user_phone", :id=>"new_user_phone_label"} Phone Number
+					.col-md-4.col-sm-4
+						%input.form-control#new_user_phone{:type => "text", :placeholder => "ex: (111) 111-1111", :spellcheck=>"false"}
+						%span#phone_span{:class=>"glyphicon form-control-feedback"}
+						%p#phone_errors{:class=>"error-text"}
+			.row
+				.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1
+					.form-group
+						%label
+							#asterisk *
+							#required_field required field
+				.col-md-9.col-sm-9
+					.form_button_group
+						%button.btn.syllabutton#submit_form{:type => "submit"} Submit
+						%button.btn.syllabutton#cancel_form Cancel
