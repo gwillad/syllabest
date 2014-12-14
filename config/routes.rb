@@ -10,10 +10,14 @@ Syllabest::Application.routes.draw do
   get 'signin' => 'sessions#new'
   post 'signin' => 'sessions#create'
   delete 'signout' => 'sessions#destroy'
+  get 'signup' => 'main#new'
+
 
   scope "pdf" do
     resources :syllabuses, :only => [:show]
   end
+
+  
 
   scope "api" do 
     resources :users do
@@ -27,7 +31,7 @@ Syllabest::Application.routes.draw do
       end
     end
   end
-
+  get '*path' => "main#index"
   #get '*path', to: 'main#index'
 
   # Example of regular route:

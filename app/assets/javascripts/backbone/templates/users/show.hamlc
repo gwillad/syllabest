@@ -14,6 +14,7 @@
 			%span#back_button{:title=>"Return to users"}
 				%i.fa.fa-reply#back_arrow
 				Back
+			%button.btn.btn-default#logout{:type => "button"}Log out
 		.col-md-6.col-sm-6
 	.row
 		.col-md-12.col-sm-12

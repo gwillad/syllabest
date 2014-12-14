@@ -15,5 +15,6 @@ class Syllabest.Views.Users.UserView extends Backbone.View
     return false
 
   render: ->
+    #console.log 123
     @$el.html(@template(@model.toJSON() ))
     return this

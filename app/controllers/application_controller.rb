@@ -10,12 +10,16 @@ class ApplicationController < ActionController::Base
   private
   
   def require_login
-    unless logged_in?
-      p "---------------------------------___________You are not logged in"
-      redirect_to "/signin"
-    else
-      p "&&&&&&&&&&&&&&&&&&&&&&&&&&____________________&&&&&&&&&&&&&&&&&"
-      p current_user
+    #p request.path
+    unless request.path == "/signup"
+      unless logged_in?
+        #p "---------------------------------___________You are not logged in"
+        redirect_to "/signin"
+        #p request
+      else
+        #p "&&&&&&&&&&&&&&&&&&&&&&&&&&____________________&&&&&&&&&&&&&&&&&"
+        #p current_user
+      end
     end
   end
 
@@ -23,8 +27,9 @@ class ApplicationController < ActionController::Base
     if code == 401
       p current_user.id
       render status: 401, json: {message: "Unauthenticated, please log in", user: current_user.id}
+    elsif code == 304
+      render status: 304, json: {message: "Logout successful"}
     end
-
   end
 
 end

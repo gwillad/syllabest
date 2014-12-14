@@ -3,9 +3,11 @@ Syllabest.Views.Users ||= {}
 class Syllabest.Routers.UsersRouter extends Backbone.Router
   routes:
     #'': 'reroute'
+    'signup' : 'userNew'
     '': 'index'
     'users/:userid/syllabuses/:syllabusid': 'showSyllabus'
     'users/:id' : 'show'
+    
   
   #reroute: ->
     #Backbone.history.navigate("users", {trigger: true})
@@ -16,22 +18,26 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
 
   index: ->
     @collection = new Syllabest.Collections.UsersCollection()
-    @collection.fetch({success: (col) -> 
+    @collection.fetch({async: false, success: (col) -> 
       view = new Syllabest.Views.Users.IndexView(collection: col)
       $('#container').html(view.render().el)
    })
 
   handleRoutingError: (id) ->	
-    #console.log "error"
-    #console.log #{id}
     Backbone.history.navigate("#users/#{id}", true)
  # if its a 403 redirect to the users own page
  # if its a 401 we want to redirect to signin
 
   userVisit: (id) ->	
     @collection =  new Syllabest.Collections.UsersCollection()
-    @collection.fetch({async: false})
+    @collection.fetch({async: false, wait:true})
     @collection
+
+  userNew: ->
+    @collection = @userVisit(1)
+    view = new Syllabest.Views.Users.New(collection: @collection)
+    $("#signup").after(view.render().el)
+
 
   syllabiVisit: (hash, id) ->
     router = this
@@ -43,7 +49,7 @@ class Syllabest.Routers.UsersRouter extends Backbone.Router
     syllabi
 
   show: (id) ->
-    @collection ?= @userVisit(id)
+    @collection = @userVisit(id)
     hash = 
       id: id 
     #@syllabi = new Syllabest.Collections.SyllabusesCollection([],hash)
