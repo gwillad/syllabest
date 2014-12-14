@@ -27,7 +27,7 @@
 				  <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><%= flash[:danger]%></div>
 				<% end -%>
     				<%= bootstrap_form_for(:session, url: signin_path, layout: :horizontal, label_col: "col-md-3 col-sm-3", control_col: "col-md-9 col-sm-9") do |f| %>
-      					<%= f.email_field :email %>
+      					<%= f.email_field :email, spellcheck:"false" %>
       					<%= f.password_field :password %>
       				    <%= f.submit "Sign in", class:"btn syllabutton"%>
     				<% end %>

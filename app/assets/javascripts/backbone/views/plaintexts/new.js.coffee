@@ -14,7 +14,11 @@ class Syllabest.Views.Plaintexts.New extends Backbone.View
   createPlainText: (e) ->
     e.preventDefault()
     new_title = $(e.currentTarget).closest(".component").find(".component-title").text()
-    new_contents = $(e.currentTarget).closest(".component").find(".component-body").text()
+    new_contents = $(e.currentTarget).closest(".component").find(".component-body").html()
+    new_contents = new_contents.replace(/\<div\>/g, '\n')
+    new_contents = new_contents.replace(/\<\/div\>/g, '')
+    new_contents = new_contents.replace(/\<br\>/g, '\n')	
+    new_contents = new_contents.replace(/<br\s*\/\>/g, '\n')	
     if new_title isnt "" and new_contents isnt ""
       attributes =
         component_type: "plaintext"
