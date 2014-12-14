@@ -6,6 +6,7 @@
   <body>
     <h1>The Syllabus for <%= @syllabus.title %> has been updated!</h1>
     <p><%= @student.first_name %>, there has been an update! We've attached the new Syllabus to this email. Open in a pdf viewer to see the changes!</p>
+    <p>You can also view the syllabus online <a href='http://www.syllabest.me/#users/<%= @syllabus.user_id.to_s %>/syllabuses/<%= @syllabus.id.to_s %>'>here</a></p>
     <p>Thanks for using Syllabest!</p>
     <p>The Syllabest Team</p>
   </body>

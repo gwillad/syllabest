@@ -1,7 +1,8 @@
 Welcome to Syllabest, <%= @student.first_name %>!
 
 Your professor has signed you into a course on Syllabest. We think Syllabest is great product, and we hope you do too!
-You can see what Syllabest is like at http://gemini.cs.hamilton.edu:3008
+
+You can see your syllabus at http://www.syllabest.me/#users/<%= @syllabus.user_id.to_s %>/syllabuses/<%= @syllabus.id.to_s %>
 
 Syllabest is a live syllabus app. We aim to make the barrier of communication lower for professors and students. You will be updated any time your professor makes a change to the syllabus.
 

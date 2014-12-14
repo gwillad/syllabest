@@ -6,7 +6,7 @@
   <body>
     <h1>Welcome to Syllabest, <%= @student.first_name %>!</h1>
     <p>Your professor has signed you into a course on Syllabest. We think Syllabest is great product, and we hope you do too! </p>
-    <p>You can see what Syllabest is like <a href='http://gemini.cs.hamilton.edu:3008'>here</a></p>
+    <p>You can check out your syllabus <a href='http://www.syllabest.me/#users/<%= @syllabus.user_id.to_s %>/syllabuses/<%= @syllabus.id.to_s %>'>here</a></p>
     <p>Syllabest is a live syllabus app. We aim to make the barrier of communication lower for professors and students. You will be updated any time your professor makes a change to the syllabus.
     <p>Thanks from everyone at Syllabest. Enjoy!</p>
     <p>-The Syllabest Team</p>
