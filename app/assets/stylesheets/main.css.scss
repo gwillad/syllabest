@@ -67,7 +67,7 @@ body {
 #account {
 	text-align: right;
 	white-space: nowrap;
-	padding-top: 8%;
+	padding-top: 7%;
 	margin-right: 2%;
 }
 
@@ -90,7 +90,7 @@ body {
 
 #navbar {
 	margin-top: 6%;
-	font-size: 20px;
+	font-size: 19px;
 }
 
 #sections_tab {
@@ -109,7 +109,6 @@ body {
 	background-color: #6CBC51;
 	width: 100%;
 	height: 1px;
-	//margin-top: 40px;
 }
 
 #back_button_row {
@@ -126,6 +125,7 @@ body {
 	color:#6CBC51;
 	padding-bottom: 20px;
 	border-top: none;
+	font-weight: normal;
 }
 
 #users tbody>tr>td, #syllabi tbody>tr>td, #students tbody>tr>td {
@@ -156,7 +156,7 @@ body {
 	border-color: #6CBC51;
 }
 
-.syllabutton:active {
+.syllabutton:active, .syllabutton:visited {
 	color: #909090 !important;
 	outline-style: none !important;
 }
@@ -165,7 +165,7 @@ body {
 	margin-top: 1%;
 }
 
-#add_user, #add_syllabus {
+#add_syllabus {
 	margin-left: .5%;
 }
 
@@ -174,7 +174,7 @@ body {
 }
 
 td button {
-	margin-top: -2%;
+	margin-top: -5%;
 }
 
 #destroy_syllabus {

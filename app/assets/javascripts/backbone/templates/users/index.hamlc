@@ -16,8 +16,4 @@
 					%th School
 					%th Office
 					%th
-	.row
-		.col-md-12.col-sm-12
-			%button.btn.syllabutton#add_user{:type => "button"} Add User
-
 

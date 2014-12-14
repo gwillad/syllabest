@@ -302,7 +302,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         $(each).remove()
 
   goToPDF: ->
-    window.location.href = "pdf/users/#{@model.get('user_id')}/syllabuses/#{@model.get('id')}.pdf"
+    window.location.href = "/pdf/users/#{@model.get('user_id')}/syllabuses/#{@model.get('id')}.pdf"
 
   viewStudents: (e) ->
     if @viewingSyllabus
