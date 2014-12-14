@@ -36,9 +36,9 @@ class SyllabusesController < ApplicationController
   def update
     syllabus = Syllabus.update(params[:id], params[:syllabus])
     
-    if syllabus.save
-      StudentMailer.updated_syllabus().deliver
-    end
+    #if syllabus.save
+    StudentMailer.updated_syllabus().deliver
+    #end
 
     respond_with syllabus #Syllabus.update(params[:id], params[:syllabus])
   end
