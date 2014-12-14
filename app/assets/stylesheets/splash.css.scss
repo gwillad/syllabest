@@ -18,11 +18,15 @@
 	margin-top: 2%;
 }
 
-a {
+a, a:active, a:visited, a:link  {
 	color: #6CBC51;
+	text-decoration: none;
 }
 
-a:hover {
+a:hover{
 	color: #8BCA76;
-	text-decoration: none;
+}
+
+#signin_button {
+	margin-top: 2%;
 }
