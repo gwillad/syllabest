@@ -40,7 +40,7 @@ class SyllabusesController < ApplicationController
     
     #if syllabus.save
     syllabus.students.all.each do |student|
-      StudentMailer.updated_syllabus(student, @syllabus).deliver
+      StudentMailer.updated_syllabus(student, syllabus).deliver
     end
 
     respond_with syllabus #Syllabus.update(params[:id], params[:syllabus])

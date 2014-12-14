@@ -17,6 +17,7 @@ class SyllabusPdf < Prawn::Document
         sTable(t)
       end
     end
+    self
   end
   
   def header
