@@ -418,18 +418,18 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 	cursor: pointer;
 	color: $lightest-gray;
 	margin-right: 7%;
-	display: none;
+	display: none !important;
 }
 
 .toggle_grid {
 	cursor: pointer;
 	color: $lightest-gray;
-	display: none;
+	display: none !important;
 	margin-right: 7%;
 }
 
 .border_visible {
-	border: 1px solid $lightest-gray!important;
+	border: 1px solid $lightest-gray !important;
 }
 
 .border_hidden {
