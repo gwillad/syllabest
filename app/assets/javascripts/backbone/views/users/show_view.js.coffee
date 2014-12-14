@@ -44,6 +44,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
 
   removeSyllabusForm: (event) ->
     event.preventDefault()
+    $('#warning-box').remove()
     $('#new_syllabus_view').remove()
     $('#syllabi').show()
     $('#add_syllabus').show()
@@ -78,11 +79,14 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     #                  + last_name(user), office(user), officehours, 
     #                  email(user), phone(user)] --> 10 <--
     ###
-    @collection.create attributes
-    $('#new_syllabus').remove()
-    $('#add_syllabus').show()
-    $('#syllabi').show()
-    @collection.fetch()
+    @collection.create attributes,
+      wait: true
+      success: ->
+        $('#new_syllabus').remove()
+        $('#add_syllabus').show()
+        $('#syllabi').show()
+        @collection.fetch()
+      error: @handleError
 
   returnToUsers: ->
     Backbone.history.navigate("/users", true)
@@ -91,3 +95,55 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     event.preventDefault()
     $.ajax({url:"/signout",type:"DELETE",success: (response, b, c)->
       window.location.href = "/signin"})
+
+  handleError: (syllabus, response) ->
+    if response.status == 422
+      $('#warning-box').remove()
+      $('#warnings').append('<div id="warning-box" class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Warning</strong> A problem has occured while submitting your data.</div>')
+      
+      $('#title_errors').empty()
+      $('#new_syllabus_title').removeClass('error')
+      $('#title_span').removeClass()
+
+      $('#department_errors').empty()
+      $('#new_syllabus_department').removeClass('error')
+      $('#department_span').removeClass()
+
+      $('#course_num_errors').empty()
+      $('#new_syllabus_course_num').removeClass('error')
+      $('#course_num_span').removeClass()
+
+      $('#section_num_errors').empty()
+      $('#new_syllabus_section_num').removeClass('error')
+      $('#section_num_span').removeClass()
+
+      errors = $.parseJSON(response.responseText).errors
+      for attribute, messages of errors
+        if (attribute == "title")
+          $('#title_errors').empty()
+          $('#title_errors').text('('+messages+')')
+          $('#title_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_syllabus_title').addClass('error')
+          $('#title_span').css("color", "DarkRed")
+
+        if (attribute == "department")
+          $('#department_errors').empty()
+          $('#department_errors').text('('+messages+')')
+          $('#department_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_syllabus_department').addClass('error')
+          $('#department_span').css("color", "DarkRed")
+
+        if (attribute == "course_num")
+          $('#course_num_errors').empty()
+          $('#course_num_errors').text('('+messages+')')
+          $('#course_num_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_syllabus_course_num').addClass('error')
+          $('#course_num_span').css("color", "DarkRed")
+
+        if (attribute == "section_num")
+          $('#section_num_errors').empty()
+          $('#section_num_errors').text('('+messages+')')
+          $('#section_num_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_syllabus_section_num').addClass('error')
+          $('#section_num_span').css("color", "DarkRed")
+
