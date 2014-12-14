@@ -7,7 +7,9 @@ class StudentMailer < ActionMailer::Base
     mail(to: @student.email, subject: "You've been added to a Course")
   end
 
-  def updated_syllabus()
+  def updated_syllabus(student, syllabus)
+  	@student = 	student
+  	@syllabus = syllabus
     mail(to: @student.email, subject: "There's been an update!")
   end
 end

@@ -34,10 +34,13 @@ class SyllabusesController < ApplicationController
   end
   
   def update
+    p 
+    '000000000000000000000000000000000000000000000000000000'
     syllabus = Syllabus.update(params[:id], params[:syllabus])
     
-    if syllabus.save
-      StudentMailer.updated_syllabus().deliver
+    #if syllabus.save
+    syllabus.students.all.each do |student|
+      StudentMailer.updated_syllabus(student, @syllabus).deliver
     end
 
     respond_with syllabus #Syllabus.update(params[:id], params[:syllabus])
