@@ -29,7 +29,10 @@
     				<%= bootstrap_form_for(:session, url: signin_path, layout: :horizontal, label_col: "col-md-3 col-sm-3", control_col: "col-md-9 col-sm-9") do |f| %>
       					<%= f.email_field :email, spellcheck:"false" %>
       					<%= f.password_field :password %>
-      				    <%= f.submit "Sign in", class:"btn syllabutton"%>
+  				    	<%= f.submit "Sign in", class:"btn syllabutton"%>
+  				    	<div class="btn syllabutton", id="cancel_signin">
+  				    		<%= link_to "Cancel", "/" %>
+  				    	</div>
     				<% end %>
 				</div>
 				<div class="col-md-4 col-sm-4"></div>
