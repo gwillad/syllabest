@@ -42,7 +42,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
 
   removeSyllabusForm: (event) ->
     event.preventDefault()
-    $('#new_syllabus').remove()
+    $('#new_syllabus_view').remove()
     $('#syllabi').show()
     $('#add_syllabus').show()
 

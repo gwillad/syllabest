@@ -115,8 +115,6 @@ body {
 	margin-top: 1.3%;
 }
 
-
-
 #users, #syllabi, #students {
 	margin-top: 2%;
 }
@@ -128,8 +126,20 @@ body {
 	font-weight: normal;
 }
 
+label {
+	font-weight: normal;
+}
+
 #users tbody>tr>td, #syllabi tbody>tr>td, #students tbody>tr>td {
 	border-top: none;
+}
+
+#new_syllabus_view label {
+	text-align: left;
+}
+
+#new_syllabus_view .form_button_group {
+	margin-left: 18.5%;
 }
 
 #components .table {

@@ -1,36 +1,39 @@
 .row
-	.col-md-12
+	.col-md-9.col-md-offset-3.col-sm-9.col-sm-offset-3.accent
+		%h3 New Syllabus
+.row
+	.col-md-12.col-sm-12
 		%form.form-horizontal#new_syllabus{:role => "form"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_title"} Title
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_title"} Title
 				.col-md-5.col-sm-5
 					%input.form-control#new_syllabus_title{:type => "text", :placeholder => "ex: Intro to Computer Science"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_department"} Department
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_department"} Department
 				.col-md-5.col-sm-5
 					%input.form-control#new_syllabus_department{:type => "text", :placeholder => "ex: CPSCI"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_course_num"} Course Number
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_course_num"} Course Number
 				.col-md-5.col-sm-5
 					%input.form-control#new_syllabus_course_num{:type => "text", :placeholder => "ex: 110"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_section_num"} Section Number
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_section_num"} Section Number
 				.col-md-5.col-sm-5
 					%input.form-control#new_syllabus_section_num{:type => "text", :placeholder => "ex: 01"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_course_type"} Course Type
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_course_type"} Course Type
 				.col-md-5.col-sm-5
 					%input.form-control#new_syllabus_course_type{:type => "text", :placeholder => "ex: QSR"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_term"} Term
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_term"} Term
 				.col-md-5.col-sm-5
 					%input.form-control#new_syllabus_term{:type => "text", :placeholder => "ex: Fall 2014"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_location"} Location
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_location"} Location
 				.col-md-5.col-sm-5
 					%input.form-control#new_syllabus_location{:type => "text", :placeholder => "ex: SCCT 3040"}
 			.form-group
-				%label.col-md-2.control-label.accent{:for => "new_syllabus_office_hrs"} Office Hours
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_office_hrs"} Office Hours
 				.col-md-5
 					.row
 						.col-md-3.col-sm-3.date_label Sunday
@@ -81,6 +84,8 @@
 						.col-md-1.col-sm-1.date_label to
 						.col-md-4.col-sm-4
 							%input.form-control#new_syllabus_office_hrs_sa_end{:type => "text", :placeholder=>"Select", :onfocus=>"(this.type='time')", :onblur=>"(this.type='text')"}
-			.form_button_group
-				%button.btn.syllabutton#submit_syllabus{:type => "submit"} Submit
-				%button.btn.syllabutton#cancel_syllabus Cancel
+.row
+	.col-md-11.col-md-offset-1.col-sm-11.col-sm-offset-1
+		.form_button_group
+			%button.btn.syllabutton#submit_syllabus{:type => "submit"} Submit
+			%button.btn.syllabutton#cancel_syllabus Cancel

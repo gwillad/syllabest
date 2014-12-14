@@ -23,6 +23,9 @@
 			<div class="row" id="sign_in_row">
 				<div class="col-md-4 col-sm-4"></div>
 				<div class="col-md-4 col-sm-4 accent" id="sign_in">
+				<% if flash[:danger] -%>
+				  <div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><%= flash[:danger]%></div>
+				<% end -%>
     				<%= bootstrap_form_for(:session, url: signin_path, layout: :horizontal, label_col: "col-md-3 col-sm-3", control_col: "col-md-9 col-sm-9") do |f| %>
       					<%= f.email_field :email %>
       					<%= f.password_field :password %>

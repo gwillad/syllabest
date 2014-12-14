@@ -48,7 +48,7 @@ class Syllabest.Views.Users.New extends Backbone.View
 
   handleError: (user, response)->
     #console.log user
-    console.log response.status
+    #console.log response.status
     if response.status == 422
       $('#warning-box').remove()
       $('#warnings').append('<div id="warning-box" class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Warning</strong> A problem has occured while submitting your data.</div>')
