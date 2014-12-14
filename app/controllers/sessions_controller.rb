@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
             p "-----------------------------------------Success"
           else
             #create an errors messages
-            p "-----------------------------------------Failure"
+            flash[:danger] = 'Invalid email/password combination'
             render 'new'
           end
         end
