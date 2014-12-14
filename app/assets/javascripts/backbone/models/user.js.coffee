@@ -5,5 +5,5 @@ class Syllabest.Models.User extends Backbone.Model
 
 class Syllabest.Collections.UsersCollection extends Backbone.Collection
   model: Syllabest.Models.User
-  url: 'api/users'
+  url: '/api/users'
 

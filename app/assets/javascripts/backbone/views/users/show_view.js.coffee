@@ -7,14 +7,16 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     'click #cancel_syllabus': 'removeSyllabusForm'
     'click #back_button': 'returnToUsers'
     'hover #back_button, #destroy_syllabus': 'highlight'
+    'click #logout': 'logout_user'
 
   initialize: -> 
     _.bindAll(this, 'render')
+    @collection.fetch({async: false})
     #this.listenTo(@collection, 'reset', @render)
     #this.listenTo(@collection, 'add', @appendSyllabus)
     @collection.on('reset', @render, this)
     @collection.on('add', @appendSyllabus, this)
-    @collection.fetch()
+    
 
   render: ->
     $(@el).html(@template(user: @model))
@@ -78,19 +80,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
   returnToUsers: ->
     Backbone.history.navigate("", true)
 
-###
-
-WHAT WE NEED TO DO:
-
-add an add syllabus form and buttton to this view, need to make a subview and templates
-
-make sure syllabus controller is working (permit)
-
-start showing syllabi
-
-start viewing syllabi
-
-repeat above process for components, just no showing indiviudal components, but viewing them as a syllabus
-
-make show syllabus look nice
-###
+  logout_user: (event) ->
+    event.preventDefault()
+    $.ajax({url:"/signout",type:"DELETE",success: (response, b, c)->
+      window.location.href = "/signin"})

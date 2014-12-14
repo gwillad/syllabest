@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
-
+  skip_before_action :require_login, only: [:new, :create]
+  respond_to :json
 	def show
 	end
 	
@@ -22,6 +23,8 @@ class SessionsController < ApplicationController
         end
 
 	def destroy
+          log_out
+          error(304)
 	end
 	
 end
