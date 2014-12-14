@@ -82,7 +82,8 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     @collection.create attributes,
       wait: true
       success: ->
-        $('#new_syllabus').remove()
+        $('#new_syllabus_view').remove()
+        $('#warning-box').remove()
         $('#add_syllabus').show()
         $('#syllabi').show()
         @collection.fetch()
