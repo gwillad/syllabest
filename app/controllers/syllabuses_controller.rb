@@ -4,11 +4,18 @@ class SyllabusesController < ApplicationController
   before_action :find_user, only: [:create, :index, :update, :destroy, :show]
   
   def index
-    p @user.syllabuses.all
-    respond_with @user.syllabuses.all
+    if(current_user == @user)
+      p @user.syllabuses.all
+      respond_with @user.syllabuses.all
+    else
+      error(401)
+    end
   end
   
   def show
+    if(current_user!= @user)
+      error(401)
+    end
     @syllabus = Syllabus.find(params[:id])
     respond_to do |format|
       format.pdf do

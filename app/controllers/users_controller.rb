@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  respond_to :json 
+  skip_before_action :require_login, only: [:new, :create]
+  respond_to :json , :html
 
   def index
     respond_with User.all
