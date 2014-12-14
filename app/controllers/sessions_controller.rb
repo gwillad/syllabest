@@ -1,5 +1,5 @@
 class SessionsController < ApplicationController
-  skip_before_action :require_login, only: [:new, :create]
+  skip_before_action :require_login, only: [:new, :create, :show]
   respond_to :json
 	def show
 	end
@@ -13,7 +13,7 @@ class SessionsController < ApplicationController
             # Log user in and
             sign_in user
             #....redirect where?
-            redirect_to "/#users/" + user.id.to_s
+            redirect_to "/users/" + user.id.to_s
             p "-----------------------------------------Success"
           else
             #create an errors messages
