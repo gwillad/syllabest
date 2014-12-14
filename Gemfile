@@ -13,7 +13,8 @@ gem 'bcrypt-ruby', :require => 'bcrypt'
 gem 'email_validator'
 gem 'protected_attributes'
 
-
+# Use thin instead of webrick. supposedly better
+gem 'thin'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
