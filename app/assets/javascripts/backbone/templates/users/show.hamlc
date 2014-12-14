@@ -34,5 +34,5 @@
 					%th
 					%th
 	.row
-		.col-md-12.col-sm-12<<<<<<< HEAD
+		.col-md-12.col-sm-12
 			%button.btn.syllabutton#add_syllabus{:type => "button"} Add Syllabus
