@@ -7,10 +7,13 @@
 				= @user.get("first_name") + ' ' + @user.get("last_name")
 				%i.fa.fa-caret-down#show_user_menu
 	.row#navbar
+		.col-md-2.col-sm-2
+			#sections_tab.accent{:title=>"View sections"} Sections
+		.col-md-10.col-sm-10
 	.row
 		.col-md-12.col-sm-12
 			#line
-	.row
+	.row#back_button_row
 		.col-md-6.col-sm-6
 			%span#back_button{:title=>"Return to users"}
 				%i.fa.fa-reply#back_arrow
