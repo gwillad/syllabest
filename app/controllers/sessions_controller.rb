@@ -1,5 +1,6 @@
 class SessionsController < ApplicationController
   skip_before_action :require_login, only: [:new, :create, :show]
+  before_action :require_not_login, only: [:new, :create, :show]
   respond_to :json
 	def show
 	end

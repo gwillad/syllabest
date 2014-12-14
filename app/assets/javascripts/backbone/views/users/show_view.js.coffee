@@ -6,7 +6,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     'click #submit_syllabus': 'createSyllabus'
     'click #add_syllabus': 'addSyllabusForm'
     'click #cancel_syllabus': 'removeSyllabusForm'
-    'click #back_button': 'returnToUsers'
+    #'click #back_button': 'returnToUsers'
     'hover #back_button, #destroy_syllabus': 'highlight'
     'click #logout': 'logout_user'
 
@@ -83,7 +83,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     @collection.fetch()
 
   returnToUsers: ->
-    Backbone.history.navigate("", true)
+    Backbone.history.navigate("/users", true)
 
   logout_user: (event) ->
     event.preventDefault()
