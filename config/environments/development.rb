@@ -29,11 +29,10 @@ Syllabest::Application.configure do
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
-    :address              => 'smtp.gmail.com',
-    :port                 => 587,
-    :domain               => 'gmail.com',
-    :user_name            => 'syllabestapp@gmail.com',
-    :password             => 'Syll@b3st8888',
-    :authentication       => 'plain',
+    :address              => 'localhost',
+    :port                 => 25,
+    :domain               => 'syllabest.me',
+#    :user_name            => 'admin@syllabest.me',
+#    :password             => 'Syll@b3st8888',
     :enable_starttls_auto => true  }
 end
