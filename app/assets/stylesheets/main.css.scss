@@ -148,8 +148,15 @@ label {
 	text-align: left;
 }
 
-#new_user .form_button_group {
-	margin-left: 25.7%;
+#asterisk {
+	display: inline-block;
+	color: #A0A0A0;
+}
+
+#required_field {
+	display: inline-block;
+	font-size: 12px;
+	color: #A0A0A0;
 }
 
 #components .table {
@@ -201,11 +208,6 @@ td button {
 	margin-top: -5%;
 	color: $lightest-gray;
 	cursor: pointer;
-}
-
-.form_button_group {
-	margin-top: 2%;
-	margin-left: 17%;
 }
 
 .form-control::-webkit-input-placeholder {
