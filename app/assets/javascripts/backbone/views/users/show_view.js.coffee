@@ -12,6 +12,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
 
   initialize: -> 
     _.bindAll(this, 'render')
+    _.bindAll(this, 'createSyllabus')
     #this.listenTo(@collection, 'reset', @render)
     #this.listenTo(@collection, 'add', @appendSyllabus)
     @collection.on('reset', @render, this)
