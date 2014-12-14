@@ -26,7 +26,7 @@ class StudentsController < ApplicationController
 
   def update
     params.premit!
-    @record = @syllabus.students.update(params[:id].to_i, params[:student]
+    @record = @syllabus.students.update(params[:id].to_i, params[:student])
     respond_with @user, @syllabus, @record
   end
 
