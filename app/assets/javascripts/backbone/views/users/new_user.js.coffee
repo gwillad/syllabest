@@ -1,6 +1,8 @@
 class Syllabest.Views.Users.New extends Backbone.View
   template: JST["backbone/templates/users/new"]
 
+  id: "sign_up"
+
   events:
     'submit #new_user': 'createUser'
     'click #cancel_form': 'cancelCreateUser'
@@ -18,7 +20,7 @@ class Syllabest.Views.Users.New extends Backbone.View
   cancelCreateUser: (event) ->
     event.preventDefault()
     $('#warning-box').remove()
-    $('#new_user').remove()
+    $('#sign_up').remove()
     window.location.href = "/"
     #window.location.replace("http://google.com")
 
@@ -40,7 +42,7 @@ class Syllabest.Views.Users.New extends Backbone.View
       success: ->
         $('#warning-box').remove()
         window.location.href = "signin"
-        #$('#new_user').remove()
+        #$('#sign_up').remove()
         #$('#add_user').show()
         #$('#users').show()
       error: @handleError
