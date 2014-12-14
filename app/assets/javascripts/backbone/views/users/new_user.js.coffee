@@ -24,6 +24,7 @@ class Syllabest.Views.Users.New extends Backbone.View
 
   createUser: (event) ->
     #alert("Here")
+    #console.log 45
     event.preventDefault()
     attributes = 
       first_name: $('#new_user_fname').val()
@@ -33,6 +34,7 @@ class Syllabest.Views.Users.New extends Backbone.View
       password_confirmation: $('#confirm_password').val()
       school:     $('#new_user_school').val()
       office:     $('#new_user_office').val()
+      phone:      $('#new_user_phone').val()
     @collection.create attributes,
       wait: true
       success: ->
@@ -46,7 +48,7 @@ class Syllabest.Views.Users.New extends Backbone.View
 
   handleError: (user, response)->
     #console.log user
-    #console.log response
+    console.log response.status
     if response.status == 422
       $('#warning-box').remove()
       $('#warnings').append('<div id="warning-box" class="alert alert-danger"><a href="#" class="close" data-dismiss="alert">&times;</a><strong>Warning</strong> A problem has occured while submitting your data.</div>')
@@ -73,10 +75,18 @@ class Syllabest.Views.Users.New extends Backbone.View
       $('#office_errors').empty()
       $('#new_user_office').removeClass('error')
       $('#office_span').removeClass()
+ 
+      $('#phone_errors').empty()
+      $('#new_user_phone').removeClass('error')
+      $('#phone_span').removeClass()
+
+      $('#confirm_password_errors').empty()
+      $('#confirm_password').removeClass('error')
+      $('#confirm_password_span').removeClass()
 
 
       errors = $.parseJSON(response.responseText).errors
-
+      #alert("Hello")
       for attribute, messages of errors
         #alert(attribute + ' ' +message) for message in messages
         if (attribute == "first_name")
@@ -122,6 +132,20 @@ class Syllabest.Views.Users.New extends Backbone.View
           $('#school_span').addClass('glyphicon glyphicon-remove form-control-feedback')
           $('#new_user_school').addClass('error')
           $('#school_span').css("color", "DarkRed")
+
+        if (attribute == "phone")
+          $('#phone_errors').empty()
+          $('#phone_errors').text('('+messages+')')
+          $('#phone_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#new_user_phone').addClass('error')
+          $('#phone_span').css("color", "DarkRed")
+ 
+        if (attribute == "password_confirmation")
+          $('#confirm_password_errors').empty()
+          $('#confirm_password_errors').text('('+messages+')')
+          $('#confirm_password_span').addClass('glyphicon glyphicon-remove form-control-feedback')
+          $('#confirm_password').addClass('error')
+          $('#confirm_password_span').css("color", "DarkRed")
           
 
 
