@@ -6,21 +6,23 @@
 			#account.accent
 				="#{@user.get("first_name")} #{@user.get("last_name")}"
 				%i.fa.fa-caret-down#show_user_menu
+	.row#navbar
+		.col-md-2.col-sm-2
+			#syllabus_tab.accent{:title=>"View syllabus"} Syllabus
+		.col-md-2.col-sm-2
+			#students_tab.accent{:title=>"Vew students"} Students
+		.col-md-8.col-sm-8
 	.row
 		.col-md-12.col-sm-12
 			#line
 	.row
 		.col-md-8.col-sm-8#left_side
 			.row
-				.col-md-4.col-sm-4#back
+				.col-md-6.col-sm-6#back
 					%span#back_button{:title=>"Return to syllabi"}
 						%i.fa.fa-reply#back_arrow
 						Back
-				.col-md-4.col-sm-4#view_students
-					%span#view_students_button{:title=>"View students"}
-						%i.fa.fa-users#users_icon
-						Students
-				.col-md-4.col-sm-4#pdf
+				.col-md-6.col-sm-6#pdf
 					%span#pdf_button{:title=>"View syllabus as PDF"}
 						%i.fa.fa-file-pdf-o#pdf_icon
 						PDF
