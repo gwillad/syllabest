@@ -15,8 +15,14 @@ class UsersController < ApplicationController
   
   def create
     params.permit!
- #require(:user).permit(:first_name,:last_name,:email,:school,:office,:password)
-    respond_with User.create(params[:user])
+
+    @user = User.create(params[:user])
+
+    if @user.save
+      UserMailer.welcome_email(@user).deliver
+    end
+    #require(:user).permit(:first_name,:last_name,:email,:school,:office,:password)
+    respond_with @user
   end
 
   def update

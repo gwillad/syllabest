@@ -16,12 +16,17 @@ class StudentsController < ApplicationController
   def create
     params.permit!
     @record = @syllabus.students.create(params[:student])
+    
+    if @record.save
+      StudentMailer.new_student(@record, @syllabus).deliver
+    end
+
     respond_with @user, @syllabus, @record
   end
 
   def update
     params.premit!
-    @record = @syllabus.students.update(params[:id].to_i, params[:student])
+    @record = @syllabus.students.update(params[:id].to_i, params[:student]
     respond_with @user, @syllabus, @record
   end
 
