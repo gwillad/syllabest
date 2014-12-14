@@ -2,7 +2,8 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
   template: JST["backbone/templates/users/show"]
 
   events:
-    'submit #new_syllabus': 'createSyllabus'
+    'submit #new_syllabus': 'createSyllabus' #this might just be a precaution
+    'click #submit_syllabus': 'createSyllabus'
     'click #add_syllabus': 'addSyllabusForm'
     'click #cancel_syllabus': 'removeSyllabusForm'
     'click #back_button': 'returnToUsers'
