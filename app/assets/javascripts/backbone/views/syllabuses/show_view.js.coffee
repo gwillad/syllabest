@@ -165,7 +165,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
         else
           if $(e.currentTarget).text() is ""
             $(e.currentTarget).text(instance[field])
-          instance[field] = $(e.currentTarget).html()
+          instance[field] = $(e.currentTarget).text().trim()
 
         component.set(attributes, instance)
         component.save()
