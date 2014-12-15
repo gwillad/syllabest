@@ -52,8 +52,10 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
   createSyllabus: (event) ->
     console.log "running create syllabus" 
     event.preventDefault()
-    console.log($('#new_syllabus_title'))
-    console.log($('#new_syllabus_location'))
+    section_num = $('#new_syllabus_section_num').val()
+    numSections = parseInt(section_num)
+    if numSections is 1
+      section_num = ""
 
     office_hours = []
     office_hours.push [$('#new_syllabus_office_hrs_su_start').val(), $('#new_syllabus_office_hrs_su_end').val()]
@@ -64,31 +66,36 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
     office_hours.push [$('#new_syllabus_office_hrs_fr_start').val(), $('#new_syllabus_office_hrs_fr_end').val()]
     office_hours.push [$('#new_syllabus_office_hrs_sa_start').val(), $('#new_syllabus_office_hrs_sa_end').val()]
 
-    attributes = 
-      title: $('#new_syllabus_title').val()
-      location: $('#new_syllabus_location').val()
-      course_num: $('#new_syllabus_course_num').val()
-      department: $('#new_syllabus_department').val()
-      term: $('#new_syllabus_term').val()
-      section_num: $('#new_syllabus_section_num').val()
-      course_type: $('#new_syllabus_course_type').val()
-      office_hrs: office_hours
-      user_id: @model.get("id")
-      header_options: ["1", "1", "0", "0", "0", "0", "0", "0", "0", "0"]
-    ###
-    # HEADER OPTIONS: [title, dept + course_num + course_type, 
-    #                  school(user), term, location, first_name(user)#                  + last_name(user), office(user), officehours, 
-    #                  email(user), phone(user)] --> 10 <--
-    ###
-    @collection.create attributes,
-      wait: true
-      success: ->
-        $('#new_syllabus_view').remove()
-        $('#warning-box').remove()
-        $('#add_syllabus').show()
-        $('#syllabi').show()
-        @collection.fetch()
-      error: @handleError
+    for i in [1 .. numSections]
+      section_num = i.toString()
+      if section_num.length < 2
+        section_num = "0" + section_num
+      attributes = 
+        title: $('#new_syllabus_title').val()
+        location: $('#new_syllabus_location').val()
+        course_num: $('#new_syllabus_course_num').val()
+        department: $('#new_syllabus_department').val()
+        term: $('#new_syllabus_term').val()
+        section_num: section_num
+        course_type: $('#new_syllabus_course_type').val()
+        office_hrs: office_hours
+        user_id: @model.get("id")
+        header_options: ["1", "1", "0", "0", "0", "0", "0", "0", "0", "0"]
+      ###
+      # HEADER OPTIONS: [title, dept + course_num + course_type, 
+      #                  school(user), term, location, first_name(user)#                  + last_name(user), office(user), officehours, 
+      #                  email(user), phone(user)] --> 10 <--
+      ###
+      @collection.create attributes,
+        wait: true
+        success: ->
+          $('#new_syllabus_view').remove()
+          $('#warning-box').remove()
+          $('#add_syllabus').show()
+          $('#syllabi').show()
+          if i is numSections
+            @collection.fetch()
+        error: @handleError
 
   returnToUsers: ->
     Backbone.history.navigate("/users", true)
