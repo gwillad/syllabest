@@ -3,4 +3,6 @@
 %td= @student.get("class_year")
 %td= @student.get("email")
 %td
+	.btn.syllabutton{:style=>"visibility:hidden;"} Submit
+%td
 	%i.fa.fa-remove.fa-lg#destroy_student{:title => "Delete this student"}
