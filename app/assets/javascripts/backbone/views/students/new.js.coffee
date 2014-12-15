@@ -12,4 +12,5 @@ class Syllabest.Views.Students.New extends Backbone.View
     this
 
   destroyStudent: (e) ->
+    $('#warning-box').remove()
     $(e.currentTarget).closest(".newStudent").remove()

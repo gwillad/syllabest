@@ -325,6 +325,7 @@ class Syllabest.Views.Syllabuses.ShowView extends Backbone.View
       $('#students_tab').removeClass("accent")
       $(e.currentTarget).addClass("accent")
       $('#line').after(@syllabus)
+      $('#warning-box').remove()
 
   logout_user: (event) ->
     event.preventDefault()
