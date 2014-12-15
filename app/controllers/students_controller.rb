@@ -16,9 +16,14 @@ class StudentsController < ApplicationController
   def create
     params.permit!
     @record = @syllabus.students.create(params[:student])
+    # @record.save
     
+    ## NOTE: I have commented this mailer out temporarily due to 500 internal
+    ##       service errors. To go back uncomment bellow (including respond with
+    ##       record) and comment above '@record.save' -Paul
+
     if @record.save
-      StudentMailer.new_student(@record, @syllabus).deliver
+      #StudentMailer.new_student(@record, @syllabus).deliver
     end
 
     respond_with @user, @syllabus, @record

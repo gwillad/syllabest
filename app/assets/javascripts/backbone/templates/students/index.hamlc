@@ -13,6 +13,8 @@
 				%th Email
 				%th
 				%th
+			%tr
+				#warnings
 	.row
 		.col-md-12.col-sm-12
 			%button.btn.syllabutton#add_student{:type => "button"} Add Student
