@@ -25,9 +25,9 @@
 					%span#course_num_span{:class=>"glyphicon form-control-feedback"}
 					%p#course_num_errors{:class=>"error-text"}
 			.form-group.has-feedback
-				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_section_num"} Section Number
+				%label.col-md-2.col-md-offset-1.col-sm-2.col-sm-offset-1.control-label.accent{:for => "new_syllabus_section_num"} Number of Sections
 				.col-md-5.col-sm-5
-					%input.form-control#new_syllabus_section_num{:type => "text", :placeholder => "ex: 01", :spellcheck=>"false"}
+					%input.form-control#new_syllabus_section_num{:type => "text", :placeholder => "ex: 2", :spellcheck=>"false"}
 					%span#section_num_span{:class=>"glyphicon form-control-feedback"}
 					%p#section_num_errors{:class=>"error-text"}
 			.form-group
