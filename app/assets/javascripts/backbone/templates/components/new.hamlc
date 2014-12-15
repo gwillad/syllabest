@@ -17,7 +17,7 @@
 			%input#course_term{:type=>"checkbox"} Term
 		.checkbox.header_option_left
 			%input#course_room{:type=>"checkbox"} Room
-	.col-md-6.col.sm-6#header_options_right
+	.col-md-6.col-sm-6#header_options_right
 		%h4#header_option_title_right Instructor
 		.checkbox.header_option_right
 			%input#instructor_name{:type=>"checkbox"} Name

@@ -52,6 +52,8 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
   createSyllabus: (event) ->
     console.log "running create syllabus" 
     event.preventDefault()
+    console.log($('#new_syllabus_title'))
+    console.log($('#new_syllabus_location'))
 
     office_hours = []
     office_hours.push [$('#new_syllabus_office_hrs_su_start').val(), $('#new_syllabus_office_hrs_su_end').val()]
@@ -75,8 +77,7 @@ class Syllabest.Views.Users.ShowView extends Backbone.View
       header_options: ["1", "1", "0", "0", "0", "0", "0", "0", "0", "0"]
     ###
     # HEADER OPTIONS: [title, dept + course_num + course_type, 
-    #                  school(user), term, location, first_name(user),
-    #                  + last_name(user), office(user), officehours, 
+    #                  school(user), term, location, first_name(user)#                  + last_name(user), office(user), officehours, 
     #                  email(user), phone(user)] --> 10 <--
     ###
     @collection.create attributes,
