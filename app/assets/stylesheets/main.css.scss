@@ -211,6 +211,7 @@ label {
 	background-color: transparent;
 	border-color: #A0A0A0;
 	border-radius: 6px;
+	outline-style: none !important;
 }
 
 .syllabutton:hover {
@@ -218,7 +219,7 @@ label {
 	border-color: $primary-green;
 }
 
-.syllabutton:active, .syllabutton:visited {
+.syllabutton:active, .syllabutton:visited, .syllabutton:link {
 	color: $darkest-gray !important;
 	outline-style: none !important;
 }
@@ -528,6 +529,14 @@ input[type="text"]:focus, input[type="password"]:focus, input[type="number"]:foc
 
 #destroy_student:hover {
 	color: $primary-green;
+}
+
+.student td {
+	width: 21.8%;
+}
+
+.newStudent td {
+	width: 21.8%;
 }
 
 // SPLASH -------------------------------------------------------
